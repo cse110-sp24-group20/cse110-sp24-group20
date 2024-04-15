@@ -56,3 +56,8 @@ Hello! I'm Royce Huang, I'm a third year at UCSD studying Computer Engineering. 
 Hello! My name is Joey Toscano and I am a second year CS major with a minor in communications. I have taught game dev at iD Tech, developed the mobile game Battle Paddles, and cofounded 7-Pixel Studios DBA. I like to juggle in my free time and I am currently on the UCSD Club Men's Ultimate Frisbee team! I'm looking forward to making a great project with an even better team.
 
 ### Zhaoyu Dou
+<a>
+    <img src = 'https://github.com/Littlekawayi233/cse110/blob/main/images/IMG_3734.jpg?raw=true' width = '70' />
+</a>
+
+Hello! My name is Zhaoyu Dou and I am a Computer Science major student. I wish I could learn more about the industry and how to become a good software development engineer. I am really excited to work with our teammates and build fantastic project together!
