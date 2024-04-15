@@ -8,7 +8,17 @@
 - Building a supportive, inclusive, and diverse community withing the team, fostering camaraderie and mutial repect, much like the close-knit communities formed within space crews.
 ## Our Team
 ### Brandon Rogers
-### Yvanna Cardenas
+### Yvanna Cardenas 
+<img src="https://raw.githubusercontent.com/yvcardenas/CSE110Lab1/main/me.jpg" width="80">
+
+**Team Leader**
+<br>
+I am a frist year transfer student and a computer science major. I am passionate about web development and hope to pursue IOS developing after graduating. In my free time I enjoy picking up hobbies like crocheting and practicing my latte art. I enjoy working with others and am looking forward to creating something with my peers. 
+
+<a href="https://github.com/yvcardenas">
+    <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" width="70"/>
+</a>
+
 ### Amdadul Haque
 ### Beijie Cheng
 ### Jiawei Huang
