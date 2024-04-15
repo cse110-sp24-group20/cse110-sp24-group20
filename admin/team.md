@@ -7,9 +7,6 @@
 ### Amdadul Haque
 ### Beijie Cheng
 ### Jiawei Huang
-<a>
-  <img src="[Jiawei Huang](https://github.com/SoulCoder3/CSE110-GitHubPage-Project/blob/more-reading/picture/me.png)" width="50" />
-</a>
 ### Joseph Jun
 ### Royce Huang
 ### Jiaying Yang
