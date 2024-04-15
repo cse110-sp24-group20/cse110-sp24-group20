@@ -32,6 +32,12 @@ I am a first year transfer student and a computer science major. I am passionate
 </a>
 
 ### Joseph Jun
+Hello! My name is Joseph Jun, and I am currently a senior at UCSD, majoring in Mathematics-Computer Science. I had an internship at Tech for Good Inc., where I worked on database and blockchain platforms. I also interned at Citmit, focusing on backend development. I hope to become a full-stack software engineer and later on, work as an AI/ML engineer. My hobbies include weightlifting, playing soccer, and basketball. A fun fact about me is that I have lived in four different countries.
+
+<a href="https://github.com/j2jun">
+    <img src="https://github.com/j2jun/cse110-lab1/blob/main/Picture/img1.JPG" width="50"/>
+</a>
+
 ### Royce Huang
 <a>
   <img src="https://raw.githubusercontent.com/roycehuang/cse110Lab1/main/screenshots/DSCF0156_Original.jpg" width="70" />
