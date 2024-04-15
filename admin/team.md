@@ -45,11 +45,8 @@ Hello! I'm Royce Huang, I'm a third year at UCSD studying Computer Engineering. 
 
 ### Jiaying Yang
 ### Joey Toscano
-* Second Year CS Major
-* Comm Minor
-* Previous Experience:
-* * Taught Game Dev at iD Tech
-* * Developed the mobile game Battle Paddles and cofounded 7-Pixel Studios DBA.
-* Fun Fact: I held a juggling world record!
-* CSE 110 goal: Make a great project with an even better team!
+<img width="163" alt="JoeyPic" src="https://github.com/cse110-sp24-group20/cse110-sp24-group20/assets/97120058/286c19f5-aef7-4d42-90e3-def7b3a5f8df">
+
+Hello! My name is Joey Toscano and I am a second year CS major with a minor in communications. I have taught game dev at iD Tech, developed the mobile game Battle Paddles, and cofounded 7-Pixel Studios DBA. I like to juggle in my free time and I am currently on the UCSD Club Men's Ultimate Frisbee team! I'm looking forward to making a great project with an even better team.
+
 ### Zhaoyu Dou
