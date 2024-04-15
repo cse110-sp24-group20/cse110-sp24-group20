@@ -33,6 +33,16 @@ I am a first year transfer student and a computer science major. I am passionate
 
 ### Joseph Jun
 ### Royce Huang
+<a>
+  <img src="https://raw.githubusercontent.com/roycehuang/cse110Lab1/main/screenshots/DSCF0156_Original.jpg" width="70" />
+</a>
+
+Hello! I'm Royce Huang, I'm a third year at UCSD studying Computer Engineering. I had a previous internship at Intel, working on platforms and automating the deployment of operating systems. I don't have much of a web development background, but I hope to learn a lot with the team, hone my skills and apply my past knowledge. Outside of academics, I love to play sports and board games with friends.
+
+<a href="https://github.com/roycehuang">
+    <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" width="50"/>
+</a>
+
 ### Jiaying Yang
 ### Joey Toscano
 * Second Year CS Major
