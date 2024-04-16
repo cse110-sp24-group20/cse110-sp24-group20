@@ -59,6 +59,13 @@ Hello! I'm Royce Huang, I'm a third year at UCSD studying Computer Engineering. 
 </a>
 
 ### Jiaying Yang
+<a href="https://github.com/Jessyjy7">
+    <img src="https://github.com/Jessyjy7/CSE-110-Lab1/blob/main/PassportPic.JPG" width="100"/>
+</a>
+
+Hello! My name is Jiaying Yang and I'm a fourth-year Math-CS major. I spend my first two years of college doing an exchange program at Fudan University, China during the pandemic. So technically, this is just my second year physically at UCSD. I enjoy doing coding projects that can benefit people. I have designed an HCI web product called Gamer's Voyage and worked for UCSD Global TIES projects to build health dispatch systems in Tijuana. I also enjoy doing research and planning to become a PhD student in CSE.
+
+
 ### Joey Toscano
 <img width="163" alt="JoeyPic" src="https://github.com/cse110-sp24-group20/cse110-sp24-group20/assets/97120058/286c19f5-aef7-4d42-90e3-def7b3a5f8df">
 
