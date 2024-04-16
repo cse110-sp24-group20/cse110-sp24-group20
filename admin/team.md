@@ -18,6 +18,10 @@
 
 Hi, I'm Brandon and I'm a second year computer science at Revelle. I currently work as a software engineer at Aqua SD, focusing primarily on data science and automation. Outside of work and academics, I enjoy tennis, soccer, weightlifting, and board games! I am excited to work with such a talented and hardworking group of people, and look forward to our project.
 
+<a href="https://github.com/bmrogers2022">
+    <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" width="50"/>
+</a>
+
 ### Yvanna Cardenas 
 <img src="https://raw.githubusercontent.com/yvcardenas/CSE110Lab1/main/me.jpg" width="80">
 
@@ -30,6 +34,15 @@ I am a first year transfer student and a computer science major. I am passionate
 </a>
 
 ### Amdadul Haque
+
+<img src="https://raw.githubusercontent.com/bmrogers2022/Github-Pages-Project/main/screenshots/e3c97tvt.png" width="100">
+
+My name is Amdadul Haque. I am a third year Math Computer science student. I love playing basketball and gymming in my free time. My favorite basketball player is Russel Westbrook.
+
+<a href="https://github.com/Amdau1">
+    <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" width="50"/>
+</a>
+
 ### Beijie Cheng
 
 <img src="https://github.com/cse110-sp24-group20/cse110-sp24-group20/assets/116754028/6b7be92d-5afc-4917-9d22-7f40ee4b15cb" width="100">
