@@ -37,7 +37,7 @@ I am a first year transfer student and a computer science major. I am passionate
 
 <img src="https://raw.githubusercontent.com/bmrogers2022/Github-Pages-Project/main/screenshots/e3c97tvt.png" width="100">
 
-My name is Amdadul Haque. I am a third year Math Computer science student. I love playing basketball and gymming in my free time. My favorite basketball player is Russel Westbrook.
+ Hello My name is Amdadul Haque. I am a third year Math-CS major at UCSD. I also picking up a minor in Finance. One of my hobbies since I was a kid is playing basketball but I am too busy now days to play Basketball. In my free time I usally go to the gym and work out a bit. I am ecited to work with my team to build a project. This will be my first project so I am very excited and looking forward to work with everyone.
 
 <a href="https://github.com/Amdau1">
     <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" width="50"/>
