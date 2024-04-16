@@ -21,6 +21,15 @@ I am a first year transfer student and a computer science major. I am passionate
 
 ### Amdadul Haque
 ### Beijie Cheng
+
+<img src="https://github.com/cse110-sp24-group20/cse110-sp24-group20/assets/116754028/6b7be92d-5afc-4917-9d22-7f40ee4b15cb" width="100">
+
+Hi my name is Beijie Cheng and you can call me Jessica. I am also a first year transfer majoring in Computer Science with a minor in Math at UCSD. I have a keen interest in machine learning and its potential to transform industries and improve lives. Beyond academics, I enjoy engaging in activities that allow me to connect with nature, such as hiking and surfing. I'm looking forward to collaborating with my teammates and contributing to our collective success. 
+
+<a href="https://github.com/auroruaaa">
+    <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" width="50"/>
+</a>
+
 ### Jiawei Huang
 <a>
   <img src="https://raw.githubusercontent.com/SoulCoder3/CSE110-GitHubPage-Project/more-reading/picture/me.png" width="70" />
