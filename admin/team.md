@@ -1,4 +1,7 @@
 # 404 - Team 20
+
+<img src="branding/board.jpg" width="1000">
+
 ## Brand 
 404 embodies the essence of innovation and exploration in the realm of software engineering. Like space explorers venturing into uncharted territories, we boldly aim to push the boundaries of technology, seeking new frontiers and solutions to complex challenges. Just like astronauts rely on each other and cutting edge technology for successful missions, our team thrives on collaboration, expertise, and a shared vision of shaping the future through software development. 
 ## Values
@@ -7,7 +10,14 @@
 - Being flexible and adaptive to changes, challenges and evolving requirements, reflecting the dynamic nature of space exploration.
 - Building a supportive, inclusive, and diverse community withing the team, fostering camaraderie and mutial repect, much like the close-knit communities formed within space crews.
 ## Our Team
-### Brandon Rogers
+
+### Brandon Rogers 
+<img src="https://raw.githubusercontent.com/bmrogers2022/Github-Pages-Project/main/screenshots/Face.png" width="100">
+
+**Team Leader**
+
+Hi, I'm Brandon and I'm a second year computer science at Revelle. I currently work as a software engineer at Aqua SD, focusing primarily on data science and automation. Outside of work and academics, I enjoy tennis, soccer, weightlifting, and board games! I am excited to work with such a talented and hardworking group of people, and look forward to our project.
+
 ### Yvanna Cardenas 
 <img src="https://raw.githubusercontent.com/yvcardenas/CSE110Lab1/main/me.jpg" width="80">
 
@@ -42,7 +52,7 @@ Hi my name is Beijie Cheng and you can call me Jessica. I am also a first year t
 
 ### Joseph Jun
 <a href="https://github.com/j2jun">
-    <img src="https://github.com/j2jun/cse110-lab1/blob/main/Picture/img1.JPG" width="100"/>
+    <img src="https://raw.githubusercontent.com/j2jun/cse110-lab1/main/Picture/img1.JPG" width="100"/>
 </a>
 
 Hello! My name is Joseph Jun, and I am currently a senior at UCSD, majoring in Mathematics-Computer Science. I had an internship at Tech for Good Inc., where I worked on database and blockchain platforms. I also interned at Citmit, focusing on backend development. I hope to become a full-stack software engineer and later on, work as an AI/ML engineer. My hobbies include weightlifting, playing soccer, and basketball. A fun fact about me is that I have lived in four different countries: South Korea, Ukraine, Australia, and United States.
@@ -60,7 +70,7 @@ Hello! I'm Royce Huang, I'm a third year at UCSD studying Computer Engineering. 
 
 ### Jiaying Yang
 <a href="https://github.com/Jessyjy7">
-    <img src="https://github.com/Jessyjy7/CSE-110-Lab1/blob/main/PassportPic.JPG" width="100"/>
+    <img src="https://raw.githubusercontent.com/Jessyjy7/CSE-110-Lab1/main/PassportPic.JPG" width="100"/>
 </a>
 
 Hello! My name is Jiaying Yang and I'm a fourth-year Math-CS major. I spend my first two years of college doing an exchange program at Fudan University, China during the pandemic. So technically, this is just my second year physically at UCSD. I enjoy doing coding projects that can benefit people. I have designed an HCI web product called Gamer's Voyage and worked for UCSD Global TIES projects to build health dispatch systems in Tijuana. I also enjoy doing research and planning to become a PhD student in CSE.
