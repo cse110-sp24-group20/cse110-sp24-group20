@@ -8,9 +8,9 @@ Team Number: 20 <br>
 Team Name: 404 <br>
 
 **Team Member Information**
-
+ idk
 ### Primary Means of Communication and Expectations
-
+ feifjei
 ### Scheduling Meetings
 
 ### General Reponsibilities for All Team Members
