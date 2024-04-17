@@ -11,9 +11,9 @@ Yvanna Cardenas, Brandon Rogers, Joseph Toscano, Amdadul Haque, Beijie Cheng, Ji
 ### Previous Meeting
 Discussed and brainstormed team name, mascot, logo
 ### New Business
-After the meeting, all members are to download the pdf of the contract and send their signed copy to the team leaders for the gradescope submission
+After the meeting, all members are to download the pdf of the contract and upload their signed copy to the github 
 ### For Next Meeting
-
+Begin brainstorming ideas for the project, start splitting roles and working on it
 ### Key Topics from this Meeting
 Discuss and Finalize Group Contract 
 Going over filling out lettucemeet to schedule a weekly meeting
