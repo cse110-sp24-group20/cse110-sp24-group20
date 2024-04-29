@@ -47,4 +47,7 @@
   - SWOT:
     --Jiaying: finished O and T session.
 
-### 
+### Screen Captures
+![Image](./sprint-1.1.png)
+![Image](./sprint-1.2.png)
+![Image](./sprint-1.3.png)
