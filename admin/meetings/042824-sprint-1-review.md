@@ -22,29 +22,29 @@
 ### Key Topics from this Meeting  
   - Contributions for the Warm-Up Exercise: 
   - HTML: 
-    --Brandon - radio buttons put them together, set up the project. 
-    --Royce: at the beginning for starting, worked on video later. 
-    --Yvanna: unify code, and the documentation, add the sound effect.
-    --Jessica: structure, CSS file font-size and image-size, wrap & size adjustment. 
+    - Brandon - radio buttons put them together, set up the project. 
+    - Royce: at the beginning for starting, worked on video later. 
+    - Yvanna: unify code, and the documentation, add the sound effect.
+    - Jessica: structure, CSS file font-size and image-size, wrap & size adjustment. 
 
   - CSS: 
-    --Amdahl: check if everything worked as they should.
-    --Zhaoyu: pattern, background, color
-    --Joey: design, GitHub issues, SWOT analysis
+    - Amdahl: check if everything worked as they should.
+    - Zhaoyu: pattern, background, color
+    - Joey: design, GitHub issues, SWOT analysis
 
   - JS: 
-    --Jiawei: messages, submit buttons
-    --Joseph: design, JS: click and wait for textbook and the message, animation part: pop-up
+    - Jiawei: messages, submit buttons
+    - Joseph: design, JS: click and wait for textbook and the message, animation part: pop-up
 
   - Debugging or Logistic:
-    --Brandon: webdev tool
-    --Yvanna: design, documation, user stories. 
-    --Joey: git issues
+    - Brandon: webdev tool
+    - Yvanna: design, documation, user stories. 
+    - Joey: git issues
 
   - Youtube & Documentation:
-    --Yvanna: editing and performing, main documentation
+    - Yvanna: editing and performing, main documentation
     
   - SWOT:
-    --Jiaying: finished O and T session.
+    - Jiaying: finished O and T session.
 
 ### 
