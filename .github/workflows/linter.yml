@@ -1,35 +1,27 @@
-name: Lint
+name: Lint Code Base
 
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
   push:
-    branches:
-      - main
-  # Replace pull_request with pull_request_target if you
-  # plan to use this action with forks, see the Limitations section
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
-
-# Down scope as necessary via https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token
-permissions:
-  checks: write
-  contents: write
+    branches: [ main ]
 
 jobs:
-  run-linters:
-    name: Run linters
+  eslint:
+    name: Run ESLint
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out Git repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install Node.js dependencies
-        run: npm ci
-
-      - name: Run linters
-        uses: wearerequired/lint-action@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          eslint: true
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npx eslint . --format stylish --config eslint.config.mjs
