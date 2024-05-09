@@ -26,5 +26,5 @@ jobs:
       - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: sudo npx eslint . --format stylish --config eslint.config.mjs
+      - name: Run eslint
+        run: npx eslint .
