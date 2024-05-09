@@ -24,4 +24,4 @@ jobs:
         run: npm install
 
       - name: Run ESLint
-        run: npx eslint . --format stylish
+        run: npm eslint . --format stylish
