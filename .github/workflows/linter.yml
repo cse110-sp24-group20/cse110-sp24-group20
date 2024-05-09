@@ -22,12 +22,14 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 16
 
       - name: Install Node.js dependencies
-        run: npm install -g eslint
+        run: npm install eslint
 
       - name: Run linters
         uses: wearerequired/lint-action@v2
         with:
           eslint: true
+          auto_fix: true
+          npm_install: true
