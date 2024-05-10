@@ -24,9 +24,3 @@ jobs:
 
       - name: Generate Documentation
         run: npx jsdoc -c jsdoc.config.json
-
-      - name: Deploy Documentation
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
