@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - CI/CD-pipeline
+      - Documentation-Generate
 
 jobs:
   build-docs:
