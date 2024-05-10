@@ -1,7 +1,7 @@
 {
     "source": {
-      "include": [""], 
-      "includePattern": ".+\\.js(doc|x)?$", 
+      "include": ["cse110-sp24-group20"],
+      "includePattern": ".+\\.js(doc|x)?$",
       "excludePattern": "(^|\\/|\\\\)_"
     },
     "opts": {
