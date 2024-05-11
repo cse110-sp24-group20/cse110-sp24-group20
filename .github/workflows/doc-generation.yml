@@ -6,7 +6,6 @@ on:
       - main
       - CI/CD-pipeline
       - Documentation-Generate
-  permissions: write-all
 
 jobs:
   build-docs:
