@@ -30,8 +30,14 @@ jobs:
         with:
           source_dir: ./test
           recurse: true
-          output_dir: ./out
+          output_dir: ./docs
           template: clean-jsdoc-theme
+
+      - name: Commit JSDOCS
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "Generated JSDocs"
+          add: "docs/*"
 
       # - name: Generate Documentation
       #   run: npx jsdoc -c jsdoc.config.json
