@@ -22,14 +22,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
-        uses: andstor/jsdoc-action@v1
-        with:
-          config_file: jsdoc.config.json
-          template: minami
+      # - name: Build
+      #   uses: andstor/jsdoc-action@v1
+      #   with:
+      #     config_file: jsdoc.config.json
+      #     template: minami
 
-      # - name: Generate Documentation
-      #   run: npx jsdoc -c jsdoc.config.json
+      - name: Generate Documentation
+        run: npx jsdoc -c jsdoc.config.json
 
       # - name: Setup Git Identity
       #   run: |
