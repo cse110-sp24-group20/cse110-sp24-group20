@@ -24,3 +24,15 @@ jobs:
 
       - name: Generate Documentation
         run: npx jsdoc -c jsdoc.config.json
+        
+
+      - name: Setup Git Identity
+        run: |
+          git config --local user.name 'GitHub Actions'
+          git config --local user.email 'actions@github.com'
+
+      - name: Commit Documentation
+        run: |
+          git add docs/
+          git commit -m "Update documentation" || echo "No changes to commit"
+          git push
