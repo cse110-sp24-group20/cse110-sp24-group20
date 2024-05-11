@@ -1,5 +1,9 @@
 {
   "devDependencies": {
+    "clean-jsdoc-theme": "^4.3.0",
     "jsdoc": "^4.0.3"
+  },
+  "scripts": {
+    "generate-docs": "jsdoc --configure jsdoc.json --verbose"
   }
 }
