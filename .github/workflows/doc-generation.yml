@@ -29,7 +29,13 @@ jobs:
           recurse: true
           output_dir: ./out
           config_file: jsdoc.config.json
-          template_name: minami
+          template: clean-jsdoc-theme
+
+      - name: Commit JSDOCS
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "Generated JSDocs"
+          add: "jsdocs/*"
 
       # - name: Generate Documentation
       #   run: npx jsdoc -c jsdoc.config.json
