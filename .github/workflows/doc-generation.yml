@@ -17,13 +17,21 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "20"
+          node-version: "v16.18.0"
 
       - name: Install dependencies
         run: npm install
 
-      - name: Generate Documentation
-        run: npx jsdoc -c jsdoc.config.json
+      - name: Build
+        uses: andstor/jsdoc-action@v1
+        with:
+          source_dir: ./
+          output_dir: ./docs
+          config_file: jsdoc.config.json
+          template: minami
+
+      # - name: Generate Documentation
+      #   run: npx jsdoc -c jsdoc.config.json
 
       # - name: Setup Git Identity
       #   run: |
