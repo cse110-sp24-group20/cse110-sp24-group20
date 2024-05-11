@@ -6,13 +6,14 @@ on:
       - main
       - CI/CD-pipeline
       - Documentation-Generate
+  permissions: write-all
 
 jobs:
   build-docs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v1
@@ -22,14 +23,17 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # - name: Build
-      #   uses: andstor/jsdoc-action@v1
-      #   with:
-      #     config_file: jsdoc.config.json
-      #     template: minami
+      - name: Build
+        uses: andstor/jsdoc-action@v1
+        with:
+          source_dir: ./test
+          recurse: true
+          output_dir: ./out
+          config_file: jsdoc.config.json
+          template_name: minami
 
-      - name: Generate Documentation
-        run: npx jsdoc -c jsdoc.config.json
+      # - name: Generate Documentation
+      #   run: npx jsdoc -c jsdoc.config.json
 
       # - name: Setup Git Identity
       #   run: |
