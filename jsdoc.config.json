@@ -5,7 +5,7 @@
       "excludePattern": "(^|\\/|\\\\)_"
     },
     "opts": {
-      "destination": "/home/runner/work/cse110-sp24-group20/docs/"
+      "destination": "./docs/"
     }
   }
   
