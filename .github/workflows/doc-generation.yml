@@ -37,7 +37,7 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: "Generated JSDocs"
-          add: "docs/*"
+          add: "./docs"
 
       # - name: Generate Documentation
       #   run: npx jsdoc -c jsdoc.config.json
