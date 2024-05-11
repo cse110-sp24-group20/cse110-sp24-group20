@@ -8,11 +8,12 @@ on:
       - Documentation-Generate
 
 jobs:
+  - name: Checkout code
+    uses: actions/checkout@v2
+    
   build-docs:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
 
       - name: Set up Node.js
         uses: actions/setup-node@v1
