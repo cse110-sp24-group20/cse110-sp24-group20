@@ -25,7 +25,7 @@ class Calculator {
      * Subtracts the second number from the first.
      * @param {number} a The first number.
      * @param {number} b The second number.
-     * @returns {number} Difference between a and b.
+     * @returns {number} Difference between a and b..
      */
     subtract(a, b) {
         return a - b;
