@@ -33,8 +33,14 @@ jobs:
       #     config_file: jsdoc.config.json
       #     template: clean-jsdoc-theme
 
-      - name: Generate Documentation
-        run: npx jsdoc -c jsdoc.config.json
+      - name: Build
+        uses: erikyo/tsdoc-action@v1
+        with:
+          source_dir: ./test/*
+          output_dir: ./docs
+
+      # - name: Generate Documentation
+      #   run: npx jsdoc -c jsdoc.config.json
 
       # - name: Commit and Push Documentation
       #   run: |
