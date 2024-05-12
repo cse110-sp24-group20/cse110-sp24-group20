@@ -4,7 +4,7 @@ parent: Decisions
 nav_order: 100
 title: ADR 2024-05-12 - Implement Space-Themed Calendar Feature
 
-status: accepted
+status: pending
 date: 2024-05-12
 deciders: Team Lead - Brandon Rogers, Yvanna Cardenas
 consulted: Kashish Jain
