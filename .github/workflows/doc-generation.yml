@@ -1,0 +1,40 @@
+name: Generate JSDoc Documentation
+
+on:
+  push:
+    branches:
+      - main
+      - CI/CD-pipeline
+      - Documentation-Generate
+
+jobs:
+  build-docs:
+    permissions:
+      contents: write
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "v16.18.0"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        uses: andstor/jsdoc-action@v1
+        with:
+          source_dir: ./src
+          recurse: true
+          output_dir: ./docs
+          template: clean-jsdoc-theme
+
+      - name: Commit JSDOCS
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "Generated JSDocs"
+          add: "./docs"
