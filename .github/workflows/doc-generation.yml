@@ -1,11 +1,6 @@
 name: Generate JSDoc Documentation
 
-on:
-  push:
-    branches:
-      - main
-      - CI/CD-pipeline
-      - Documentation-Generate
+on: [push]
 
 jobs:
   build-docs:
