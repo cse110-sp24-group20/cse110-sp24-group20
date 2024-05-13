@@ -1,0 +1,11 @@
+# Status Report
+### Linting and Code Style Enforcement
+### Code Quality via Tool
+- Tool choice: We compared Codeclimate and Codacy then found that Codacy is more straightforward and powerful to use.
+- Procedure: We first followed the instructions on Codacy to link our team repository to Codacy, so that the platform could get access to the code we would be writing. Then, we created a new branch on our repository that contains the same content as the CI/CD branch but some extra empty lines in ci-cd.yml and apply Codacy to this branch as a safety test. We let Codacy run the code on this branch and received 0 issues. Then we repeated this process again for the CI/CD branch. This time instead of testing from Codacy platform, we tried it from GitHub by submitting a pull request directly, and after checking conflicts both GitHub and Codacy indicated that the code quality is in a good standard. It is our first time trying to detect code quality via tools, so we realized applying tools like Codacy is very secure and helpful for our code development.    
+- Exception: We did not realize our repository did not have a docs/ folder for Codacy to ignore and this caused trouble for later procedures like merging the jsdocs branch. We resolved the issue by changing the default branch to documenation-generate branch and ignored the docs/ folder. 
+### Code Quality via Human Review
+### Unit Tests via Automation
+### Documentation Automation
+### E2E Testing
+Our team recognizes the importance of end to end “E2E” testing as it ensures the reliability of our software product. We have yet to fully incorporate E2E testing into our development process, but plan to implement it as soon as we step foot into our development process. We will first plan what parts of our software needs to be tested, and set up a testing environment. Then, we will be able to identify scenarios and make test scripts accordingly. Integrating E2E testing frameworks into our continuous integration and delivery pipelines is a priority as we understand how important it is to enable automated testing across our entire stack.
