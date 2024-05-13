@@ -6,6 +6,9 @@
 - Exception: We did not realize our repository did not have a docs/ folder for Codacy to ignore and this caused trouble for later procedures like merging the jsdocs branch. We resolved the issue by changing the default branch to documenation-generate branch and ignored the docs/ folder. 
 ### Code Quality via Human Review
 ### Unit Tests via Automation
+- Tool Choice: We opted for Jest due to its widespread adoption and robust support for JavaScript-based applications. Its library and capabilities make it particularly useful for our needs.
+- Procedure: We first added Jest as a step in our GitHub Actions CI pipeline. To implement this, we configured a .github/workflows/ci-cd.yml file where we specified Jest as a command to run tests. Then we create the `__tests__/pipeline.test.js` file that will contain all future unit tests. There is a formatted standard in the file to ensure that each unit test will be isolated, focusing on one function or module at a time.
+- Running Tests: On every push or pull request, the tests are automatically executed. If a test fails, the workflow stops, preventing merging until issues are resolved.
 ### Documentation Automation
 ### E2E Testing
 Our team recognizes the importance of end to end “E2E” testing as it ensures the reliability of our software product. We have yet to fully incorporate E2E testing into our development process, but plan to implement it as soon as we step foot into our development process. We will first plan what parts of our software needs to be tested, and set up a testing environment. Then, we will be able to identify scenarios and make test scripts accordingly. Integrating E2E testing frameworks into our continuous integration and delivery pipelines is a priority as we understand how important it is to enable automated testing across our entire stack.
