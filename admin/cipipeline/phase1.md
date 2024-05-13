@@ -1,6 +1,9 @@
 # Status Report
 ### Linting and Code Style Enforcement
 ### Code Quality via Tool
+- Tool choice: We compared Codeclimate and Codacy then found that Codacy is more straightforward and powerful to use.
+- Procedure: We first followed the instructions on Codacy to link our team repository to Codacy, so that the platform could get access to the code we would be writing. Then, we created a new branch on our repository that contains the same content as the CI/CD branch but some extra empty lines in ci-cd.yml and apply Codacy to this branch as a safety test. We let Codacy run the code on this branch and received 0 issues. Then we repeated this process again for the CI/CD branch. This time instead of testing from Codacy platform, we tried it from GitHub by submitting a pull request directly, and after checking conflicts both GitHub and Codacy indicated that the code quality is in a good standard. It is our first time trying to detect code quality via tools, so we realized applying tools like Codacy is very secure and helpful for our code development.    
+- Exception: We did not realize our repository did not have a docs/ folder for Codacy to ignore and this caused trouble for later procedures like merging the jsdocs branch. We resolved the issue by changing the default branch to documenation-generate branch and ignored the docs/ folder. 
 ### Code Quality via Human Review
 ### Unit Tests via Automation
 ### Documentation Automation
