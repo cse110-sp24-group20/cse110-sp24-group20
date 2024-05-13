@@ -76,14 +76,6 @@ class Calculator {
     getMemory() {
         return this.memory;
     }
-
-    /**
-     * Retrieves the number stored in Money.
-     * @returns {number} Number stored in Money.
-     */
-    getMoney() {
-        return this.memory;
-    }
 }
 
 module.exports = Calculator;
