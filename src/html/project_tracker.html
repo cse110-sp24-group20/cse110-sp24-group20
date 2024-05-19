@@ -1,51 +1,60 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Tracker</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="project-tracker">
-        <h1>Project Tracker</h1>
-        <div class="projects">
-            <div class="project">
-                <span>Project A</span>
-                <div class="rocket"></div>
-                <div id="projectAprogress">
-                    <input type="range" name="bar" id="Abar" value="13" min="0" max="100" step="1" />
-                  </div>
+    <!--Head: Contains metadata about the HTML document-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project Tracker</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <!--Body: Contains the visible content of the HTML document-->
+    <body>
+        <!--Div for project-tracker component-->
+        <div class="project-tracker">
+            <h1>Project Tracker</h1>
+            <!--Div containing all projects-->
+            <div class="projects">
+                <!--Project element with respective name, rocket (same for all), and progress slider-->
+                <div class="project">
+                    <span>Project A</span>
+                    <div class="rocket"></div>
+                    <div id="projectAprogress">
+                        <input type="range" name="bar" id="Abar" value="13" min="0" max="100" step="1" />
+                    </div>
+                </div>
+                <!--Project element with respective name, rocket (same for all), and progress slider-->
+                <div class="project">
+                    <span>Project B</span>
+                    <div class="rocket"></div>
+                    <div id="projectBprogress">
+                        <input type="range" name="bar" id="Bbar" value="13" min="0" max="100" step="1" />
+                    </div>
+                </div>
+                <!--Project element with respective name, rocket (same for all), and progress slider-->
+                <div class="project">
+                    <span>Project C</span>
+                    <div class="rocket"></div>
+                    <div id="projectCprogress">
+                        <input type="range" name="bar" id="Cbar" value="13" min="0" max="100" step="1" />
+                    </div>
+                </div>
+                <!--Project element with respective name, rocket (same for all), and progress slider-->
+                <div class="project">
+                    <span>Project D</span>
+                    <div class="rocket"></div>
+                    <div id="projectCprogress">
+                        <input type="range" name="bar" id="Dbar" value="13" min="0" max="100" step="1" />
+                    </div>
+                </div>
             </div>
-            <div class="project">
-                <span>Project B</span>
-                <div class="rocket"></div>
-                <div id="projectBprogress">
-                    <input type="range" name="bar" id="Bbar" value="13" min="0" max="100" step="1" />
-                  </div>
-            </div>
-            <div class="project">
-                <span>Project C</span>
-                <div class="rocket"></div>
-                <div id="projectCprogress">
-                    <input type="range" name="bar" id="Cbar" value="13" min="0" max="100" step="1" />
-                  </div>
-            </div>
-            <div class="project">
-                <span>Project D</span>
-                <div class="rocket"></div>
-                <div id="projectCprogress">
-                    <input type="range" name="bar" id="Dbar" value="13" min="0" max="100" step="1" />
-                  </div>
+            <!--Buttons for navigating to other features or home menu-->
+            <div class="buttons">
+                <button onclick="location.href='reflect.html'">Tra</button>
+                <button onclick="location.href='daySchedule.html'">ScheDay</button>
+                <button onclick="location.href='monthSchedule.html'">ScheMonth</button>
+                <button onclick="location.href='index.html'">back</button>
             </div>
         </div>
-        <div class="buttons">
-            <button onclick="location.href='reflect.html'">Tra</button>
-            <button onclick="location.href='daySchedule.html'">ScheDay</button>
-            <button onclick="location.href='monthSchedule.html'">ScheMonth</button>
-            <button onclick="location.href='index.html'">back</button>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
