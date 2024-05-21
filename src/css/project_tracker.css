@@ -1,30 +1,51 @@
-table {
-    width: 75%;
-    border-collapse: collapse;
-    height: 500px;
-    justify-content: center;
-    align-items: center;
+/* Styling for the header */
+.project-tracker h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Styling for the projects container */
+.projects {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     position: absolute;
-    top: 10px;
+    top: 100px;
     right: 0;
     bottom: 0;
-    left: 360px;
+    left: 400px;
 }
-  
-th, td {
-    border: 5px solid black;
-    text-align: center;
-    padding: 8px;
+
+/* Styling for each project */
+.project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-top: 50px;
 }
-  
-/* th {
-    background-color: #f2f2f2;
-} */
-  
-caption {
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 1.5em;
+
+/* Styling for the progress sliders */
+input[type="range"] {
+    width: 50%;
+    height: 8px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    position: absolute;
+    left: 150px; /* Align the slider with the project text */
+}
+
+/* Styling for project names */
+.project span {
+    width: 100px;
+    font-size: 18px;
+    color: #333;
 }
 .home-menu button {
     width: 100px;
@@ -40,24 +61,26 @@ caption {
 }
 
 .home-menu button:hover {
-    background-color: #45a049;
+    background-color: #4556a0;
 }
+
 .reflect-button {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 300px;
+    top: 100px;
     right: 0;
     bottom: 0;
     left: 200px;
 }
+
 .day-schedule-button {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 400px;
+    top: 250px;
     right: 0;
     bottom: 0;
     left: 120px;
@@ -75,7 +98,7 @@ caption {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 665px;
+    top: 500px;
     right: 0;
     bottom: 0;
     left: 232px;
@@ -86,7 +109,7 @@ caption {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 550px;
+    top: 400px;
     right: 0;
     bottom: 0;
     left: 50px;
@@ -100,9 +123,29 @@ caption {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 620px;
+    top: 450px;
     right: 0;
     bottom: 0;
     left: 180px;
     transform: rotate(270deg);
+}
+
+.add_button {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.add_button:hover {
+    background-color: #4e4caf;
+    color: white;
+    border-color: #5645a0;
 }
