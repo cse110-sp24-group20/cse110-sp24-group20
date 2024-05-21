@@ -51,7 +51,7 @@ input[type="range"] {
     border-radius: 50%; 
     margin: 20px;
     background-color: transparent; 
-    color: balck;
+    color: black;
     font-size: 16px;
     cursor: pointer;
     border: none;
@@ -59,7 +59,28 @@ input[type="range"] {
 }
 
 .home-menu button:hover {
-    background-color: #4556a0;
+    background-color: #4c63ca;
+}
+
+.add_button {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 17%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.add_button:hover {
+    background-color: #4c63ca;
+    color: white;
+    border-color: #4c63ca;
 }
 
 .reflect-button {
@@ -73,6 +94,11 @@ input[type="range"] {
     left: 200px;
 }
 
+.reflect-button:hover {
+    background-color: rgba(81, 113, 199, 0.8);
+    color: white;
+}
+
 .day-schedule-button {
     display: flex;
     justify-content: center;
@@ -84,25 +110,12 @@ input[type="range"] {
     left: 120px;
 }
 
-.home-button {
-    width: 100px;
-    height: 100px;
-    background-color: transparent; 
-    color: balck;
-    font-size: 20px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 500px;
-    right: 0;
-    bottom: 0;
-    left: 232px;
+.day-schedule-button:hover {
+    background-color: rgba(81, 113, 199, 0.8);
+    color: white;
 }
 
-.project-button {
+.month-schedule-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,37 +126,59 @@ input[type="range"] {
     left: 50px;
 }
 
-.spaceship {
-    width: 200px;
-    height: 200px;
-    background-color: transparent;
+.month-schedule-button:hover {
+    background-color: rgba(81, 113, 199, 0.8);
+    color: white;
+}
+
+.home-button-container {
+    width: 100px;
+    height: 100px;
+    background-color: transparent; 
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 450px;
+    top: 500px;
     right: 0;
     bottom: 0;
-    left: 180px;
+    left: 232px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.home-button-container:hover {
+    /*background-color: #4c63ca; */
+    color: white; 
+}
+
+.home-button-container:hover .spaceship {
+    filter: hue-rotate(360deg);
+}
+
+.home-button-container .spaceship {
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
     transform: rotate(270deg);
+    transition: filter 0.3s ease;
 }
 
-.add_button {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.home-button-container .home-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
     font-size: 24px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
 }
 
-.add_button:hover {
-    background-color: #4e4caf;
+.home-button-container:hover .home-text {
     color: white;
-    border-color: #5645a0;
 }

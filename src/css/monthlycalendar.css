@@ -11,9 +11,16 @@ table {
     left: 360px;
 }
   
-th, td {
+th {
     border: 5px solid black;
     text-align: center;
+    padding: 8px;
+}
+
+td {
+    border: 5px solid black;
+    vertical-align: text-top;
+    text-align: left;
     padding: 8px;
 }
   
@@ -32,7 +39,7 @@ caption {
     border-radius: 50%; 
     margin: 20px;
     background-color: transparent; 
-    color: balck;
+    color: black;
     font-size: 16px;
     cursor: pointer;
     border: none;
@@ -40,8 +47,9 @@ caption {
 }
 
 .home-menu button:hover {
-    background-color: #45a049;
+    background-color: rgba(69, 160, 73, 0.8);
 }
+
 .reflect-button {
     display: flex;
     justify-content: center;
@@ -52,6 +60,12 @@ caption {
     bottom: 0;
     left: 200px;
 }
+
+.reflect-button:hover {
+    background-color: rgba(69, 160, 73, 0.8);
+    color: white;
+}
+
 .day-schedule-button {
     display: flex;
     justify-content: center;
@@ -63,22 +77,9 @@ caption {
     left: 120px;
 }
 
-.home-button {
-    width: 100px;
-    height: 100px;
-    background-color: transparent; 
-    color: balck;
-    font-size: 20px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 665px;
-    right: 0;
-    bottom: 0;
-    left: 232px;
+.day-schedule-button:hover {
+    background-color: rgba(69, 160, 73, 0.8);
+    color: white;
 }
 
 .project-button {
@@ -92,10 +93,18 @@ caption {
     left: 50px;
 }
 
-.spaceship {
+.project-button:hover {
+    background-color: rgba(69, 160, 73, 0.8);
+    color: white;
+}
+
+.home-button-container {
     width: 200px;
     height: 200px;
-    background-color: transparent;
+    background-color: transparent; 
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,5 +113,39 @@ caption {
     right: 0;
     bottom: 0;
     left: 180px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.home-button-container:hover {
+    /*background-color: #45a049; */
+    color: white; 
+}
+
+.home-button-container:hover .spaceship {
+    filter: hue-rotate(360deg);
+}
+
+.home-button-container .spaceship {
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
     transform: rotate(270deg);
+    transition: filter 0.3s ease;
+}
+
+.home-button-container .home-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.home-button-container:hover .home-text {
+    color: white;
 }
