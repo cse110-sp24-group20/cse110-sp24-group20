@@ -47,7 +47,7 @@ caption {
 }
 
 .home-menu button:hover {
-    background-color: rgba(69, 160, 73, 0.8);
+    background-color: rgba(69, 160, 73, 80%);
 }
 
 .reflect-button {
