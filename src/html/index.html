@@ -4,12 +4,16 @@
     <head>
         <meta charset="UTF-8"> <!--Character encoding for the document-->
         <title>Devlog Journal Homepage</title><!--Title of the HTML Document-->
-        <link rel="stylesheet" type="text/css" href="style.css"><!--Link to external CSS stylesheet-->
+        <link rel="stylesheet" type="text/css" href="../css/index.css"><!--Link to external CSS stylesheet-->
         <link rel="icon" type="image/x-icon" href="/img/Team20_spaceShip-export.png"><!--Link to favicon-->
     </head>
     <!--Body: Contains the visible content of the HTML document-->
     <body>
         <!--Home menu section for each of the four main buttons to be stylized-->
+        <video autoplay muted loop id="spaceVideo">
+            <source src="../video/space.mp4" type="video/mp4">
+        </video>
+        <img class="spaceship" src="../image/spaceship (1).png" alt="image">
         <div class="home-menu">
             <button class="day-schedule-button" onclick="location.href='daySchedule.html'">Schedule Your Day</a>
             <button class="reflect-button" onclick="location.href='reflect.html'">Reflect on the Day</a>

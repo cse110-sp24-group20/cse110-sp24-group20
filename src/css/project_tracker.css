@@ -1,0 +1,184 @@
+.project-tracker h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+.projects {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 400px;
+}
+
+
+.project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+input[type="range"] {
+    width: 50%;
+    height: 8px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    position: absolute;
+    left: 150px; 
+}
+
+.project span {
+    width: 100px;
+    font-size: 18px;
+    color: #333;
+}
+
+.home-menu button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    margin: 20px;
+    background-color: transparent; 
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border: 2px solid black;
+}
+
+.home-menu button:hover {
+    background-color: #4c63ca;
+}
+
+.add_button {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 17%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.add_button:hover {
+    background-color: #4c63ca;
+    color: white;
+    border-color: #4c63ca;
+}
+
+.reflect-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 200px;
+}
+
+.reflect-button:hover {
+    background-color: rgba(81, 113, 199, 80%);
+    color: white;
+}
+
+.day-schedule-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 250px;
+    right: 0;
+    bottom: 0;
+    left: 120px;
+}
+
+.day-schedule-button:hover {
+    background-color: rgba(81, 113, 199, 0.8);
+    color: white;
+}
+
+.month-schedule-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 400px;
+    right: 0;
+    bottom: 0;
+    left: 50px;
+}
+
+.month-schedule-button:hover {
+    background-color: rgba(81, 113, 199, 0.8);
+    color: white;
+}
+
+.home-button-container {
+    width: 100px;
+    height: 100px;
+    background-color: transparent; 
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 500px;
+    right: 0;
+    bottom: 0;
+    left: 232px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.home-button-container:hover {
+    /*background-color: #4c63ca; */
+    color: white; 
+}
+
+.home-button-container:hover .spaceship {
+    filter: hue-rotate(360deg);
+}
+
+.home-button-container .spaceship {
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    transform: rotate(270deg);
+    transition: filter 0.3s ease;
+}
+
+.home-button-container .home-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.home-button-container:hover .home-text {
+    color: white;
+}

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>May 2024 Calendar</title>
+    <link rel="stylesheet" type="text/css" href="../css/monthlycalendar.css">
   </head>
   <!--Body: Contains the visible content of the HTML document-->
   <body>
@@ -82,11 +83,18 @@
           </tr>
         </tbody>
     </table>
-  <!--Buttons for navigating to other features or home menu-->
-  <button onclick="location.href='index.html'">Home</button>
-  <button onclick="location.href='reflect.html'">Reflect on the Day</button>
-  <button onclick="location.href='project_tracker.html'">Track a Project</button>
-  <button onclick="location.href='daySchedule.html'">Schedule Your Day</button>
+    <!--Buttons for navigating to other features or home menu-->
+    <div class="home-menu">
+      <button class="day-schedule-button" onclick="location.href='daySchedule.html'">Schedule Your Day</button>
+      <button class="reflect-button" onclick="location.href='reflect.html'">Reflect on the Day</button>
+      <button class="project-button" onclick="location.href='project_tracker.html'">Track a Project</button>
+    </div>
 
+    <div class="home">
+      <div class="home-button-container" onclick="location.href='index.html'">
+        <img class="spaceship" src="../image/spaceship (1).png" alt="image">
+        <span class="home-text">Home</span>
+      </div>
+    </div>
   </body>
 </html>
