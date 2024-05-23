@@ -95,7 +95,7 @@ input[type="range"] {
 }
 
 .reflect-button:hover {
-    background-color: rgba(81, 113, 199, 0.8);
+    background-color: rgba(81, 113, 199, 80%);
     color: white;
 }
 
