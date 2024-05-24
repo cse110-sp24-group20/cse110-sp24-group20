@@ -76,7 +76,7 @@ To ensure our project remains stable and bug-free as it travels through the cosm
 - [Design and Inspiration Board](https://miro.com/app/board/uXjVKNISHwk=/?share_link_id=576063224816)<br>
 - [Starting Pitch Slides](https://docs.google.com/presentation/d/1XM8Uf43_SsPsqYF8VAFeeAE-i8acFYfE/edit?usp=sharing&ouid=111349215821081964117&rtpof=true&sd=true)
 
-## Team Agenda and Action Plans (UCSD Restricted):
+## Team Agenda and Action Plans (UCSD Restricted)
 - [Week 2 - Group Kickoff and Team Branding](https://docs.google.com/document/d/1yzLrVUtwJmrQ68DPAA6afpxohxKKO2E4eC-_4uID680/edit)
 - [Week 3 - Team Contract](https://docs.google.com/document/d/15mF2mpcLLf5Oe0fnNDoXHUj939dCAirqgcebsFFDy-w/edit)
 - [Week 4 - Sentiment Widget Planning](https://docs.google.com/document/d/1ysq4WFbjsmEBw-Oj4d_Fahja3ulLQXkpKWMOmJw4Wbw/edit)
