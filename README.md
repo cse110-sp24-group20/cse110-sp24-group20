@@ -10,6 +10,12 @@ This is the repository for Team 404! A project group for cse110 at UCSD aimed at
 ### Final Project Team assignments and feature outline not already in ADRs: 
 [https://docs.google.com/document/d/1dZmwqVCs0ZC4plcDEWnxN-K4PJR0swP2MpI4Dj3yGbQ/edit?usp=sharing](https://docs.google.com/document/d/1dZmwqVCs0ZC4plcDEWnxN-K4PJR0swP2MpI4Dj3yGbQ/edit?usp=sharing)
 
-
-
+## Testing Utilized and General Build Process
+- Jest unit testing
+- Protected main branch, requires human review and testing
+- Codacy Automatic review
+- Dedicated PR review team
+- E2E Testing with Puppetteer (pending)
+  
+## Team Page:
 [Team Page](https://cse110-sp24-group20.github.io/cse110-sp24-group20/admin/team.html)
