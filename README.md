@@ -71,16 +71,21 @@ To ensure our project remains stable and bug-free as it travels through the cosm
 *TODO: Explain how the gproject tracker works with all its buttons*
 
 ## Important Links
-[Team Page](https://cse110-sp24-group20.github.io/cse110-sp24-group20/admin/team.html) <br>
-[Sentiment Widget](https://cse110-sp24-group20.github.io/warmup-exercise/) <br>
-[Design and Inspiration Board](https://miro.com/app/board/uXjVKNISHwk=/?share_link_id=576063224816)
+-  [Team Page](https://cse110-sp24-group20.github.io/cse110-sp24-group20/admin/team.html) <br>
+- [Sentiment Widget](https://cse110-sp24-group20.github.io/warmup-exercise/) <br>
+- [Design and Inspiration Board](https://miro.com/app/board/uXjVKNISHwk=/?share_link_id=576063224816)<br>
+- [Starting Pitch Slides](https://docs.google.com/presentation/d/1XM8Uf43_SsPsqYF8VAFeeAE-i8acFYfE/edit?usp=sharing&ouid=111349215821081964117&rtpof=true&sd=true)
 
-## Team Assignments and Action Plans (UCSD Restricted):
-- [Week 5]()<br>
-- [Week 5]()<br>
-- [Week 5]()<br>
-- [Week 6 - ADR/Pipeline assignments](https://docs.google.com/document/d/1eZZqLK8mjrwdlCh4X4SJAX0UNBqJf80z57Zfoi1hcS0/edit?usp=sharing)<br>
-- [Final Project Team assignments and feature outline not already in ADRs](https://docs.google.com/document/d/1dZmwqVCs0ZC4plcDEWnxN-K4PJR0swP2MpI4Dj3yGbQ/edit?usp=sharing)
+## Team Agenda and Action Plans (UCSD Restricted):
+- [Week 2 - Group Kickoff and Team Branding](https://docs.google.com/document/d/1yzLrVUtwJmrQ68DPAA6afpxohxKKO2E4eC-_4uID680/edit)
+- [Week 3 - Team Contract](https://docs.google.com/document/d/15mF2mpcLLf5Oe0fnNDoXHUj939dCAirqgcebsFFDy-w/edit)
+- [Week 4 - Sentiment Widget Planning](https://docs.google.com/document/d/1ysq4WFbjsmEBw-Oj4d_Fahja3ulLQXkpKWMOmJw4Wbw/edit)
+- [Week 5 - Brainstorming/Starting Pitch](https://docs.google.com/document/d/1mrsB5nUFdbxZu8t8xpUFAwBF3jD9fcPrrDOP-OsmXrE/edit)
+- [Week 6 - ADR/Pipeline assignments](https://docs.google.com/document/d/1eZZqLK8mjrwdlCh4X4SJAX0UNBqJf80z57Zfoi1hcS0/edit?usp=sharing)
+- [Week 7 - Final Project Team assignments and Feature Outline](https://docs.google.com/document/d/1dZmwqVCs0ZC4plcDEWnxN-K4PJR0swP2MpI4Dj3yGbQ/edit?usp=sharing)
+- [Week 8 - Team Progress Check](https://docs.google.com/document/d/1jyHvgMBJ21IVbKARUtSgecBZsP3IoNrsW3pQSRrcHDA/edit)
+- [Week 9 - ]()
+- [Week 10 - ]()
 
 
 
