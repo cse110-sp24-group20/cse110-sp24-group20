@@ -8,7 +8,7 @@ Team 404 is committed to exploring the vast universe of software development. Ou
 ## Our Repository
 Our repository is the command center of our project. Here's your mission briefing on its layout:
 -  **admin/**: Contains all administrative resources, including our Team 404 branding assets, CI/CD pipeline information, meeting notes, and weekly progress reports.
--  **design in specs/**: Houses all our design boards for the homepage and each individual feature, created on Miro.
+- **design in specs/**: Houses all our design boards for the homepage and each individual feature, created on Miro.
 -  **docs/**: <span style="color:pink">I do not know what's in here, can someone add pls</span>
 -  **img/**: Contains useful elements'images like our emoticons, the planets shown throughout the project, and other miscellaneous animations.
 -  **specs/**: Contains our ADRs, individual team member brainstorms, and our pitch slides.
