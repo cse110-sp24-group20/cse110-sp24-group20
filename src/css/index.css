@@ -1,3 +1,24 @@
+/*Media Queries: Define CSS rules based on screen width
+@media (max-width: 599px) {
+    :root {
+        --font_size: 6px;
+    }
+  }
+  @media (min-width: 600px) and (max-width: 1023px) {
+    :root {
+        --font_size: 8px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    :root {
+        --font_size: 10px;
+    }
+  }
+*/
+
+
+
 #spaceVideo {
     position: fixed;
     right: 0;
@@ -18,10 +39,10 @@
 }
 
 .home-menu button {
-    width: 100px;
-    height: 100px;
+    width: calc(8vh + 3vw);
+    height: calc(8vh + 3vw);
     border-radius: 50%; 
-    margin: 20px;
+    /*margin: 20px;*/
     background-color: transparent; 
     color: white;
     font-size: 16px;
@@ -44,17 +65,17 @@
 }
 
 .spaceship {
-    width: 100px;
-    height: 100px;
+    width: calc(6vh + 4vw);
+    height: calc(6vh + 4vw);
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 300px;
+    top: 45vh;
     right: 0;
     bottom: 0;
-    left: 660px;
+    left: 45vw;
     transform: rotate(300deg);
     animation: spin 5s linear infinite;
 }
@@ -64,10 +85,10 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 100px;
+    top: 15vh;
     right: 0;
     bottom: 0;
-    left: 650px;
+    left: 45vw;
 }
 
 .day-schedule-button {
@@ -75,10 +96,10 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 500px;
+    top: 72vh;
     right: 0;
     bottom: 0;
-    left: 650px;
+    left: 45vw;
 }
 
 .month-schedule-button {
@@ -86,10 +107,10 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 300px;
+    top: 45vh;
     right: 0;
     bottom: 0;
-    left: 350px;
+    left: 23vw;
 }
 
 .project-button {
@@ -97,8 +118,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 300px;
+    top: 45vh;
     right: 0;
     bottom: 0;
-    left: 950px;
+    left: 65vw;
 }
