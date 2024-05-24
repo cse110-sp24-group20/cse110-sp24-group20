@@ -60,6 +60,7 @@ Our repository is the command center of our project. Here's your mission briefin
 
 ### Testing Utilized and General Build Process
 To ensure our project remains stable and bug-free as it travels through the cosmos, we employ a rigourous testing and review process:
+
 - **Jest Unit Testing**: Every component is tested to ensure it functions correctly.
 - **Protected Main Branch**: All changes to the main branch require human review and testing. 
 - **Codacy Automatic Review**: Our code is automatically reviewed for quality and consistency.
