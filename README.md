@@ -7,12 +7,12 @@ Team 404 is committed to exploring the vast universe of software development. Ou
 
 ## Our Repository
 Our repository is the command center of our project. Here's your mission briefing on its layout:
--  **admin/**: Contains all administrative resources, including our Team 404 branding assets, CI/CD pipeline information, meeting notes, and weekly progress reports.
--  **design in specs/**: Houses all our design boards for the homepage and each individual feature, created on Miro.
--  **docs/**: <span style="color:pink">I do not know what's in here, can someone add pls</span>
--  **img/**: Contains useful elements'images like our emoticons, the planets shown throughout the project, and other miscellaneous animations.
--  **specs/**: Contains our ADRs, individual team member brainstorms, and our pitch slides.
--  **src/**: The core of our project where all the source code resides. 
+- `admin/`: Contains all administrative resources, including our Team 404 branding assets, CI/CD pipeline information, meeting notes, and weekly progress reports.
+- `design in specs/`: Houses all our design boards for the homepage and each individual feature, created on Miro.
+- `docs/`: <span style="color:pink">I do not know what's in here, can someone add pls</span>
+- `img/`: Contains useful elements'images like our emoticons, the planets shown throughout the project, and other miscellaneous animations.
+- `specs/`: Contains our ADRs, individual team member brainstorms, and our pitch slides.
+- `src/`: The core of our project where all the source code resides. 
 
 ## Developer Journal
 ### How To Use
@@ -29,7 +29,8 @@ Our repository is the command center of our project. Here's your mission briefin
    ```
 
 3. **Deploy the Journal on Vercel**: Follow these steps to deploy your developer journal website using Vercel:
-   1. **Create a Vercel Account**: Go to [Vercel](https://vercel.com/) and sign up for a free account using your GitHub, GitLab, or Bitbucket account.
+   
+   1. **Create a Vercel Account**: Go to [Vercel](https://vercel.com/) and sign up for a free account using your GitHub account.
     
     2. **Import the Project from GitHub**:
         - In your Vercel dashboard, click on "New Project".
@@ -53,9 +54,7 @@ Our repository is the command center of our project. Here's your mission briefin
    ```
    Open your browser and navigate to `http:localhost:3000` to start using the developer journal.
    
-<br>
-*Check out our demo video for a guided tour of the finished product: [Demo Video Link]()*
-<br>
+<br>*Check out our demo video for a guided tour of the finished product: [Demo Video Link]()*<br>
 <span style="color:red">**INSERT DEMO VIDEO ONCE COMPLETED** </span> 
 
 ### Testing Utilized and General Build Process
@@ -71,9 +70,9 @@ To ensure our project remains stable and bug-free as it travels through the cosm
 *TODO: Explain how the gproject tracker works with all its buttons*
 
 ## Important Links
--  [Team Page](https://cse110-sp24-group20.github.io/cse110-sp24-group20/admin/team.html) <br>
-- [Sentiment Widget](https://cse110-sp24-group20.github.io/warmup-exercise/) <br>
-- [Design and Inspiration Board](https://miro.com/app/board/uXjVKNISHwk=/?share_link_id=576063224816)<br>
+-  [Team Page](https://cse110-sp24-group20.github.io/cse110-sp24-group20/admin/team.html)
+- [Sentiment Widget](https://cse110-sp24-group20.github.io/warmup-exercise/)
+- [Design and Inspiration Board](https://miro.com/app/board/uXjVKNISHwk=/?share_link_id=576063224816)
 - [Starting Pitch Slides](https://docs.google.com/presentation/d/1XM8Uf43_SsPsqYF8VAFeeAE-i8acFYfE/edit?usp=sharing&ouid=111349215821081964117&rtpof=true&sd=true)
 
 ## Team Agenda and Action Plans (UCSD Restricted):
@@ -84,8 +83,8 @@ To ensure our project remains stable and bug-free as it travels through the cosm
 - [Week 6 - ADR/Pipeline assignments](https://docs.google.com/document/d/1eZZqLK8mjrwdlCh4X4SJAX0UNBqJf80z57Zfoi1hcS0/edit?usp=sharing)
 - [Week 7 - Final Project Team assignments and Feature Outline](https://docs.google.com/document/d/1dZmwqVCs0ZC4plcDEWnxN-K4PJR0swP2MpI4Dj3yGbQ/edit?usp=sharing)
 - [Week 8 - Team Progress Check](https://docs.google.com/document/d/1jyHvgMBJ21IVbKARUtSgecBZsP3IoNrsW3pQSRrcHDA/edit)
-- [Week 9 - ]()
-- [Week 10 - ]()
+- [Week 9]()
+- [Week 10]()
 
 
 
