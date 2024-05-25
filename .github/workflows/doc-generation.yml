@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-      - CI/CD-pipeline
-      - Documentation-Generate
       - js-team1
       - js-team2
 
