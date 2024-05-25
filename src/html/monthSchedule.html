@@ -6,96 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>May 2024 Calendar</title>
     <link rel="stylesheet" type="text/css" href="../css/monthlycalendar.css">
-    <script src="../javaScript/monthlyCalendar.js"></script>
   </head>
   <!--Body: Contains the visible content of the HTML document-->
   <body>
     <!--Create calendar for the current month using html table-->
-    <table>
-      <!--Caption used to indicate current month-->
-      <caption>May 2024</caption>
-        <!--Table header containing days of the week-->
-        <thead>
-          <tr>
-            <th>Sun</th>
-            <th>Mon</th>
-            <th>Tue</th>
-            <th>Wed</th>
-            <th>Thu</th>
-            <th>Fri</th>
-            <th>Sat</th>
-          </tr>
-        </thead>
-        <!--Table body containing rows with cells for each individual day-->
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>1</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>11</td>
-            <td>12</td>
-            <td>13</td>
-            <td>14</td>
-            <td>15</td>
-            <td>16</td>
-          </tr>
-          <tr>
-            <td>17</td>
-            <td>18</td>
-            <td>19</td>
-            <td>20</td>
-            <td>21</td>
-            <td>22</td>
-            <td>23</td>
-          </tr>
-          <tr>
-            <td>24</td>
-            <td>25</td>
-            <td>26</td>
-            <td>27</td>
-            <td>28</td>
-            <td>29</td>
-            <td>30</td>
-          </tr>
-          <tr>
-            <td>31</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-    </table>
-    <!--Buttons for navigating to other features or home menu-->
-    <div class="home-menu">
-      <button class="day-schedule-button" onclick="location.href='daySchedule.html'">Schedule Your Day</button>
-      <button class="reflect-button" onclick="location.href='reflect.html'">Reflect on the Day</button>
-      <button class="project-button" onclick="location.href='project_tracker.html'">Track a Project</button>
-    </div>
-
-    <div class="home">
-      <div class="home-button-container" onclick="location.href='index.html'">
-        <img class="spaceship" src="../image/spaceship (1).png" alt="image">
-        <span class="home-text">Home</span>
+    <div class="calendar">
+      <div class="calendar-box">
+        <div class="top">
+          <select id="year" class="float"></select>
+          <span class="float">&nbsp;&nbsp;Year</span>
+          <select id="month" class="float"></select>
+          <span class="float">&nbsp;&nbsp;Month</span>
+          <br/><br/>
+        </div>
+        <table>
+            <!--Table header containing days of the week-->
+            <thead>
+              <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+              </tr>
+            </thead>
+            <!--Table body containing rows with cells for each individual day-->
+            <tbody id="tbody">
+              <!-- <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+              </tr>
+              <tr>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td>31</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr> -->
+            </tbody>
+        </table>
+      </div>
+      <!--Buttons for navigating to other features or home menu-->
+      <div class="home-menu">
+        <button class="day-schedule-button" onclick="location.href='daySchedule.html'">Schedule Your Day</button>
+        <button class="reflect-button" onclick="location.href='reflect.html'">Reflect on the Day</button>
+        <button class="project-button" onclick="location.href='project_tracker.html'">Track a Project</button>
+        <div class="home">
+          <div class="home-button-container" onclick="location.href='index.html'">
+            <img class="spaceship" src="../image/spaceship (1).png" alt="image">
+            <span class="home-text">Home</span>
+          </div>
+        </div>
       </div>
     </div>
+    <script src="../javaScript/monthlyCalendar.js"></script>
   </body>
 </html>

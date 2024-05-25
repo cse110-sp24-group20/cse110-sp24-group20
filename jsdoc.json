@@ -1,12 +1,12 @@
 {
     "source": {
-      "include": ["src"],
+      "include": ["src/javascript/"],
       "includePattern": ".+\\.js(doc|x)?$",
       "excludePattern": "(^|\\/|\\\\)_"
     },
     "opts": {
       "template": "node_modules/clean-jsdoc-theme",
-      "destination": "docs/"
+      "destination": "src/javascript/doc"
     }
   }
   
