@@ -17,42 +17,35 @@ Our repository is the command center of our project. Here's your mission briefin
 ## Developer Journal
 ### How To Use
 *Ready to launch? Here's your pre-flight checklist:*
-1. **Clone the Repository**: Download the repository to your local machine using:
-   ```bash
-   git clone https://github.com/cse110-sp24-group20/cse110-sp24-group20
-   ```
 
-2. **Install Dependencies**: Navigate to the project directory and install necessary packages:
-   ```bash
-   cd cse110-sp24-group20
-   npm install
-   ```
+1. **You can access the journal here**: [Developer Journal](https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/html/index.html)
 
-3. **Deploy the Journal on Vercel**: Follow these steps to deploy your developer journal website using Vercel:
-   
-   1. **Create a Vercel Account**: Go to [Vercel](https://vercel.com/) and sign up for a free account using your GitHub account.
-    
-    2. **Import the Project from GitHub**:
-        - In your Vercel dashboard, click on "New Project".
-        - Select "Import Git Repository".
-        - Authenticate with GitHub and select the developer journal repository.
-    
-    3. **Configure the Project**:
-       - Vercel will automatically detect the framework you're using. Confirm the settings.
-        - If your application requires environment variables, you can set them up in the Vercel dashboard under "Settings" -> "Environment Variables".
-    
-    4. **Deploy the Project**:
-        - Click "Deploy" in the Vercel dashboard.
-        - Once deployed, you can access your site at the URL provided by Vercel, typically in the format `https://<project-name>.vercel.app`.
-    
-    5. **Automatic Deployments**:
-        - Vercel will automatically redeploy your site every time you push changes to the connected branch in your GitHub repository.
-  
-4. **Access the Journal Locally**: If you want to run the project locally, start the development server:
-    ```bash
-   npm start
-   ```
-   Open your browser and navigate to `http:localhost:3000` to start using the developer journal.
+2. **Using the Homepage**:
+   - When you first visit the Developer Journal, you will be greeted by the homepage, which features a space-themed interface.
+   - The homepage displays a spaceship in the center with interactive options around it. These options are typically represented as planets, and each one corresponds to a different feature of the journal.
+   - Click on the planets (or the buttons) to navigate to different sections of the journal.
+
+3. **Features**:
+
+   **Reflect on the Day**:
+   - Click on the "Reflect on the Day" planet to open the reflection interface.
+   - Here, you can write about your day, note any significant events, feelings, or achievements.
+   - This feature helps in maintaining a daily log of your thoughts and experiences.
+
+   **Schedule Your Day**:
+   - Click on the "Schedule Your Day" planet to open the daily scheduler.
+   - You can add tasks, set reminders, and organize your day efficiently.
+   - This helps in keeping track of your daily activities and ensuring productivity.
+
+   **Schedule Your Month**:
+   - Click on the "Schedule Your Month" planet to access the monthly planner.
+   - Plan out your month by adding important dates, goals, and tasks.
+   - This feature is great for long-term planning and setting monthly objectives.
+
+   **Track a Project**:
+   - Click on the "Track a Project" planet to enter the project tracking interface.
+   - Add new projects, update progress, and manage deadlines.
+   - This feature helps you stay on top of your projects and ensures you meet your milestones.
    
 <br>*Check out our demo video for a guided tour of the finished product: [Demo Video Link]()*<br>
 <span style="color:red">**INSERT DEMO VIDEO ONCE COMPLETED** </span> 
