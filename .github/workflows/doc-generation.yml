@@ -6,6 +6,8 @@ on:
       - main
       - CI/CD-pipeline
       - Documentation-Generate
+      - js-team1
+      - js-team2
 
 jobs:
   build-docs:
