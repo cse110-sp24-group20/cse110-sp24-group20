@@ -46,10 +46,6 @@ caption {
     border: 2px solid black;
 }
 
-.home-menu button:hover {
-    background-color: rgba(69, 160, 73, 80%);
-}
-
 .reflect-button {
     display: flex;
     justify-content: center;
@@ -59,11 +55,14 @@ caption {
     right: 0;
     bottom: 0;
     left: 200px;
+    background-position: 50% 50%;
+    background-image: url(../../img/planets/small_earth.png);
 }
 
 .reflect-button:hover {
-    background-color: rgba(69, 160, 73, 0.8);
-    color: white;
+    width: 110px;
+    height: 110px;
+    background-size: 130%;    
 }
 
 .day-schedule-button {
@@ -75,11 +74,14 @@ caption {
     right: 0;
     bottom: 0;
     left: 120px;
+    background-position: 50% 50%;
+    background-image: url(../../img/planets/small_mars.png);
 }
 
 .day-schedule-button:hover {
-    background-color: rgba(69, 160, 73, 0.8);
-    color: white;
+    width: 110px;
+    height: 110px;
+    background-size: 110%;    
 }
 
 .project-button {
@@ -91,11 +93,14 @@ caption {
     right: 0;
     bottom: 0;
     left: 50px;
+    background-position: 50% 50%;
+    background-image: url(../../img/planets/small_jupiter.png);
 }
 
 .project-button:hover {
-    background-color: rgba(69, 160, 73, 0.8);
-    color: white;
+    width: 110px;
+    height: 110px;
+    background-size: 110%;    
 }
 
 .home-button-container {
