@@ -1,0 +1,275 @@
+.task1 {
+    background-color: rgb(232, 230, 230);
+    border: 1px solid #ddd;
+    width: 850px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+    font-size: 24px;
+}
+.task2 {
+    background-color: rgb(232, 230, 230);
+    border: 1px solid #ddd;
+    width: 850px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+    font-size: 24px;
+}
+.task3 {
+    background-color: rgb(232, 230, 230);
+    border: 1px solid #ddd;
+    width: 850px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+    font-size: 24px;
+}
+.task4 {
+    background-color: rgb(232, 230, 230);
+    border: 1px solid #ddd;
+    width: 850px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+    font-size: 24px;
+}
+.task5 {
+    background-color: rgb(232, 230, 230);
+    border: 1px solid #ddd;
+    width: 850px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+    font-size: 24px;
+}
+.task6 {
+    background-color: rgb(232, 230, 230);
+    border: 1px solid #ddd;
+    width: 850px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+    font-size: 24px;
+}
+.task7 {
+    background-color: rgb(232, 230, 230);
+    border: 1px solid #ddd;
+    width: 850px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+    font-size: 24px;
+}
+.task8 {
+    background-color: rgb(232, 230, 230);
+    border: 1px solid #ddd;
+    width: 850px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+}
+.task9 {
+    background-color: rgb(232, 230, 230);
+    border: 1px solid #ddd;
+    width: 850px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+    font-size: 24px;
+}
+.task10 {
+    background-color: rgb(232, 230, 230);
+    border: 1px solid #ddd;
+    width: 850px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+    font-size: 24px;
+}
+.home-menu button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    margin: 20px;
+    background-color: transparent; 
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border: 2px solid black;
+}
+
+.home-menu button:hover {
+    background-color: rgba(69, 160, 73, 80%);
+}
+.Addtask {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 17%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.reflect-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 300px;
+    right: 0;
+    bottom: 0;
+    left: 125px;
+}
+
+.reflect-button:hover {
+    background-color: rgba(69, 160, 73, 0.8);
+    color: white;
+}
+
+.day-schedule-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 400px;
+    right: 0;
+    bottom: 0;
+    left: 50px;
+}
+
+.day-schedule-button:hover {
+    background-color: rgba(69, 160, 73, 0.8);
+    color: white;
+}
+
+.project-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 550px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.project-button:hover {
+    background-color: rgba(69, 160, 73, 0.8);
+    color: white;
+}
+
+.home-button-container {
+    width: 200px;
+    height: 200px;
+    background-color: transparent; 
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    left: 180px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+}
+
+.home-button-container:hover {
+    /* background-color: #45a049; */
+    color: white; 
+}
+
+.home-button-container:hover .spaceship {
+    filter: hue-rotate(360deg);
+}
+
+.home-button-container .spaceship {
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    transform: rotate(270deg);
+    transition: filter 0.3s ease;
+}
+
+.home-button-container .home-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.home-button-container:hover .home-text {
+    color: white;
+}
+input[type="range"] {
+    width: 50%;
+    height: 8px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+    position: absolute;
+    left: 150px; 
+}
+.project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-top: 50px;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 600px;
+    right: 0;
+    bottom: 0;
+    left: 400px;
+}

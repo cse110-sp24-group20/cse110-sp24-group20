@@ -1,4 +1,43 @@
-<button onclick="location.href='index.html'">Home</button>
-<button onclick="location.href='reflect.html'">Reflect on the Day</button>
-<button onclick="location.href='project_tracker.html'">Track a Project</button>
-<button onclick="location.href='daySchedule.html'">Schedule Your Month</button>
+<!DOCTYPE html>
+<html lang="en">
+    <!--Head: Contains metadata about the HTML document-->
+    <head>
+        <meta charset="UTF-8"> <!--Character encoding for the document-->
+        <link rel="stylesheet" type="text/css" href="../css/daySchedule.css">
+        <title>Devlog Journal Homepage</title><!--Title of the HTML Document-->
+    </head>
+    <body>
+        <div class = "reflect-menu">
+            <button class="Addtask">Add task</button>
+        </div>
+        <div class = "numbers">
+            <div class="task1"></div>
+            <div class="task2"></div>
+            <div class="task3"></div>
+            <div class="task4"></div>
+            <div class="task5"></div>
+            <div class="task6"></div>
+            <div class="task7"></div>
+            <div class="task8"></div>
+            <div class="task9"></div>
+            <div class="task10"></div>
+        </div>
+        <div class="project">
+            <span>Completeness:</span>
+            <div id="Completeness">
+                <input type="range" name="bar" id="Abar" value="13" min="0" max="100" step="1" />
+            </div>
+        </div>
+        <div class="home-menu">
+            <button class="day-schedule-button" onclick="location.href='daySchedule.html'">Schedule Your Day</button>
+            <button class="reflect-button" onclick="location.href='reflect.html'">Reflect on the Day</button>
+            <button class="project-button" onclick="location.href='project_tracker.html'">Track a Project</button>
+        </div>
+        <div class="home">
+            <div class="home-button-container" onclick="location.href='index.html'">
+              <img class="spaceship" src="../../img/misc/spaceship (1).png" alt="image">
+              <span class="home-text">Home</span>
+            </div>
+        </div>
+    </body>
+</html>
