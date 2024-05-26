@@ -1,3 +1,23 @@
+@media (max-width: 599px) {
+    :root {
+        --font_size: 10px;
+        --projectName_size: 17px;
+    }
+  }
+  @media (min-width: 600px) and (max-width: 1023px) {
+    :root {
+        --font_size: 12px;
+        --projectName_size: 20px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    :root {
+        --font_size: 16px;
+        --projectName_size: 22px;
+    }
+  }
+
 .project-tracker h1 {
     text-align: center;
     color: #333;
@@ -16,7 +36,7 @@
     top: 100px;
     right: 0;
     bottom: 0;
-    left: 400px;
+    left: 25vw;
 }
 
 
@@ -36,23 +56,23 @@ input[type="range"] {
     opacity: 0.7;
     transition: opacity .2s;
     position: absolute;
-    left: 150px; 
+    left: 12vh; 
 }
 
 .project span {
     width: 100px;
-    font-size: 18px;
+    font-size: var(--projectName_size);
     color: #333;
 }
 
 .home-menu button {
-    width: 100px;
-    height: 100px;
+    width: calc(1vh + 6vw);
+    height: calc(1vh + 6vw);
     border-radius: 50%; 
     margin: 20px;
     background-color: transparent; 
     color: black;
-    font-size: 16px;
+    font-size: var(--font_size);
     cursor: pointer;
     border: none;
     border: 2px solid black;
@@ -84,18 +104,19 @@ input[type="range"] {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 100px;
+    top: 40vh;
     right: 0;
     bottom: 0;
-    left: 200px;
+    left: 10vw;
     background-position: 50% 50%;
     background-image: url(../../img/planets/small_earth.png);
+    background-size: 120%;
 }
 
 .reflect-button:hover {
-    width: 110px;
-    height: 110px;
-    background-size: 130%; 
+    width: calc(2vh + 8vw);
+    height: calc(2vh + 8vw);
+    background-size: 130%;  
 }
 
 .day-schedule-button {
@@ -103,18 +124,19 @@ input[type="range"] {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 250px;
+    top: 54vh;
     right: 0;
     bottom: 0;
-    left: 120px;
+    left: 4vw;
     background-position: 50% 50%;
     background-image: url(../../img/planets/small_mars.png);
+    background-size: 120%;
 }
 
 .day-schedule-button:hover {
-    width: 110px;
-    height: 110px;
-    background-size: 110%; 
+    width: calc(2vh + 8vw);
+    height: calc(2vh + 8vw);
+    background-size: 130%;  
 }
 
 .month-schedule-button {
@@ -122,18 +144,18 @@ input[type="range"] {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 400px;
+    top: 70vh;
     right: 0;
     bottom: 0;
-    left: 50px;
+    left: 2vw;
     background-position: 50% 50%;
     background-image: url(../../img/planets/small_neptune.png);
 }
 
 .month-schedule-button:hover {
-    width: 110px;
-    height: 110px;
-    background-size: 110%; 
+    width: calc(2vh + 8vw);
+    height: calc(2vh + 8vw);
+    background-size: 130%;  
 }
 
 .home-button-container {
@@ -147,10 +169,10 @@ input[type="range"] {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 500px;
+    top: 78vh;
     right: 0;
     bottom: 0;
-    left: 232px;
+    left: 2vw;
     border-radius: 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
     position: relative;
@@ -166,8 +188,8 @@ input[type="range"] {
 }
 
 .home-button-container .spaceship {
-    width: 200px;
-    height: 200px;
+    width: calc(3vh + 6vw);
+    height: calc(3vh + 6vw);
     background-color: transparent;
     transform: rotate(270deg);
     transition: filter 0.3s ease;
@@ -179,7 +201,7 @@ input[type="range"] {
     left: 50%;
     transform: translate(-50%, -50%);
     color: black;
-    font-size: 24px;
+    font-size: var(--font_size);
     font-family: 'Arial', sans-serif;
     font-weight: bold;
 }
