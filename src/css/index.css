@@ -2,8 +2,9 @@
     position: fixed;
     right: 0;
     bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     z-index: -1;
 }
 
@@ -22,16 +23,18 @@
     height: 100px;
     border-radius: 50%; 
     margin: 20px;
-    background-color: transparent; 
-    color: white;
+    background-color: transparent;
+    color: black;
     font-size: 16px;
     cursor: pointer;
     border: none;
-    border: 2px solid white;
+    border: 2px, white;
 }
 
-.home-menu button:hover {
-    background-color: #45a049;
+.home-menu button:hover { 
+    width: 110px;
+    height: 110px;
+    background-size: 110%;    
 }
 
 @keyframes spin {
@@ -68,6 +71,8 @@
     right: 0;
     bottom: 0;
     left: 650px;
+    background-position: 50% 50%;
+    background-image: url(../../img/planets/small_earth.png);
 }
 
 .day-schedule-button {
@@ -79,6 +84,8 @@
     right: 0;
     bottom: 0;
     left: 650px;
+    background-position: 50% 50%;
+    background-image: url(../../img/planets/small_mars.png);
 }
 
 .month-schedule-button {
@@ -90,6 +97,8 @@
     right: 0;
     bottom: 0;
     left: 350px;
+    background-position: 50% 50%;
+    background-image: url(../../img/planets/small_neptune.png);
 }
 
 .project-button {
@@ -101,4 +110,6 @@
     right: 0;
     bottom: 0;
     left: 950px;
+    background-position: 50% 50%;
+    background-image: url(../../img/planets/small_jupiter.png);
 }

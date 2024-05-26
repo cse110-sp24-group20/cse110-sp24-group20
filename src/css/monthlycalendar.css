@@ -52,18 +52,15 @@ caption {
     border: 2px solid black;
 }
 
-.home-menu button:hover {
-    background-color: rgba(69, 160, 73, 80%);
-}
-
 .reflect-button {
     margin: 0 auto;
     align-items: center;
 }
 
 .reflect-button:hover {
-    background-color: rgba(69, 160, 73, 0.8);
-    color: white;
+    width: 110px;
+    height: 110px;
+    background-size: 130%;    
 }
 
 .day-schedule-button {
@@ -73,8 +70,9 @@ caption {
 }
 
 .day-schedule-button:hover {
-    background-color: rgba(69, 160, 73, 0.8);
-    color: white;
+    width: 110px;
+    height: 110px;
+    background-size: 110%;    
 }
 
 .project-button {
@@ -84,8 +82,9 @@ caption {
 }
 
 .project-button:hover {
-    background-color: rgba(69, 160, 73, 0.8);
-    color: white;
+    width: 110px;
+    height: 110px;
+    background-size: 110%;    
 }
 
 .home-button-container {

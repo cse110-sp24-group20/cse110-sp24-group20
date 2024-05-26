@@ -83,10 +83,6 @@ input[type="range"].progress-bar {
     border: 2px solid black;
 }
 
-.home-menu button:hover {
-    background-color: #4c63ca;
-}
-
 .add_button {
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -117,6 +113,8 @@ input[type="range"].progress-bar {
     right: 0;
     bottom: 0;
     left: 200px;
+    background-position: 50% 50%;
+    background-image: url(../../img/planets/small_earth.png);
 }
 
 .reflect-button:hover {
@@ -133,11 +131,14 @@ input[type="range"].progress-bar {
     right: 0;
     bottom: 0;
     left: 120px;
+    background-position: 50% 50%;
+    background-image: url(../../img/planets/small_mars.png);
 }
 
 .day-schedule-button:hover {
-    background-color: rgba(81, 113, 199, 0.8);
-    color: white;
+    width: 110px;
+    height: 110px;
+    background-size: 110%; 
 }
 
 .month-schedule-button {
@@ -149,11 +150,14 @@ input[type="range"].progress-bar {
     right: 0;
     bottom: 0;
     left: 50px;
+    background-position: 50% 50%;
+    background-image: url(../../img/planets/small_neptune.png);
 }
 
 .month-schedule-button:hover {
-    background-color: rgba(81, 113, 199, 0.8);
-    color: white;
+    width: 110px;
+    height: 110px;
+    background-size: 110%; 
 }
 
 .home-button-container {

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "eslint .",
-    "generate-docs": "jsdoc --configure jsdoc.json --verbose"
+    "generate-docs": "jsdoc --configure jsdoc.json --verbose",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
