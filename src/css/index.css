@@ -1,3 +1,22 @@
+/*Media Queries: Define CSS rules based on screen width
+@media (max-width: 599px) {
+    :root {
+        --font_size: 6px;
+    }
+  }
+  @media (min-width: 600px) and (max-width: 1023px) {
+    :root {
+        --font_size: 8px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    :root {
+        --font_size: 10px;
+    }
+  }
+*/
+
 #spaceVideo {
     position: fixed;
     right: 0;
@@ -19,10 +38,10 @@
 }
 
 .home-menu button {
-    width: 100px;
-    height: 100px;
+    width: calc(10vh + 4vw);
+    height: calc(10vh + 4vw);
     border-radius: 50%; 
-    margin: 20px;
+    /*margin: 20px;*/
     background-color: transparent;
     color: black;
     font-size: 16px;
@@ -32,9 +51,9 @@
 }
 
 .home-menu button:hover { 
-    width: 110px;
-    height: 110px;
-    background-size: 110%;    
+    width: calc(5vh + 10vw);
+    height: calc(5vh + 10vw);
+    background-size: 130%;  
 }
 
 @keyframes spin {
@@ -47,17 +66,17 @@
 }
 
 .spaceship {
-    width: 100px;
-    height: 100px;
+    width: calc(8vh + 5vw);
+    height: calc(8vh + 5vw);
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 300px;
+    top: 45vh;
     right: 0;
     bottom: 0;
-    left: 660px;
+    left: 45vw;
     transform: rotate(300deg);
     animation: spin 5s linear infinite;
 }
@@ -67,12 +86,13 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 100px;
+    top: 15vh;
     right: 0;
     bottom: 0;
-    left: 650px;
+    left: 45vw;
     background-position: 50% 50%;
     background-image: url(../../img/planets/small_earth.png);
+    background-size: 120%;
 }
 
 .day-schedule-button {
@@ -80,12 +100,13 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 500px;
+    top: 72vh;
     right: 0;
     bottom: 0;
-    left: 650px;
+    left: 45vw;
     background-position: 50% 50%;
     background-image: url(../../img/planets/small_mars.png);
+    background-size: 120%;
 }
 
 .month-schedule-button {
@@ -93,12 +114,13 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 300px;
+    top: 45vh;
     right: 0;
     bottom: 0;
-    left: 350px;
+    left: 23vw;
     background-position: 50% 50%;
     background-image: url(../../img/planets/small_neptune.png);
+    background-size: 120%;
 }
 
 .project-button {
@@ -106,10 +128,11 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 300px;
+    top: 45vh;
     right: 0;
     bottom: 0;
-    left: 950px;
+    left: 65vw;
     background-position: 50% 50%;
     background-image: url(../../img/planets/small_jupiter.png);
+    background-size: 120%;
 }
