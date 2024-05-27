@@ -222,3 +222,22 @@ caption {
 .event:hover .tooltip {
     display: block;
 }
+
+html{
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1;
+    background-image: url('../../img/backgrounds/bg2.jpg');
+    background-size: cover; /* Adjust the image to cover the whole background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}

@@ -211,3 +211,22 @@ input[type="range"].progress-bar {
 .home-button-container:hover .home-text {
     color: white;
 }
+
+html{
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1;
+    background-image: url('../../img/backgrounds/bg3.jpg');
+    background-size: cover; /* Adjust the image to cover the whole background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
