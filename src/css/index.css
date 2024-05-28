@@ -56,9 +56,8 @@
 }
 
 .home-menu button:hover { 
-    width: calc(5vh + 10vw);
-    height: calc(5vh + 10vw);
-    background-size: 130%;  
+    width: 110px;
+    height: 110px;
 }
 
 @keyframes spin {
