@@ -105,9 +105,8 @@ caption {
 }
 
 .day-schedule-button:hover {
-    width: calc(2vh + 8vw);
-    height: calc(2vh + 8vw);
-    background-size: 130%;     
+    width: 160px;
+    height: 160px;
 }
 
 .project-button {
