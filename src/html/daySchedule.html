@@ -1,4 +1,96 @@
-<button onclick="location.href='index.html'">Home</button>
-<button onclick="location.href='reflect.html'">Reflect on the Day</button>
-<button onclick="location.href='project_tracker.html'">Track a Project</button>
-<button onclick="location.href='daySchedule.html'">Schedule Your Month</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Your Day</title>
+    <link rel="stylesheet" type="text/css" href="../css/daySchedule.css"><!--Link to external CSS stylesheet-->
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Schedule Your Day</h1>
+        </div>
+        <ul class="todo-list">
+            <li class="todo-item">
+                <span style="background-color: #f44336;">1</span>
+                <div class="task">
+                    <input type="text" placeholder="Task 1">
+                    <div class="checkbox">✔</div>
+                </div>
+            </li>
+            <li class="todo-item">
+                <span style="background-color: #ff9800;">2</span>
+                <div class="task">
+                    <input type="text" placeholder="Task 2">
+                    <div class="checkbox">✔</div>
+                </div>
+            </li>
+            <li class="todo-item">
+                <span style="background-color: #ffeb3b;">3</span>
+                <div class="task">
+                    <input type="text" placeholder="Task 3">
+                    <div class="checkbox">✔</div>
+                </div>
+            </li>
+            <li class="todo-item">
+                <span style="background-color: #8bc34a;">4</span>
+                <div class="task">
+                    <input type="text" placeholder="Task 4">
+                    <div class="checkbox">✔</div>
+                </div>
+            </li>
+            <li class="todo-item">
+                <span style="background-color: #00bcd4;">5</span>
+                <div class="task">
+                    <input type="text" placeholder="Task 5">
+                    <div class="checkbox">✔</div>
+                </div>
+            </li>
+            <li class="todo-item">
+                <span style="background-color: #3f51b5;">6</span>
+                <div class="task">
+                    <input type="text" placeholder="Task 6">
+                    <div class="checkbox">✔</div>
+                </div>
+            </li>
+            <li class="todo-item">
+                <span style="background-color: #9c27b0;">7</span>
+                <div class="task">
+                    <input type="text" placeholder="Task 7">
+                    <div class="checkbox">✔</div>
+                </div>
+            </li>
+        </ul>
+        <div class="completeness">
+            <span>Completeness:</span>
+            <div class="progress-bar">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div style="background-color: #e0e0e0;"></div>
+                <div style="background-color: #e0e0e0;"></div>
+                <div style="background-color: #e0e0e0;"></div>
+                <div style="background-color: #e0e0e0;"></div>
+                <div style="background-color: #e0e0e0;"></div>
+            </div>
+        </div>
+    </div>
+    <!--Buttons for navigating to other features or home menu-->
+    <div class="home-menu">
+        <button class="month-schedule-button" onclick="location.href='monthSchedule.html'">Schedule Your Month</a>
+        <button class="reflect-button" onclick="location.href='reflect.html'">Reflect on the Day</button>
+        <button class="project-button" onclick="location.href='project_tracker.html'">Track a Project</button>
+      </div>
+  
+      <div class="home">
+        <div class="home-button-container" onclick="location.href='index.html'">
+          <img class="spaceship" src="../../img/misc/spaceship (1).png" alt="image">
+          <span class="home-text">Home</span>
+        </div>
+      </div>
+</body>
+</html>

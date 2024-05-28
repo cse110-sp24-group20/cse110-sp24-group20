@@ -25,17 +25,18 @@ table {
     top: 5vh;
     right: 2vw;
     bottom: 0;
-    /*left: 360px;*/
 }
   
 th {
-    border: 5px solid black;
+    border: 5px solid #156359c0;
     text-align: center;
     padding: 8px;
+    width: 14.27%;
+    height: 100%;
 }
 
 td {
-    border: 5px solid black;
+    border: 5px solid #156359c0;
     vertical-align: text-top;
     text-align: left;
     padding: 8px;
@@ -50,11 +51,18 @@ caption {
     font-weight: bold;
     font-size: 1.5em;
 }
+
+.home-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150pt;
+}
+
 .home-menu button {
     width: calc(2vh + 5vw);
     height: calc(2vh + 5vw);
     border-radius: 50%; 
-    margin: 20px;
+    margin-top: 20px;
     background-color: transparent; 
     color: black;
     font-size: var(--font_size);
@@ -64,8 +72,7 @@ caption {
 }
 
 .reflect-button {
-    display: flex;
-    justify-content: center;
+    margin: 0 auto;
     align-items: center;
     position: absolute;
     top: 40vh;
@@ -84,8 +91,8 @@ caption {
 }
 
 .day-schedule-button {
-    display: flex;
-    justify-content: center;
+    margin-right: 10pt;
+    margin-left: auto;
     align-items: center;
     position: absolute;
     top: 54vh;
@@ -104,8 +111,8 @@ caption {
 }
 
 .project-button {
-    display: flex;
-    justify-content: center;
+    margin-right: auto;
+    margin-left: 20pt;
     align-items: center;
     position: absolute;
     top: 70vh;
@@ -124,10 +131,9 @@ caption {
 }
 
 .home-button-container {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 220px;
     background-color: transparent; 
-    color: black;
     font-size: 20px;
     cursor: pointer;
     display: flex;
@@ -163,7 +169,7 @@ caption {
 .home-button-container .home-text {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 50%; 
     transform: translate(-50%, -50%);
     color: black;
     font-size: var(--font_size);
@@ -173,4 +179,118 @@ caption {
 
 .home-button-container:hover .home-text {
     color: white;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.calendar {
+    display: flex;
+    margin-right: 2%;
+    justify-content: flex-end;
+    margin-left: auto;
+    flex-direction: row-reverse;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: 15%;
+    padding: 20px;
+    background-color: #4bc0d4;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+}
+
+.top span {
+    font-size: 16px;
+}
+
+.calendar-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#year, #month {
+    width: 100px;
+    height: 30px;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    margin-left: 5pt;
+}
+
+#year:hover, #month:hover {
+    border-color: teal;
+}
+
+.float {
+    display: block;
+    width: 50px;
+    float: left;
+}
+
+.event {
+    display: block;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    position: relative;
+}
+
+.event .tooltip {
+    display: none;
+    position: absolute;
+    background-color: #4e4a4a;
+    font-size: medium;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: normal;
+    top: 50%;
+    left: -110%; /* Adjust to the left side of eventDiv */
+    transform: translateY(-50%);
+    z-index: 10; /* Make sure the tooltip is displayed on top */
+}
+
+.event:hover .tooltip {
+    display: block;
+}
+
+html{
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1;
+    background-image: url('../../img/backgrounds/bg2.jpg');
+    background-size: cover; /* Adjust the image to cover the whole background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
 }

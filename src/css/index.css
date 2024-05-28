@@ -35,19 +35,24 @@
     height: 100vh;
     position: relative;
     z-index: 1;
+    text-align: center;
 }
 
 .home-menu button {
     width: calc(10vh + 4vw);
     height: calc(10vh + 4vw);
-    border-radius: 50%; 
-    /*margin: 20px;*/
+    border-radius: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
     background-color: transparent;
-    color: black;
-    font-size: 16px;
-    cursor: pointer;
     border: none;
-    border: 2px, white;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
 }
 
 .home-menu button:hover { 
@@ -58,10 +63,10 @@
 
 @keyframes spin {
     0% {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
     100% {
-        transform: rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
@@ -90,8 +95,9 @@
     right: 0;
     bottom: 0;
     left: 45vw;
+    transform: translate(-50%, -50%);
     background-position: 50% 50%;
-    background-image: url(../../img/planets/small_earth.png);
+    background-image: url(../../img/planets/earth-text.png);
     background-size: 120%;
 }
 
@@ -104,8 +110,9 @@
     right: 0;
     bottom: 0;
     left: 45vw;
+    transform: translate(-50%, -50%);
     background-position: 50% 50%;
-    background-image: url(../../img/planets/small_mars.png);
+    background-image: url(../../img/planets/mars-text.png);
     background-size: 120%;
 }
 
@@ -118,8 +125,9 @@
     right: 0;
     bottom: 0;
     left: 23vw;
+    transform: translate(-50%, -50%);
     background-position: 50% 50%;
-    background-image: url(../../img/planets/small_neptune.png);
+    background-image: url(../../img/planets/neptune-text.png);
     background-size: 120%;
 }
 
@@ -132,7 +140,8 @@
     right: 0;
     bottom: 0;
     left: 65vw;
+    transform: translate(-50%, -50%);
     background-position: 50% 50%;
-    background-image: url(../../img/planets/small_jupiter.png);
+    background-image: url(../../img/planets/jupiter-text.png);
     background-size: 120%;
 }

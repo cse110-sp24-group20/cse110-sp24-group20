@@ -17,6 +17,14 @@
         --projectName_size: 22px;
     }
   }
+.project-count {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
 
 .project-tracker h1 {
     text-align: center;
@@ -24,7 +32,6 @@
     margin-bottom: 20px;
     width: 100%;
 }
-
 
 .projects {
     flex: 1;
@@ -39,7 +46,6 @@
     left: 25vw;
 }
 
-
 .project {
     display: flex;
     align-items: center;
@@ -49,6 +55,7 @@
 }
 
 input[type="range"] {
+    -webkit-appearance: none;
     width: 50%;
     height: 8px;
     background: #ddd;
@@ -59,10 +66,35 @@ input[type="range"] {
     left: 12vh; 
 }
 
+
 .project span {
     width: 100px;
     font-size: var(--projectName_size);
     color: #333;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    background: url('../image/spaceship-1.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    background: url('../image/spaceship-1.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="range"].progress-bar {
+    background: linear-gradient(to right, red, yellow, green);
 }
 
 .home-menu button {
@@ -208,4 +240,23 @@ input[type="range"] {
 
 .home-button-container:hover .home-text {
     color: white;
+}
+
+html{
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1;
+    background-image: url('../../img/backgrounds/bg3.jpg');
+    background-size: cover; /* Adjust the image to cover the whole background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
 }

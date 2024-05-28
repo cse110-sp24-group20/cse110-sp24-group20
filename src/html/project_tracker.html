@@ -7,40 +7,52 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Project Tracker</title>
         <link rel="stylesheet" href="../css/project_tracker.css">
+        <script src="../javaScript/project_tracker.js"></script>
     </head>
     <!--Body: Contains the visible content of the HTML document-->
     <body>
         <!--Div for project-tracker component-->
         <div class="project-tracker">
             <h1>Project Tracker</h1>
+            <!--Div number of project counter-->
+            <div class="project-count">
+                Projects: <span id="project-count">0</span>
+            </div>
             <!--Div containing all projects-->
             <div class="projects">
                 <button class="add_button">+</button>
+                <!-- Project elements will be dynamically added here -->
+            </div>
+                
                 <!--Project element with respective name, rocket (same for all), and progress slider-->
+                <!--
                 <div class="project">
                     <span>Project A</span>
                     <div class="rocket"></div>
                     <div id="projectAprogress">
                         <input type="range" name="bar" id="Abar" value="13" min="0" max="100" step="1" />
                     </div>
-                </div>
+                </div> -->
                 <!--Project element with respective name, rocket (same for all), and progress slider-->
+                <!--
                 <div class="project">
                     <span>Project B</span>
                     <div class="rocket"></div>
                     <div id="projectBprogress">
                         <input type="range" name="bar" id="Bbar" value="13" min="0" max="100" step="1" />
                     </div>
-                </div>
+                </div> -->
                 <!--Project element with respective name, rocket (same for all), and progress slider-->
+                <!--
                 <div class="project">
                     <span>Project C</span>
                     <div class="rocket"></div>
                     <div id="projectCprogress">
                         <input type="range" name="bar" id="Cbar" value="13" min="0" max="100" step="1" />
                     </div>
-                </div>
+                </div> -->
                 <!--Project element with respective name, rocket (same for all), and progress slider-->
+                <!--
                 <div class="project">
                     <span>Project D</span>
                     <div class="rocket"></div>
@@ -48,7 +60,7 @@
                         <input type="range" name="bar" id="Dbar" value="13" min="0" max="100" step="1" />
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!--Buttons for navigating to other features or home menu-->
             <div class="home-menu">
                 <button class="day-schedule-button" onclick="location.href='daySchedule.html'">Schedule Your Day</a>
@@ -57,7 +69,7 @@
             </div>
             <div class="home">
                 <div class="home-button-container" onclick="location.href='index.html'">
-                    <img class="spaceship" src="../../img/misc/spaceship (1).png" alt="image">
+                    <img class="spaceship" src="../image/spaceship-0.png" alt="image">
                     <span class="home-text">Home</span>
                 </div>
             </div> 

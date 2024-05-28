@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-      - CI/CD-pipeline
-      - Documentation-Generate
+      - js-team1
+      - js-team2
 
 jobs:
   build-docs:
@@ -28,13 +28,13 @@ jobs:
       - name: Build
         uses: andstor/jsdoc-action@v1
         with:
-          source_dir: ./src
+          source_dir: ./src/javascript/
           recurse: true
-          output_dir: ./docs
+          output_dir: ./src/javascript/docs/
           template: clean-jsdoc-theme
 
       - name: Commit JSDOCS
         uses: EndBug/add-and-commit@v9
         with:
           message: "Generated JSDocs"
-          add: "./docs"
+          add: "./src/javascript/docs"
