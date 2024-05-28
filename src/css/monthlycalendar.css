@@ -1,30 +1,10 @@
-@media (max-width: 599px) {
-    :root {
-        --font_size: 10px;
-    }
-  }
-  @media (min-width: 600px) and (max-width: 1023px) {
-    :root {
-        --font_size: 12px;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    :root {
-        --font_size: 16px;
-    }
-  }
-
 table {
-    width: 78%;
+    width: 75%;
     border-collapse: collapse;
-    height: 80vh;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 5vh;
-    right: 2vw;
-    bottom: 0;
+    height: 500px;
+    margin-right: 10%;
+    margin-left: auto;
+    background-color: #F4F7FE;
 }
   
 th {
@@ -52,7 +32,6 @@ caption {
     font-size: 1.5em;
 }
 
-
 .home-menu {
     display: flex;
     flex-direction: column;
@@ -60,13 +39,14 @@ caption {
 }
 
 .home-menu button {
-    width: calc(2vh + 5vw);
-    height: calc(2vh + 5vw);
+    display: flex;
+    width: 100px;
+    height: 100px;
     border-radius: 50%; 
     margin-top: 20px;
     background-color: transparent; 
     color: black;
-    font-size: var(--font_size);
+    font-size: 16px;
     cursor: pointer;
     border: none;
     border: 2px solid black;
@@ -75,9 +55,6 @@ caption {
 .reflect-button {
     margin: 0 auto;
     align-items: center;
-    background-position: 50% 50%;
-    background-image: url(../../img/planets/small_earth.png);
-    background-size: 120%;
 }
 
 .reflect-button:hover {
@@ -90,9 +67,6 @@ caption {
     margin-right: 10pt;
     margin-left: auto;
     align-items: center;
-    background-position: 50% 50%;
-    background-image: url(../../img/planets/small_mars.png);
-    background-size: 120%;
 }
 
 .day-schedule-button:hover {
@@ -105,9 +79,6 @@ caption {
     margin-right: auto;
     margin-left: 20pt;
     align-items: center;
-    background-position: 50% 50%;
-    background-image: url(../../img/planets/small_jupiter.png);
-    background-size: 120%;
 }
 
 .project-button:hover {
@@ -122,14 +93,6 @@ caption {
     background-color: transparent; 
     font-size: 20px;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 78vh;
-    right: 0;
-    bottom: 0;
-    left: 2vw;
     border-radius: 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
     position: relative;
@@ -145,8 +108,6 @@ caption {
 }
 
 .home-button-container .spaceship {
-    width: calc(3vh + 6vw);
-    height: calc(3vh + 6vw);
     background-color: transparent;
     transform: rotate(270deg);
     transition: filter 0.3s ease;
@@ -158,7 +119,7 @@ caption {
     left: 50%; 
     transform: translate(-50%, -50%);
     color: black;
-    font-size: var(--font_size);
+    font-size: 24px;
     font-family: Arial, sans-serif;
     font-weight: bold;
 }
