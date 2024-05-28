@@ -7,7 +7,6 @@
     width: 100px;
     height: 100px;
     border-radius: 50%; 
-    margin: 20px;
     background-color: transparent; 
     color: black;
     font-size: 16px;
@@ -139,7 +138,7 @@
     background-size: 110%; 
 }
 .width{
-    width: 800px;
+    width: 90%;
 }
 .checkbox{
     background-color: lightgreen;
@@ -149,7 +148,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    left: 825px;
+    left: 95%;
     top: -25px;
     background-position: 50% 50%;
     border-radius: 50%;
