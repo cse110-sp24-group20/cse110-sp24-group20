@@ -2,8 +2,8 @@
 <html lang="en">
   <!--Head: Contains metadata about the HTML document-->
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Schedule Your Month</title>
     <link rel="icon" href="../../admin/branding/Team404_Logo.png" type="image/x-icon"><!--Link to favicon-->
     <link rel="stylesheet" type="text/css" href="../css/monthSchedule.css">
@@ -12,86 +12,33 @@
   <body>
     <!--Create calendar for the current month using html table-->
     <div class="calendar">
+      <!--Add create and delete buttons-->
       <button class="add_button">+</button>
       <button class="remove_button">-</button>
       <div class="calendar-box">
+        <!--Add selectors for year and month-->
         <div class="top">
           <select id="year" class="float"></select>
           <span class="float">&nbsp;&nbsp;Year</span>
           <select id="month" class="float"></select>
           <span class="float">&nbsp;&nbsp;Month</span>
-          <br/><br/>
+          <br /><br />
         </div>
         <table>
-            <!--Table header containing days of the week-->
-            <thead>
-              <tr>
-                <th>Sun</th>
-                <th>Mon</th>
-                <th>Tue</th>
-                <th>Wed</th>
-                <th>Thu</th>
-                <th>Fri</th>
-                <th>Sat</th>
-              </tr>
-            </thead>
-            <!--Table body containing rows with cells for each individual day-->
-            <tbody id="tbody">
-              <!-- <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>1</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>11</td>
-                <td>12</td>
-                <td>13</td>
-                <td>14</td>
-                <td>15</td>
-                <td>16</td>
-              </tr>
-              <tr>
-                <td>17</td>
-                <td>18</td>
-                <td>19</td>
-                <td>20</td>
-                <td>21</td>
-                <td>22</td>
-                <td>23</td>
-              </tr>
-              <tr>
-                <td>24</td>
-                <td>25</td>
-                <td>26</td>
-                <td>27</td>
-                <td>28</td>
-                <td>29</td>
-                <td>30</td>
-              </tr>
-              <tr>
-                <td>31</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr> -->
-            </tbody>
+          <!--Table header containing days of the week-->
+          <thead>
+            <tr>
+              <th>Sun</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+            </tr>
+          </thead>
+          <!--Table body  to be populated with appropriate number of cells for the selected year and month-->
+          <tbody id="tbody"></tbody>
         </table>
       </div>
       <!--Buttons for navigating to other features or home menu-->
@@ -100,6 +47,7 @@
         <button class="reflect-button" onclick="location.href='reflectDay.html'"></button>
         <button class="project-button" onclick="location.href='projectTracker.html'"></button>
         <div class="home">
+          <!--div containing rocket home button-->
           <div class="home-button-container" onclick="location.href='index.html'">
             <img class="spaceship" src="../../img/misc/spaceship1.png" alt="image">
           </div>
