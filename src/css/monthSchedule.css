@@ -1,30 +1,30 @@
+/*Calendar Table Styling*/
 table {
     width: 75%;
     border-collapse: collapse;
     height: 500px;
     margin-right: 10%;
     margin-left: auto;
-    background-color: #F4F7FE;
+    background-color: transparent;
 }
   
 th {
-    border: 5px solid #156359c0;
+    border: 2px solid #156359c0;
     text-align: center;
     padding: 8px;
     width: 14.27%;
     height: 100%;
+    background-color: #F4F7FE;
 }
 
 td {
-    border: 5px solid #156359c0;
+    border: 2px solid #156359c0;
     vertical-align: text-top;
     text-align: left;
     padding: 8px;
+    height: 50px;
+    background-color: whitesmoke;
 }
-  
-/* th {
-    background-color: #f2f2f2;
-} */
   
 caption {
     margin-bottom: 10px;
@@ -32,100 +32,111 @@ caption {
     font-size: 1.5em;
 }
 
+/*Home Menu Styling*/
 .home-menu {
+    width: 200px;
     display: flex;
     flex-direction: column;
     margin-top: 150pt;
 }
 
-.home-menu button {
+.home-menu button {    
+    width: 140px;
+    height: 140px;
     display: flex;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; 
     margin-top: 20px;
-    background-color: transparent; 
-    color: black;
-    font-size: 16px;
-    cursor: pointer;
     border: none;
-    border: 2px solid black;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease; /*Smooth transition for scaling*/
 }
 
 .reflect-button {
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 250px;
+    right: 0;
+    bottom: 0;
+    left: 120px;
+    background-size: 110%;;
+    background-image: url(../../img/planets/earth-text.png);
 }
 
 .reflect-button:hover {
-    width: 110px;
-    height: 110px;
-    background-size: 130%;    
+    transform: scale(1.1); /*Scale button on hover*/
 }
 
 .day-schedule-button {
-    margin-right: 10pt;
-    margin-left: auto;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 200px;
+    background-size: 110%; 
+    background-image: url(../../img/planets/mars-text.png);
 }
 
 .day-schedule-button:hover {
-    width: 110px;
-    height: 110px;
-    background-size: 110%;    
+    transform: scale(1.1); /*Scale button on hover*/
 }
 
 .project-button {
-    margin-right: auto;
-    margin-left: 20pt;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 400px;
+    right: 0;
+    bottom: 0;
+    left: 50px;
+    background-position: 50% 50%;
+    background-image: url(../../img/planets/jupiter-text.png);
 }
 
 .project-button:hover {
-    width: 110px;
-    height: 110px;
-    background-size: 110%;    
+    transform: scale(1.1); /*Scale button on hover*/  
 }
 
+/*Home Button Styling*/
 .home-button-container {
-    width: 300px;
-    height: 220px;
-    background-color: transparent; 
+    width: 315px;
+    height: 270px;
     font-size: 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     cursor: pointer;
     border-radius: 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    bottom: 50px;
     position: relative;
 }
 
-.home-button-container:hover {
-    /* background-color: #45a049; */
-    color: white; 
-}
-
-.home-button-container:hover .spaceship {
-    filter: hue-rotate(360deg);
-}
-
 .home-button-container .spaceship {
+    width: 200px;
+    height: 200px;
     background-color: transparent;
     transform: rotate(270deg);
     transition: filter 0.3s ease;
 }
 
-.home-button-container .home-text {
-    position: absolute;
-    top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    color: black;
-    font-size: 24px;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-}
-
-.home-button-container:hover .home-text {
-    color: white;
+.home-button-container:hover .spaceship{
+    /*TODO: Fix the hue so when you hover over spaceship, a gradient shows up*/
+    filter: hue-rotate(180deg);
+    width: 220px;
+    height: 220px;
 }
 
 .button-container {

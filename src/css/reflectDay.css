@@ -1,8 +1,11 @@
-.container{
-    height: 500px;
-    margin-right: auto;
-    margin-left: 35%;
+/*Home Menu Styling*/
+.home-menu {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 150pt;
 }
+
 .home-menu button {
     width: 140px;
     height: 140px;
@@ -16,7 +19,7 @@
     transition: transform 0.3s ease;
 }
 
-.reflect-button {
+.project-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,15 +28,15 @@
     right: 0;
     bottom: 0;
     left: 200px;
-    background-size: 110%; 
-    background-image: url(../../img/planets/earth-text.png);
+    background-position: 110%;
+    background-image: url(../../img/planets/jupiter-text.png);
 }
 
-.reflect-button:hover {
-    transform: scale(1.1);
+.project-button:hover {
+    transform: scale(1.1); /*Scale button on hover*/  
 }
 
-.project-button {
+.day-schedule-button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,12 +45,12 @@
     right: 0;
     bottom: 0;
     left: 120px;
-    background-size: 110%; 
-    background-image: url(../../img/planets/jupiter-text.png);
+    background-position: 110%;
+    background-image: url(../../img/planets/mars-text.png);
 }
 
-.project-button:hover {
-    transform: scale(1.1); 
+.day-schedule-button:hover {
+    transform: scale(1.1);
 }
 
 .month-schedule-button {
@@ -64,26 +67,25 @@
 }
 
 .month-schedule-button:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); 
 }
 
+/*Home Button Styling*/
 .home-button-container {
-    width: 100px;
-    height: 100px;
-    background-color: transparent; 
-    color: black;
+    width: 315px;
+    height: 270px;
     font-size: 20px;
-    cursor: pointer;
+    background-color: transparent;
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    bottom: 0;
-    left: 232px;
+    align-items: center; 
+    cursor: pointer;
     border-radius: 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    bottom: 50px;
     position: relative;
 }
 
@@ -95,30 +97,13 @@
     transition: filter 0.3s ease;
 }
 
-.home-button-container:hover .spaceship {
+.home-button-container:hover .spaceship{
     /*TODO: Fix the hue so when you hover over spaceship, a gradient shows up*/
     filter: hue-rotate(180deg);
     width: 220px;
     height: 220px;
 }
 
-.width{
-    width: 90%;
-}
-.checkbox{
-    background-color: lightgreen;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    left: 95%;
-    top: -25px;
-    background-position: 50% 50%;
-    border-radius: 50%;
-    cursor: pointer;
-}
 html{
     height: 100%;
     max-height: 100%;
@@ -132,7 +117,7 @@ body {
     width: 100%;
     max-width: 100%;
     z-index: 1;
-    background-image: url('../../img/backgrounds/bg4.jpg');
+    background-image: url('../../img/backgrounds/bg1.jpg');
     background-size: cover; /* Adjust the image to cover the whole background */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
