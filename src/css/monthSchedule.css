@@ -133,7 +133,6 @@ caption {
 }
 
 .home-button-container:hover .spaceship{
-    /*TODO: Fix the hue so when you hover over spaceship, a gradient shows up*/
     filter: hue-rotate(180deg);
     width: 220px;
     height: 220px;
