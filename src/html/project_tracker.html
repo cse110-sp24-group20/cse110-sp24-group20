@@ -1,81 +1,47 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <!--Head: Contains metadata about the HTML document-->
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Track Your Project</title>
-        <link rel="icon" href="../../admin/branding/Team404_Logo.png" type="image/x-icon"><!--Link to favicon-->
-        <link rel="stylesheet" href="../css/project_tracker.css">
-        <script src="../javaScript/project_tracker.js"></script>
-    </head>
-    <!--Body: Contains the visible content of the HTML document-->
-    <body>
-        <!--Div for project-tracker component-->
-        <div class="project-tracker">
-            <h1>Project Tracker</h1>
-            <!--Div number of project counter-->
-            <div class="project-count">
-                Projects: <span id="project-count">0</span>
-            </div>
-            <!--Div containing all projects-->
-            <div class="projects">
-                <button class="add_button">+</button>
-                <button class="remove_button">-</button>
-                <!-- Project elements will be dynamically added here -->
-            </div>
-                
-                <!--Project element with respective name, rocket (same for all), and progress slider-->
-                <!--
-                <div class="project">
-                    <span>Project A</span>
-                    <div class="rocket"></div>
-                    <div id="projectAprogress">
-                        <input type="range" name="bar" id="Abar" value="13" min="0" max="100" step="1" />
-                    </div>
-                </div> -->
-                <!--Project element with respective name, rocket (same for all), and progress slider-->
-                <!--
-                <div class="project">
-                    <span>Project B</span>
-                    <div class="rocket"></div>
-                    <div id="projectBprogress">
-                        <input type="range" name="bar" id="Bbar" value="13" min="0" max="100" step="1" />
-                    </div>
-                </div> -->
-                <!--Project element with respective name, rocket (same for all), and progress slider-->
-                <!--
-                <div class="project">
-                    <span>Project C</span>
-                    <div class="rocket"></div>
-                    <div id="projectCprogress">
-                        <input type="range" name="bar" id="Cbar" value="13" min="0" max="100" step="1" />
-                    </div>
-                </div> -->
-                <!--Project element with respective name, rocket (same for all), and progress slider-->
-                <!--
-                <div class="project">
-                    <span>Project D</span>
-                    <div class="rocket"></div>
-                    <div id="projectCprogress">
-                        <input type="range" name="bar" id="Dbar" value="13" min="0" max="100" step="1" />
-                    </div>
-                </div>
-            </div> -->
-            <!--Buttons for navigating to other features or home menu-->
-            <div class="home-menu">
-                <button class="day-schedule-button" onclick="location.href='daySchedule.html'">Schedule Your Day</a>
-                <button class="reflect-button" onclick="location.href='reflect.html'">Reflect on the Day</a>
-                <button class="month-schedule-button" onclick="location.href='monthSchedule.html'">Schedule Your Month</a>
-            </div>
-            <div class="home">
-                <div class="home-button-container" onclick="location.href='index.html'">
-                    <img class="spaceship" src="../image/spaceship-0.png" alt="image">
-                    <span class="home-text">Home</span>
-                </div>
-            </div> 
+  <!--Head: Contains metadata about the HTML document-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track Your Project</title>
+    <link
+      rel="icon"
+      href="../../admin/branding/Team404_Logo.png"
+      type="image/x-icon"
+    />
+    <!--Link to favicon-->
+    <link rel="stylesheet" href="../css/project_tracker.css" />
+    <script src="../javaScript/project_tracker.js"></script>
+  </head>
+  <!--Body: Contains the visible content of the HTML document-->
+  <body>
+    <!--Div for project-tracker component-->
+    <div class="project-tracker">
+      <h1>Project Tracker</h1>
+      <!--Div number of project counter-->
+      <div class="project-count">
+        Projects: <span id="project-count">0</span>
+      </div>
+      <!--Div containing all projects-->
+      <div class="projects">
+        <button class="add_button">+</button>
+        <button class="remove_button">-</button>
+        <!-- Project elements will be dynamically added here -->
+      </div>
+      <!--Buttons for navigating to other features or home menu-->
+      <div class="home-menu">
+        <button class="day-schedule-button" onclick="location.href='daySchedule.html'"> Schedule Your Day </button>
+        <button class="reflect-button" onclick="location.href='reflect.html'"> Reflect on the Day </button>
+        <button class="month-schedule-button" onclick="location.href='monthSchedule.html'"> Schedule Your Month</button>
+      </div>
+      <!--div for rocket home button-->
+      <div class="home">
+        <div class="home-button-container" onclick="location.href='index.html'">
+          <img class="spaceship" src="../image/spaceship-0.png" alt="image" />
+          <span class="home-text">Home</span>
         </div>
-    </body>
+      </div>
+    </div>
+  </body>
 </html>
-
