@@ -5,17 +5,21 @@
         <meta charset="UTF-8"> <!--Character encoding for the document-->
         <title>Reflect On The Day</title><!--Title of the HTML Document-->
         <link rel="icon" href="../../admin/branding/Team404_Logo.png" type="image/x-icon"><!--Link to favicon-->
-        <link rel="stylesheet" type="text/css" href="../../src/css/reflect.css"><!--Link to external CSS stylesheet-->
+        <link rel="stylesheet" type="text/css" href="../../src/css/reflectDay.css"><!--Link to external CSS stylesheet-->
         <script src="../javaScript/reflect.js"></script>
     </head>
     <!--Body: Contains the visible content of the HTML document-->
     <body>
         <!--Back button to home menu as well as buttons to each other feature-->
-        <div class = "reflect-menu">
-            <button onclick="location.href='index.html'">Home</button>
-            <button class="day-schedule-button" onclick="location.href='daySchedule.html'">Schedule Your Day</a>
-            <button class="month-schedule-button" onclick="location.href='monthSchedule.html'">Schedule Your Month</a>
-            <button class="project-button" onclick="location.href='project_tracker.html'">Track a Project</a>
+        <div class = "home-menu">
+            <button class="day-schedule-button" onclick="location.href='daySchedule.html'"></a>
+            <button class="month-schedule-button" onclick="location.href='monthSchedule.html'"></a>
+            <button class="project-button" onclick="location.href='projectTracker.html'"></a>
+        </div>
+        <div class="home">
+            <div class="home-button-container" onclick="location.href='index.html'">
+                <img class="spaceship" src="../../img/misc/spaceship1.png" alt="image">
+            </div>
         </div>
         <!--Button user can press to add a reflection to the page-->
         <div class = "add-reflection">

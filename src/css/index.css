@@ -51,11 +51,11 @@
 }
 
 .spaceship {
-    width: 100px;
-    height: 100px;
-   position: absolute;
-   top: 50%;
-   left: 50%;
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%) rotate(300deg);
     animation: spin 5s linear infinite;
 }
