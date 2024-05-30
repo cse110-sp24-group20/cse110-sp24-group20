@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Head: Contains metadata about the HTML document-->
+    <head>
+        <meta charset="UTF-8"> <!--Character encoding for the document-->
+        <title>Reflect On The Day</title><!--Title of the HTML Document-->
+        <link rel="icon" href="../../admin/branding/Team404_Logo.png" type="image/x-icon"><!--Link to favicon-->
+        <link rel="stylesheet" type="text/css" href="../../src/css/reflectDay.css"><!--Link to external CSS stylesheet-->
+        <script src="../javaScript/reflect.js"></script>
+    </head>
+    <!--Body: Contains the visible content of the HTML document-->
+    <body>
+        <!--Back button to home menu as well as buttons to each other feature-->
+        <div class = "home-menu">
+            <button class="day-schedule-button" onclick="location.href='daySchedule.html'"></a>
+            <button class="month-schedule-button" onclick="location.href='monthSchedule.html'"></a>
+            <button class="project-button" onclick="location.href='projectTracker.html'"></a>
+        </div>
+        <div class="home">
+            <div class="home-button-container" onclick="location.href='index.html'">
+                <img class="spaceship" src="../../img/misc/spaceship1.png" alt="image">
+            </div>
+        </div>
+        <!--Button user can press to add a reflection to the page-->
+        <div class = "add-reflection">
+            <button>+ Add Reflection</button>
+        </div>
+        <!--Display table of previous reflections-->
+        <div class = "previous-reflections">
+        <table>
+            <tr class="widget-slot">
+                <th class="widget-select-icon">Widget selection for 1</th>
+            </tr>
+            <tr class="previous-reflection">
+                <td>Previous Reflection 1</td>
+            </tr>
+            <tr class="widget-slot">
+                <th class="widget-select-icon"></th>>Widget selection for 2</th>
+            </tr>
+            <tr class="previous-reflection">
+                <td>Previous Reflection 2</td>
+            </tr>
+            <tr class="widget-slot">
+                <th class="widget-select-icon"></th>>Widget selection for 3</th>
+            </tr>
+            <tr class="previous-reflection">
+                <td>Previous Reflection 3</td>
+            </tr>
+        </table>
+        </div>
+    </body>
+</html>
