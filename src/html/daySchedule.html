@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--Head: Contains metadata about the HTML document-->
   <head>
     <meta charset="UTF-8" />
     <meta charset="UTF-8" />
@@ -13,14 +14,19 @@
     <!--Link to favicon-->
     <link rel="stylesheet" href="../css/dailySchedule.css" />
   </head>
+  <!--Body: Contains the visible content of the HTML document-->
   <body>
+    <!--Create div housing all elements of daySchedule-->
     <div class="container">
+      <!--Dedicated page header-->  
       <div class="header">
         <h1>Schedule Your Day</h1>
       </div>
+      <!--Store all todo-items in a todo-list ul element-->
       <ul class="todo-list">
         <button class="add_button">+</button>
         <button class="remove_button">-</button>
+        <!--Create a todo item with each containing a background, label, task, and check button-->
         <li class="todo-item">
           <span style="background-color: #f44336">1</span>
           <div class="task">
@@ -71,6 +77,7 @@
           </div>
         </li>
       </ul>
+      <!--Create a section that tracks the completeness of all tasks for the day-->
       <div class="completeness">
         <span>Completeness:</span>
         <div class="progress-bar">
@@ -105,7 +112,7 @@
         Track a Project
       </button>
     </div>
-
+    <!--Create a dedicated div for the rocket home button-->
     <div class="home">
       <div class="home-button-container" onclick="location.href='index.html'">
         <img
