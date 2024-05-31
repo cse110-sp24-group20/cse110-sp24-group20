@@ -131,7 +131,7 @@ body {
     width: 100%;
     max-width: 100%;
     z-index: 1;
-    background-image: url('../../img/backgrounds/bg4.jpg');
+    background-image: url('../../img/backgrounds/mars.svg');
     background-size: cover; /* Adjust the image to cover the whole background */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
