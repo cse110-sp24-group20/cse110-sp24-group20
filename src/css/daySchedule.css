@@ -70,7 +70,7 @@
 .home-button-container {
     width: 100px;
     height: 100px;
-    background-color: transparent; 
+    background-color: transparent;
     color: black;
     font-size: 20px;
     cursor: pointer;
@@ -78,11 +78,11 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 50px;
+    top: 100px;
     right: 0;
     bottom: 0;
-    left: 232px;
-    border-radius: 10px;
+    left: 100px;
+    border-radius: 50%;
     transition: background-color 0.3s ease, color 0.3s ease;
     position: relative;
 }
@@ -102,8 +102,9 @@
 }
 
 .width{
-    width: 90%;
+    width: 85%;
 }
+
 .checkbox{
     background-color: lightgreen;
     width: 30px;
@@ -113,11 +114,27 @@
     align-items: center;
     position: relative;
     left: 95%;
-    top: -25px;
+    top: -30px;
     background-position: 50% 50%;
     border-radius: 50%;
     cursor: pointer;
 }
+
+.listbox{
+    /* background-color: ; */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0%;
+    top: 30px;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 html{
     height: 100%;
     max-height: 100%;
@@ -136,3 +153,16 @@ body {
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
 }
+
+.todo-list{
+    background-color: rgba(243, 220, 214, 0.5);
+    border-radius: 0.5rem;
+}
+
+input{
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    margin-left: 6%;
+}
+

@@ -166,10 +166,10 @@ input[type="range"].progress-bar {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 500px;
+    top: 550px;
     right: 0;
     bottom: 0;
-    left: 232px;
+    left: 80px;
     border-radius: 10px;
     transition: background-color 0.3s ease, color 0.3s ease;
     position: relative;
