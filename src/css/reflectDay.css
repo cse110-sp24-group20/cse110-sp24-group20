@@ -3,7 +3,7 @@
     width: 200px;
     display: flex;
     flex-direction: column;
-    margin-top: 150pt;
+    /* margin-top: 150pt; */
 }
 
 .home-menu button {
@@ -72,20 +72,20 @@
 
 /*Home Button Styling*/
 .home-button-container {
-    width: 315px;
-    height: 270px;
+    width: 200px;
+    height: 200px;
     font-size: 20px;
     background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center; 
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 50%;
     transition: background-color 0.3s ease, color 0.3s ease;
     position: absolute;
-    top: 300px;
+    top: -700px;
     left: 50px;
-    bottom: 50px;
+    bottom: 500px;
     position: relative;
 }
 
@@ -120,4 +120,59 @@ body {
     background-size: cover; /* Adjust the image to cover the whole background */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+.add-reflection{
+    width: 30%;
+    left: 300px;
+    margin-left: 38%;
+    /* margin-right: 5%; */
+    padding: 3% 15% 3% 15%;
+    /* padding-top:3%; */
+    margin-top: 5%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0.5rem;
+}
+
+.addNew{
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    width: 500px;
+    height: 80px;
+    border-radius: 25px;
+    margin-left: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}    
+
+.previous-reflections{
+    width: 54%;
+    left: 300px;
+    margin-left: 38%;
+    /* margin-right: 5%; */
+    padding: 3% 3% 3% 3%;
+    /* padding-top:3%; */
+    margin-top: 1%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0.5rem;
+}
+
+table{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* margin-right: 20%; */
+    border-radius: 0.5rem;
+    /* padding: 0% 10% 0% 10%; */
+}
+
+tr,td,th{
+    padding: 2% 2% 2% 2%;
+}
+
+.widget-select-icon3{
+
 }
