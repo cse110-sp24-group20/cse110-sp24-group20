@@ -250,4 +250,6 @@ body {
     background-size: cover; /* Adjust the image to cover the whole background */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed;
+
 }
