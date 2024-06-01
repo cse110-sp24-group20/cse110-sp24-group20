@@ -4,17 +4,15 @@
 .project-tracker {
     width: 80%;
     max-width: 1200px;
-    right: -15%;
     padding: 20px;
+    margin-left: 5%;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center;
     position: relative;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .project-count {
@@ -55,9 +53,7 @@
     padding: 20px;
     border-radius: 10px;
     max-height: 500px; /* Set a max height to the projects container */
-    overflow-y: auto;
     box-sizing: border-box;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .project {
@@ -124,10 +120,9 @@ input[type="range"].progress-bar {
 .add_button, .remove_button {
     background-color: #ffffff;
     border: 1px solid #ddd;
-    width: 200px;
-    height: 50px;
     border-radius: 25px;
-    display: flex;
+    width: 20%;
+    height: 100%;
     justify-content: center;
     align-items: center;
     /* margin-left: 17%; */
@@ -148,16 +143,14 @@ input[type="range"].progress-bar {
     align-items: center;
     gap: 20px;
     margin-bottom: 20px; /* Add a gap between the button container and the projects container */
+    width: 100%;
 }
 
 /*Home Menu Styling*/
 .home-menu {
     display: flex;
-    flex-wrap: nowrap;
-    width: 200px;
-    display: flex;
     flex-direction: column;
-    margin-top: 150pt;
+    margin-top: 50pt;
 }
 
 .home-menu button {    
@@ -175,17 +168,11 @@ input[type="range"].progress-bar {
 }
 
 .day-schedule-button {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 100px;
-    right: 0;
-    bottom: 0;
-    left: 100px;
-    background-size: 80%; 
+    margin-right: 10pt;
+    margin-left: auto;
+    background-size: 110%; 
     background-image: url(../../img/planets/mars-text.png);
-
 }
 
 .day-schedule-button:hover {
@@ -193,15 +180,9 @@ input[type="range"].progress-bar {
 }
 
 .reflect-button {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 250px;
-    right: 0;
-    bottom: 0;
-    left: 60px;
-    background-size: 80%;
+    margin: 0 auto;
+    background-size: 110%;;
     background-image: url(../../img/planets/earth-text.png);
 }
 
@@ -210,17 +191,11 @@ input[type="range"].progress-bar {
 }
 
 .month-schedule-button {
-    display: flex;
-    justify-content: center;
+    margin-right: auto;
+    margin-left: 20pt;
     align-items: center;
-    position: absolute;
-    top: 400px;
-    right: 0;
-    bottom: 0;
-    left: 10px;
     background-position: 50% 50%;
-    background-size: 80%;
-    background-image: url(../../img/planets/neptune-text.png);
+    background-image: url(../../img/planets/jupiter-text.png);
 }
 
 .month-schedule-button:hover {
@@ -229,24 +204,17 @@ input[type="range"].progress-bar {
 
 /*Home Button Styling*/
 .home-button-container {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+    width: 300px;
+    height: 220px;
     cursor: pointer;
-    border-radius: 10px;
+    margin-left: 50%;
     transition: background-color 0.3s ease, color 0.3s ease;
-    position: absolute;
-    top: 600px;
-    left: 125px;
+    position: relative;
 }
 
 .home-button-container .spaceship {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     background-color: transparent;
     transform: rotate(270deg);
     transition: filter 0.3s ease;
@@ -254,8 +222,8 @@ input[type="range"].progress-bar {
 
 .home-button-container:hover .spaceship{
     filter: hue-rotate(180deg);
-    width: 220px;
-    height: 220px;
+    width: 210px;
+    height: 210px;
 }
 
 html{
@@ -263,6 +231,7 @@ html{
     max-height: 100%;
     width: 100%;
     max-width: 100%;
+    overflow-x: hidden; 
 }
 
 body {
@@ -280,4 +249,11 @@ body {
     align-items: center;
     margin: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.main-container {
+    display: flex;
+    margin-right: 2%;
+    flex-direction: row-reverse;
+    width: 100%;
 }

@@ -223,6 +223,7 @@ html{
     max-height: 100%;
     width: 100%;
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -235,4 +236,5 @@ body {
     background-size: cover; /* Adjust the image to cover the whole background */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
+    overflow-x: hidden;
 }
