@@ -118,6 +118,7 @@ function saveTasks() {
 // Load tasks from local storage
 function loadTasks() {
     var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
     tasks.forEach(task => {
         var li = document.createElement("li");
         li.classList.add("todo-item");
@@ -169,8 +170,6 @@ function loadTasks() {
             li.classList.toggle("checked");
             saveTasks();
         });
-
-        
 
         // Append todo item to the list
         todoList.appendChild(li);
