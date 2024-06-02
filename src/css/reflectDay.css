@@ -3,7 +3,6 @@
     width: 200px;
     display: flex;
     flex-direction: column;
-    /* margin-top: 150pt; */
 }
 
 .home-menu button {
@@ -83,10 +82,9 @@
     border-radius: 50%;
     transition: background-color 0.3s ease, color 0.3s ease;
     position: absolute;
-    top: -700px;
-    left: 50px;
+    top: 500px; /* Adjusted position */
+    left: 150px;
     bottom: 500px;
-    position: relative;
 }
 
 .home-button-container .spaceship {
@@ -97,13 +95,13 @@
     transition: filter 0.3s ease;
 }
 
-.home-button-container:hover .spaceship{
+.home-button-container:hover .spaceship {
     filter: hue-rotate(180deg);
     width: 220px;
     height: 220px;
 }
 
-html{
+html {
     height: 100%;
     max-height: 100%;
     width: 100%;
@@ -121,60 +119,59 @@ body {
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-attachment: fixed;
-
 }
 
-.add-reflection{
+.add-reflection {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Gap between buttons */
     width: 30%;
-    left: 300px;
-    margin-left: 38%;
-    /* margin-right: 5%; */
-    padding: 3% 15% 3% 15%;
-    /* padding-top:3%; */
+    margin-left: 43%;
     margin-top: 5%;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 0.5rem;
+    padding: 3% 0;
 }
 
-.addNew{
+.add_button, .remove_button {
     background-color: #ffffff;
     border: 1px solid #ddd;
-    width: 500px;
+    width: 200px; /* Adjusted width */
     height: 80px;
     border-radius: 25px;
-    margin-left: 12%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 18px; /* Adjusted font size */
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}    
+}
+
+.add_button:hover, .remove_button:hover {
+    background-color: #4c63ca;
+    color: white;
+    border-color: #4c63ca;
+}
 
 .previous-reflections{
     width: 54%;
-    left: 300px;
-    margin-left: 38%;
-    /* margin-right: 5%; */
-    padding: 3% 3% 3% 3%;
-    /* padding-top:3%; */
+    margin-left: 28%;
     margin-top: 1%;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 0.5rem;
+    overflow-y: auto; /* Added scroll bar */
+    max-height: 400px; /* Adjust the height as needed */
+    padding: 3% 3% 3% 3%;
+    gap: 10px; /* Gap between reflections */
 }
 
 table{
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
-    /* margin-right: 20%; */
     border-radius: 0.5rem;
-    /* padding: 0% 10% 0% 10%; */
+    margin-bottom: 10px; /* Gap between reflections */
 }
 
 tr,td,th{
     padding: 2% 2% 2% 2%;
-}
-
-.widget-select-icon3{
-
 }

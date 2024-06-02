@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Get the button elements for adding and removing reflections
-    const addReflectionButton = document.querySelector('.addNew');
+    const addReflectionButton = document.querySelector('.add_button');
     const removeReflectionButton = document.querySelector('.remove_button');
     const reflectionsContainer = document.querySelector('.previous-reflections'); // Container for displaying reflections
   
@@ -20,13 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function addReflection() {
         const date = new Date().toLocaleDateString(); // Get the current date
         let feeling;
-        
+
         try {
           // Prompt user for their feeling rating
-          feeling = prompt('Rate your feeling for the day (input 1-5):');
+          feeling = prompt('Rate your feeling for the day (input 1[Very Angry] - 5[Very Happy]):');
           // Check if the input is valid
           if (![1, 2, 3, 4, 5].includes(Number(feeling))) {
-            throw new Error('Invalid input');
+            throw new Error('No reflection was added.');
           }
       
           // Create a new reflection object
@@ -35,8 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
           saveReflection(newReflection); // Save the new reflection
       
         } catch (error) {
-          // If invalid input, prompt the user again
-          addReflection();
+          alert(error.message); // Alert the error message
         }
     }
   
