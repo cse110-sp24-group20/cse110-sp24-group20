@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Get the button elements for adding and removing reflections
+    // Container for add, remove, previous-reflection, and reflection counter
     const addReflectionButton = document.querySelector('.add_button');
     const removeReflectionButton = document.querySelector('.remove_button');
-    const reflectionsContainer = document.querySelector('.previous-reflections'); // Container for displaying reflections
-  
+    const reflectionsContainer = document.querySelector('.previous-reflections');
+    const reflectCountSpan = document.querySelector('#reflect-count');
+    
     // Add event listeners to the buttons
     addReflectionButton.addEventListener('click', addReflection);
     removeReflectionButton.addEventListener('click', removeReflection);
@@ -15,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create elements for each stored reflection
     storedReflections.forEach(reflection => createReflectionElement(reflection));
     reflectionCount = storedReflections.length; // Set the initial reflectionCount based on stored reflections
-  
+    updateReflectionCount(); // Update counter on load
+
     // Function to add a new reflection
     function addReflection() {
         const date = new Date().toLocaleDateString(); // Get the current date
@@ -33,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const newReflection = { id: ++reflectionCount, date, feeling, text: '' };
           createReflectionElement(newReflection, true); // Create a new reflection element
           saveReflection(newReflection); // Save the new reflection
+          updateReflectionCount(); // Update counter after adding
       
         } catch (error) {
           alert(error.message); // Alert the error message
@@ -42,9 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to create a reflection element and add it to the container
     function createReflectionElement(reflection, editable = false) {
       const table = document.createElement('table'); // Create a table element
+      table.setAttribute('data-id', reflection.id); // Set data-id attribute for identification
+  
       const reflectionRow = document.createElement('tr'); // Create a table row element
       reflectionRow.classList.add('previous-reflection'); // Add a class to the row
-  
+
       const indexCell = document.createElement('td'); // Create a cell for the reflection ID
       indexCell.textContent = reflection.id; // Set the ID text
   
@@ -112,11 +117,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (updatedReflections.length !== storedReflections.length) {
           // If a reflection was removed, update localStorage
           localStorage.setItem('reflections', JSON.stringify(updatedReflections));
-          reflectionsContainer.innerHTML = ''; // Clear the container
-          updatedReflections.forEach(reflection => createReflectionElement(reflection)); // Re-create reflection elements
+          const tableToRemove = document.querySelector(`table[data-id="${reflectionToRemove}"]`);
+          if (tableToRemove) {
+            reflectionsContainer.removeChild(tableToRemove); // Remove the table element from the container
+          }
+          reflectionCount = updatedReflections.length; // Update reflection count
+          updateReflectionCount(); // Update counter after removal
         } else {
           alert('Invalid reflection number.'); // Alert if invalid reflection number
         }
       }
     }
+
+    // Function to update reflection counts
+    function updateReflectionCount() {
+      reflectCountSpan.textContent = reflectionCount;
+  }
 });
