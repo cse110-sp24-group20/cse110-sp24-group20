@@ -9,6 +9,8 @@ var eventForm = document.getElementById("eventForm");
 // Show modal on add button click
 addBtn.addEventListener("click", () => {
     modal.style.display = "block";
+    // set default color to transparent
+    document.getElementById("color").value = "#ffffff";
 });
 
 // Hide modal on close button click
@@ -33,7 +35,12 @@ function createTodoItem(event) {
     var dateTime = document.getElementById("dateTime").value;
 
     // Format the date and time
-    var formattedDateTime = formatDateTime(dateTime);
+    //     if dateTime is null, no error
+    if (!dateTime) {
+        dateTime = "";
+    } else {
+        var formattedDateTime = formatDateTime(dateTime);
+    }
 
     // Create todo item
     var li = document.createElement("li");
