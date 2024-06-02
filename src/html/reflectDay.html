@@ -6,92 +6,39 @@
         <title>Reflect On The Day</title><!--Title of the HTML Document-->
         <link rel="icon" href="../../admin/branding/Team404_Logo.png" type="image/x-icon"><!--Link to favicon-->
         <link rel="stylesheet" type="text/css" href="../../src/css/reflectDay.css"><!--Link to external CSS stylesheet-->
-        <script src="../javaScript/reflect.js"></script>
     </head>
     <!--Body: Contains the visible content of the HTML document-->
     <body>
-        <!--Back button to home menu as well as buttons to each other feature-->
-        <div class = "home-menu">
-            <button class="day-schedule-button" onclick="location.href='daySchedule.html'"></button>
-            <button class="month-schedule-button" onclick="location.href='monthSchedule.html'"></button>
-            <button class="project-button" onclick="location.href='projectTracker.html'"></button>
-        </div>
-        <!--Button user can press to add a reflection to the page-->
-        <div class = "add-reflection">
-            <button class="addNew">+ Add Reflection</button>
-        </div>
-        <!--Display table of previous reflections-->
-        <div class = "previous-reflections">
-        <table>
-            <!-- <tr class="widget-slot">
-                <th class="widget-select-icon">Widget selection for 1</th>
-            </tr> -->
-            <tr class="previous-reflection">
-                <td class="widget-select-icon3">Widget selection for 1</td>
-                <td>Previous Reflection 3
-                    <p>This is the third developer's jounal, I'm very happy today
-                        because I started to work on my project and the journal looks
-                        very pretty.This is the third developer's jounal, I'm very happy today
-                        because I started to work on my project and the journal looks
-                        very pretty.This is the third developer's jounal, I'm very happy today
-                        because I started to work on my project and the journal looks
-                        very pretty.This is the third developer's jounal, I'm very happy today
-                        because I started to work on my project and the journal looks
-                        very pretty.
-                    </p>
-                </td>
-            </tr>
-            <tr><td></td><td>date: xx/xx/xxxx</td></tr>
-        </table>    
-        <br>
-        <table>
-            <!-- <tr class="widget-slot">
-                <th class="widget-select-icon"></th>>Widget selection for 2</th>
-            </tr> -->
-            <tr class="previous-reflection">
-                <td class="widget-select-icon2">Widget selection for 2</td>
-                <td>Previous Reflection 2
-                    <p>This is the second developer's jounal, I'm very happy today
-                        because I started to work on my project and the journal looks
-                        very pretty.This is the second developer's jounal, I'm very happy today
-                        because I started to work on my project and the journal looks
-                        very pretty.This is the second developer's jounal, I'm very happy today
-                        because I started to work on my project and the journal looks
-                        very pretty.This is the second developer's jounal, I'm very happy today
-                        because I started to work on my project and the journal looks
-                        very pretty.
-                    </p>
-                </td>
-            </tr>
-            <tr><td></td><td>date: xx/xx/xxxx</td></tr>
-        </table>    
-        <br>
-        <table>
-            <!-- <tr class="widget-slot">
-                <th class="widget-select-icon"></th>>Widget selection for 3</th>
-            </tr> -->
-            <tr class="previous-reflection">
-                <td class="widget-select-icon1">Widget selection for 3</td>
-                <td>Previous Reflection 1
-                    <p>This is the first developer's jounal, I'm very happy today
-                        because I started to work on my project and the journal looks
-                        very pretty.This is the first developer's jounal, I'm very happy today
-                        because I started to work on my project and the journal looks
-                        very pretty.This is the first developer's jounal, I'm very happy today
-                        because I started to work on my project and the journal looks
-                        very pretty.This is the first developer's jounal, I'm very happy today
-                        because I started to work on my project and the journal looks
-                        very pretty.
-                    </p>
-                </td>
-            </tr>
-            <tr><td></td><td>date: xx/xx/xxxx</td></tr>
-        </table>
-        </div>
-        <div class="home">
-            <div class="home-button-container" onclick="location.href='index.html'">
-                <img class="spaceship" src="../../img/misc/spaceship1.png" alt="image">
+        <!-- Div for reflection component -->
+        <div class="main-container">
+            <div class="reflect">
+                <h1>Reflection</h1>
+                <!-- Div number of reflection counter-->
+                <div class="reflect-count">
+                    Reflections: <span id="reflect-count">0</span>
+                </div>
+                <!-- Div containing all reflections-->
+                <div class="reflect-countainer">
+                    <div class="button-container">
+                        <button class="add_button">+</button>
+                        <button class="remove_button">-</button>
+                    </div>
+                    <!--Display table of previous reflections-->
+                    <div class="previous-reflections">
+                    <!-- Placeholder for dynamically generated reflection tables -->
+                    </div>
+                </div>
+            </div>
+            <!--Buttons for navigating to other features or home menu-->
+            <div class="home-menu">
+                <button class="day-schedule-button" onclick="location.href='daySchedule.html'"></button>
+                <button class="month-schedule-button" onclick="location.href='monthSchedule.html'"></button>
+                <button class="project-button" onclick="location.href='projectTracker.html'"></button>
+                <div class="home-button-container" onclick="location.href='index.html'">
+                    <img class="spaceship" src="../../img/misc/spaceship1.png" alt="image">
+                </div>
             </div>
         </div>
+        <script src="../javaScript/reflect.js"></script>
     </body>
 </html>
