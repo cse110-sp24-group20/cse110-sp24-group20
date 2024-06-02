@@ -14,9 +14,9 @@
 }
 
 .reflect-count {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: relative;
+    margin-top: -10%;
+    margin-right: -85%;
     font-size: 18px;
     color: #333;
     background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
@@ -101,7 +101,8 @@ tr, td, th {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    margin-bottom: 20px; /* Add a gap between the button container and the projects container */
+    margin-top: 10%;
+    margin-bottom: 20%; /* Add a gap between the button container and the projects container */
     width: 100%;
 }
 
