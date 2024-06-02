@@ -2,29 +2,24 @@
 <html lang="en">
   <!--Head: Contains metadata about the HTML document-->
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Schedule Your Month</title>
-    <link rel="icon" href="../../admin/branding/Team404_Logo.png" type="image/x-icon"><!--Link to favicon-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May 2024 Calendar</title>
     <link rel="stylesheet" type="text/css" href="../css/monthSchedule.css">
   </head>
   <!--Body: Contains the visible content of the HTML document-->
   <body>
     <!--Create calendar for the current month using html table-->
-    <div class="calendar">
-      <!--Add create and delete buttons-->
-      <button class="add_button">+</button>
-      <button class="remove_button">-</button>
-      <div class="calendar-box">
-        <!--Add selectors for year and month-->
-        <div class="top">
-          <select id="year" class="float"></select>
-          <span class="float">&nbsp;&nbsp;Year</span>
-          <select id="month" class="float"></select>
-          <span class="float">&nbsp;&nbsp;Month</span>
-          <br /><br />
-        </div>
-        <table>
+  <div class="calendar">
+    <div class="calendar-box">
+      <div class="top">
+        <select id="year" class="float"></select>
+        <span class="float">&nbsp;&nbsp;Year</span>
+        <select id="month" class="float"></select>
+        <span class="float">&nbsp;&nbsp;Month</span>
+        <br/><br/>
+      </div>
+      <table>
           <!--Table header containing days of the week-->
           <thead>
             <tr>
@@ -37,23 +32,23 @@
               <th>Sat</th>
             </tr>
           </thead>
-          <!--Table body  to be populated with appropriate number of cells for the selected year and month-->
-          <tbody id="tbody"></tbody>
-        </table>
-      </div>
-      <!--Buttons for navigating to other features or home menu-->
-      <div class="home-menu">
-        <button class="day-schedule-button" onclick="location.href='daySchedule.html'"></button>
-        <button class="reflect-button" onclick="location.href='reflectDay.html'"></button>
-        <button class="project-button" onclick="location.href='projectTracker.html'"></button>
-        <div class="home">
-          <!--div containing rocket home button-->
-          <div class="home-button-container" onclick="location.href='index.html'">
-            <img class="spaceship" src="../../img/misc/spaceship1.png" alt="image">
-          </div>
+          <!--Table body containing rows with cells for each individual day-->
+          <tbody id="tbody">
+          </tbody>
+      </table>
+    </div>
+    <!--Buttons for navigating to other features or home menu-->
+    <div class="home-menu">
+      <button class="day-schedule-button" onclick="location.href='daySchedule.html'"></button>
+      <button class="reflect-button" onclick="location.href='reflectDay.html'"></button>
+      <button class="project-button" onclick="location.href='projectTracker.html'"></button>
+      <div class="home">
+        <div class="home-button-container" onclick="location.href='index.html'">
+          <img class="spaceship" src="../../img/misc/spaceship1.png" alt="image">
         </div>
       </div>
     </div>
-    <script src="../javaScript/monthlyCalendar.js"></script>
+  </div>
+  <script src="../javaScript/monthlyCalendar.js"></script>
   </body>
 </html>

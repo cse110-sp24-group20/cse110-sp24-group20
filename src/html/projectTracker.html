@@ -7,74 +7,38 @@
         <title>Track Your Project</title>
         <link rel="icon" href="../../admin/branding/Team404_Logo.png" type="image/x-icon"><!--Link to favicon-->
         <link rel="stylesheet" href="../css/projectTracker.css">
-        <script src="../javaScript/project_tracker.js"></script>
     </head>
     <!--Body: Contains the visible content of the HTML document-->
     <body>
         <!--Div for project-tracker component-->
-        <div class="project-tracker">
-            <h1>Project Tracker</h1>
-            <!--Div number of project counter-->
-            <div class="project-count">
-                Projects: <span id="project-count">0</span>
-            </div>
-            <!--Div containing all projects-->
-            <div class="projects">
-                <button class="add_button">+</button>
-                <button class="remove_button">-</button>
-                <!-- Project elements will be dynamically added here -->
-            </div>
-                
-                <!--Project element with respective name, rocket (same for all), and progress slider-->
-                <!--
-                <div class="project">
-                    <span>Project A</span>
-                    <div class="rocket"></div>
-                    <div id="projectAprogress">
-                        <input type="range" name="bar" id="Abar" value="13" min="0" max="100" step="1" />
+        <div class="main-container">
+            <div class="project-tracker">
+                <h1>Project Tracker</h1>
+                <!--Div number of project counter-->
+                <div class="project-count">
+                    Projects: <span id="project-count">0</span>
+                </div>
+                <!--Div containing all projects-->
+                <div class="projects-container">
+                    <div class="button-container">
+                        <button class="add_button">+</button>
+                        <button class="remove_button">-</button>
                     </div>
-                </div> -->
-                <!--Project element with respective name, rocket (same for all), and progress slider-->
-                <!--
-                <div class="project">
-                    <span>Project B</span>
-                    <div class="rocket"></div>
-                    <div id="projectBprogress">
-                        <input type="range" name="bar" id="Bbar" value="13" min="0" max="100" step="1" />
-                    </div>
-                </div> -->
-                <!--Project element with respective name, rocket (same for all), and progress slider-->
-                <!--
-                <div class="project">
-                    <span>Project C</span>
-                    <div class="rocket"></div>
-                    <div id="projectCprogress">
-                        <input type="range" name="bar" id="Cbar" value="13" min="0" max="100" step="1" />
-                    </div>
-                </div> -->
-                <!--Project element with respective name, rocket (same for all), and progress slider-->
-                <!--
-                <div class="project">
-                    <span>Project D</span>
-                    <div class="rocket"></div>
-                    <div id="projectCprogress">
-                        <input type="range" name="bar" id="Dbar" value="13" min="0" max="100" step="1" />
+                    <div class="projects">
+                    <!-- Project elements will be dynamically added here -->
                     </div>
                 </div>
-            </div> -->
+            </div>
             <!--Buttons for navigating to other features or home menu-->
             <div class="home-menu">
-                <button class="day-schedule-button" onclick="location.href='daySchedule.html'"></a>
-                <button class="reflect-button" onclick="location.href='reflectDay.html'"></a>
-                <button class="month-schedule-button" onclick="location.href='monthSchedule.html'"></a>
-            </div>
-            <div class="home">
+                <button class="day-schedule-button" onclick="location.href='daySchedule.html'"></button>
+                <button class="reflect-button" onclick="location.href='reflect.html'"></button>
+                <button class="month-schedule-button" onclick="location.href='monthSchedule.html'"></button>
                 <div class="home-button-container" onclick="location.href='index.html'">
                     <img class="spaceship" src="../../img/misc/spaceship1.png" alt="image">
                 </div>
-            </div> 
+            </div>
         </div>
-      </div>
-    </div>
+    <script src="../javaScript/project_tracker.js"></script>
   </body>
 </html>

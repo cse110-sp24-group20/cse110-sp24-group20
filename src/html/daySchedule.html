@@ -10,100 +10,53 @@
     <link rel="stylesheet" href="../css/daySchedule.css">
 </head>
 <body>
+  <div class="main-container">
     <div class="container">
       <!--Dedicated page header-->  
       <div class="header">
         <h1>Schedule Your Day</h1>
       </div>
+      <div class="button-container">
+        <button class="add_button">+</button>
+      </div>
       <!--Store all todo-items in a todo-list ul element-->
       <ul class="todo-list">
-        <button class="add_button">+</button>
-        <button class="remove_button">-</button>
-        <!--Create a todo item with each containing a background, label, task, and check button-->
-        <!-- <li class="todo-item"> -->
-          <!-- <button style="background-color: red" class="listbox">1</button> -->
-          <div class="task">
-            <button style="background-color: red" class="listbox">1</button>
-            <input type="text" placeholder="Task 1" class="width" />
-            <button class="checkbox">✔</button>
+        <!-- submit form-->
+        <div class="modal">
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2 class="modal-title">Add Event</h2>
+              <form id="eventForm">
+                  <label for="eventName">Event Name:</label>&nbsp;
+                  <input type="text" id="eventName" name="eventName" required><br>
+  
+                  <label for="description">Description:</label>&nbsp;
+                  <textarea id="description" name="description" required></textarea><br>
+
+                  <div>
+                    <label for="color">Select Tag Color:</label>&nbsp;
+                    <input type="color" id="color" name="color" required><br>
+                  </div><br>
+  
+                  <label for="dateTime">Date and Time:</label>&nbsp;
+                  <input type="datetime-local" id="dateTime" name="dateTime" required><br>
+  
+                  <button class="submit">Submit</button>
+              </form>
           </div>
-        <!-- </li> -->
-        <!-- <li class="todo-item"> -->
-          <button style="background-color: #ff9800" class="listbox">2</button>
-          <!-- <span style="background-color: #ff9800">2</span> -->
-          <div class="task">
-            <input type="text" placeholder="Task 2" class="width" />
-            <button class="checkbox">✔</button>
-          </div>
-        <!-- </li> -->
-        <!-- <li class="todo-item"> -->
-          <button style="background-color: #ffeb3b" class="listbox">3</button>
-          <!-- <span style="background-color: #ffeb3b">3</span> -->
-          <div class="task">
-            <input type="text" placeholder="Task 3" class="width" />
-            <button class="checkbox">✔</button>
-          </div>
-        <!-- </li> -->
-        <!-- <li class="todo-item"> -->
-          <button style="background-color: #8bc34a" class="listbox">4</button>
-          <!-- <span style="background-color: #8bc34a">4</span> -->
-          <div class="task">
-            <input type="text" placeholder="Task 4" class="width" />
-            <button class="checkbox">✔</button>
-          </div>
-        <!-- </li> -->
-        <!-- <li class="todo-item"> -->
-          <button style="background-color: #00bcd4" class="listbox">5</button>
-          <!-- <span style="background-color: #00bcd4">5</span> -->
-          <div class="task">
-            <input type="text" placeholder="Task 5" class="width" />
-            <button class="checkbox">✔</button>
-          </div>
-        <!-- </li> -->
-        <!-- <li class="todo-item"> -->
-          <button style="background-color: #3f51b5" class="listbox">6</button>
-          <!-- <span style="background-color: #3f51b5">6</span> -->
-          <div class="task">
-            <input type="text" placeholder="Task 6" class="width" />
-            <button class="checkbox">✔</button>
-          </div>
-        <!-- </li> -->
-        <!-- <li class="todo-item"> -->
-          <button style="background-color: #9c27b0" class="listbox">7</button>
-          <!-- <span style="background-color: #9c27b0">7</span> -->
-          <div class="task">
-            <input type="text" placeholder="Task 7" class="width" />
-            <button class="checkbox">✔</button>
-          </div>
-        <!-- </li> -->
-      </ul>
-      <!--Create a section that tracks the completeness of all tasks for the day-->
-      <div class="completeness">
-        <span>Completeness:</span>
-        <div class="progress-bar">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div style="background-color: #e0e0e0"></div>
-          <div style="background-color: #e0e0e0"></div>
-          <div style="background-color: #e0e0e0"></div>
-          <div style="background-color: #e0e0e0"></div>
-          <div style="background-color: #e0e0e0"></div>
-        </div>
       </div>
+      </ul>
     </div>
     <!--Buttons for navigating to other features or home menu-->
     <div class="home-menu">
         <button class="month-schedule-button" onclick="location.href='monthSchedule.html'"></a>
         <button class="reflect-button" onclick="location.href='reflectDay.html'"></button>
         <button class="project-button" onclick="location.href='projectTracker.html'"></button>
-      </div>
-    <div class="home">
         <div class="home-button-container" onclick="location.href='index.html'">
             <img class="spaceship" src="../../img/misc/spaceship1.png" alt="image">
         </div>
     </div>
-</body>
+  </div>
+    <script src="../javascript/daySchedule.js"></script>
+  </body>
 </html>

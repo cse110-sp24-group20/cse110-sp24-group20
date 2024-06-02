@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         newProject.dataset.name = name; // Store the project name in a data attribute for later reference
   
         const projectNameSpan = document.createElement('span'); // Create a span element for the project name
+        projectNameSpan.ClassName = 'project-title' // Set the class name to the project-title
         projectNameSpan.textContent = name; // Set the text content to the project name
   
         const rocket = document.createElement('div'); // Create a div element for the rocket icon

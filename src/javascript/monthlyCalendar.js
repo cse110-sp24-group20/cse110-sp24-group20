@@ -13,6 +13,21 @@ const months = {
     12: "December"
 };
 
+const monthsNameToNum = {
+    "January": "1",
+    "February": "2",
+    "March": "3",
+    "April": "4",
+    "May": "5",
+    "June": "6",
+    "July": "7",
+    "August": "8",
+    "September": "9",
+    "October": "10",
+    "November": "11",
+    "December": "12"
+};
+
 /**
  * Initial the data, calendar and eventList when the web load.
  */
@@ -37,12 +52,12 @@ async function initialData() {
  * initial the Calendar with the current date
  */
 function initialCalendar() {
-    var year = document.getElementById("year");
-    var month = document.getElementById("month");
-    var date = new Date();
+    let year = document.getElementById("year");
+    let month = document.getElementById("month");
+    let date = new Date();
     //set the year from 1990 to 2030
-    for(var i = 2030; i >= 1990; i--) {
-        var sel = document.createElement("option");
+    for(let i = 2030; i >= 1990; i--) {
+        let sel = document.createElement("option");
         sel.value = i;
         sel.innerText = i;
         if (i == date.getFullYear()) {
@@ -51,8 +66,8 @@ function initialCalendar() {
         year.appendChild(sel);
     }
     //set the month from 1 to 12
-    for(var i = 1; i <= 12; i++) {
-        var sel = document.createElement("option");
+    for(let i = 1; i <= 12; i++) {
+        let sel = document.createElement("option");
         sel.value = i;
         sel.innerText = months[i];
         if (i == date.getMonth() + 1) {
@@ -75,39 +90,39 @@ document.querySelector("#month").addEventListener("change", () => {
  * Fill calendar with dates
  */
 function setDate() {
-    var week = 0;
-    var day = 1;
-    var days = 30;
-    var year = document.getElementById("year").value;
-    var month = document.getElementById("month").value;
-    var tBody = document.getElementById("tbody");
-    var date = new Date(year + "-" + month + "-1"); //get the selected date
+    let week = 0;
+    let day = 1;
+    let days = 30;
+    let year = document.getElementById("year").value;
+    let month = document.getElementById("month").value;
+    let tBody = document.getElementById("tbody");
+    let date = new Date(year + "-" + month + "-1"); //get the selected date
 
     //clear the calendar
-    var clearList = document.getElementsByClassName("trList");
-    for(var i = 0; i < clearList.length;) {
+    let clearList = document.getElementsByClassName("trList");
+    for(let i = 0; i < clearList.length;) {
         clearList[0].remove();
     }
 
     //get the numbers of day in a month
-    var data = new Date(year, month, 0);
+    let data = new Date(year, month, 0);
     days = data.getDate();
 
     //fill out the blank date at the beginning of the month
-    var newtr = document.createElement("tr");
+    let newtr = document.createElement("tr");
     newtr.classList.add("trList");
-    for (var i = 0; i < date.getDay(); i++) {
+    for (let i = 0; i < date.getDay(); i++) {
         if (week == 7) {
             week = 0;
         }
-        var newtd = document.createElement("td");
+        let newtd = document.createElement("td");
         newtr.appendChild(newtd);
         week++;
     }
     //fill out the rest day of the first week
     if (week <= 6) {
         for (; week <= 6; week++, day++) {
-            var newtd = document.createElement("td");
+            let newtd = document.createElement("td");
             newtd.innerText = day;
             newtd.id = `${year}-${month}-${day}`;
             newtr.appendChild(newtd);
@@ -126,7 +141,7 @@ function setDate() {
             newtr = document.createElement("tr");
             newtr.classList.add("trList");
         }
-        var newtd = document.createElement("td");
+        let newtd = document.createElement("td");
         newtd.innerText = day;
         newtd.id = `${year}-${month}-${day}`;
         newtr.appendChild(newtd);
@@ -135,45 +150,58 @@ function setDate() {
     initialEventList();
 }
 
+
+function convertDate(dateStr) {
+    // Separate date string
+    const [monthName, day, year] = dateStr.replace(',', '').split(' ');
+    // Get the digital representation of the month
+    const month = monthsNameToNum[monthName];
+    return `${year}-${month}-${day}`;
+}
+
 /**
  * initial the event list to the calendar when the mouse hover
  */
 function initialEventList() {
-    var data = JSON.parse(localStorage.getItem("data"));
-    var eventList = data.EventList;
+    let eventList = JSON.parse(localStorage.getItem("tasks"));
     console.log(eventList);
-    for (var i = 0; i < eventList.length; i++) {
-        var date = eventList[i].date;
-        var td = document.querySelector(`td[id="${date}"]`);
+    for (let i = 0; i < eventList.length; i++) {
+        let dateTime = eventList[i].dateTime.split("at");
+
+        let time = dateTime[1];
+        let date = convertDate(dateTime[0]);
+        let eventId = date + "-" + time;
+
+        let td = document.querySelector(`td[id="${date}"]`);
         if (td) {
             //if the event already show in the calendar, continue.
-            if (document.querySelector(`div[id=${eventList[i].eventId}]`)) {
+            if (document.querySelector(`div[id="${eventId}"]`)) {
                 continue;
             }
 
             //create a eventDiv div for the color box
-            var eventDiv = document.createElement("div");
+            let eventDiv = document.createElement("div");
             eventDiv.classList.add("event");
             eventDiv.textContent = eventList[i].eventName;
-            eventDiv.id = eventList[i].eventId;
+            eventDiv.id = eventId;
             eventDiv.style.backgroundColor = eventList[i].color;
 
             // Create a tooltip div for the event details
-            var tooltipDiv = document.createElement("div");
+            let tooltipDiv = document.createElement("div");
             tooltipDiv.className = 'tooltip';
             
             //event content detail
-            var textContent = 
+            let textContent = 
             `${eventList[i].eventName}
             <br>
             <br>
-            deadline:&nbsp;${eventList[i].date}&nbsp;${eventList[i].time}
+            deadline:&nbsp;${date}&nbsp;${time}
             <br>
             <br>
             ${eventList[i].description}
             <br>
             <br>
-            completeteness: ${eventList[i].completeness}%
+            completeteness: ${eventList[i].checked}
             `;
             tooltipDiv.innerHTML = textContent;
 
