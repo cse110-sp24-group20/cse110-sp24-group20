@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Container for add, remove, previous-reflection, and reflection counter
-  const addReflectionButton = document.querySelector('.add_button');
-  const removeReflectionButton = document.querySelector('.remove_button');
+  const addReflectionButton = document.querySelector('.add-button');
+  const removeReflectionButton = document.querySelector('.remove-button');
   const reflectionsContainer = document.querySelector('.previous-reflections');
   const reflectCountSpan = document.querySelector('#reflect-count');
   

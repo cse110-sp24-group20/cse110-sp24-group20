@@ -274,12 +274,7 @@ textarea {
     align-items: center;
     gap: 20px;
     margin-bottom: 20px; /* Add a gap between the button container and the projects container */
-    width: 100%;
-    height: 50px;
-}
-=======
-    background-attachment: fixed;
-
+    width: 40%;
 }
 
 .todo-list{
