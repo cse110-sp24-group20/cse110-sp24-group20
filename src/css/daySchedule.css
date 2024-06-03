@@ -92,6 +92,7 @@
 
 .width{
     width: 85%;
+    height: 100px;
 }
 
 .checkbox{
@@ -262,6 +263,11 @@ textarea {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+.remove_button {
+    margin-right: 0px;
+    background-color: rgb(238, 142, 142);
+}
+
 .add_button:hover, .remove_button:hover {
     background-color: #B58B00;
     color: white;
@@ -278,13 +284,34 @@ textarea {
 }
 
 .todo-list{
+    list-style-type: none; /* Remove bullet points */
     background-color: rgba(243, 220, 214, 0.5);
     border-radius: 0.5rem;
+    width: 80%;
 }
 
 input{
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 0.3rem;
     padding: 0.3rem;
-    margin-left: 6%;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.title {
+    flex: 1;
+    text-align: center;
+}
+
+.todo-item {
+    background-color: #f9f9f9; /* Light white color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
 }

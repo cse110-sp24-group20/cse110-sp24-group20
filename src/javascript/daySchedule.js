@@ -50,17 +50,24 @@ function createTodoItem(event) {
     // Add delete button
     var deleteBtn = document.createElement("button");
     deleteBtn.classList.add("remove_button");
-    deleteBtn.innerHTML = "-";
+    deleteBtn.innerHTML = "delete";
     deleteBtn.addEventListener("click", () => {
         todoList.removeChild(li);
         saveTasks();
     });
-    li.appendChild(deleteBtn);
+    //li.appendChild(deleteBtn);
 
 
     var span = document.createElement("span");
     span.style.backgroundColor = color;
     span.textContent = eventName;
+    span.classList.add("title");
+
+    var titleContainer = document.createElement("div");
+    titleContainer.appendChild(span);
+    titleContainer.appendChild(deleteBtn);
+    titleContainer.classList.add("title-container");
+    
 
     var div = document.createElement("div");
     div.classList.add("task");
@@ -85,7 +92,7 @@ function createTodoItem(event) {
     div.appendChild(checkbox);
 
     // Append elements to the todo item
-    li.appendChild(span);
+    li.appendChild(titleContainer);
     li.appendChild(div);
 
     // Add event listener to the checkbox
