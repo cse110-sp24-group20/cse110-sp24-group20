@@ -97,11 +97,27 @@ document.addEventListener('DOMContentLoaded', () => {
     dateCell.textContent = `Date: ${reflection.date}`; // Set the date text
     dateCell.classList.add('date-cell');
 
+    // Add delete button to reflection
     const deleteBtn = document.createElement('button');
     deleteBtn.innerText = 'delete';
     deleteBtn.classList.add('delete-item');
     deleteBtn.addEventListener('click', () => removeReflection(reflection.id));
     dateCell.appendChild(deleteBtn);
+
+    const editBtn = document.createElement('button');
+    editBtn.innerText = "edit";
+    editBtn.classList.add('edit-item');
+    editBtn.addEventListener('click', () => {
+      let reflections = document.querySelectorAll('textarea'); //get all textboxes
+      let selection = reflections[reflection.id-1]; //select desired one based on id of reflection target
+      selection.disabled = false; //enable textbox
+      selection.addEventListener('input', () => {
+        reflection.text = selection.value; // Update the reflection text
+        saveReflection(reflection); // Save the updated reflection
+      });
+    });
+
+    dateCell.appendChild(editBtn);
 
     // Append cells to the row
     reflectionRow.appendChild(indexCell);
