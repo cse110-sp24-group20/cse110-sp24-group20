@@ -278,3 +278,18 @@ body {
 .delete-item:hover {
     background-color: darkred;
 }
+
+.edit-item {
+    float: inline-end;
+    color: white;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-item:hover {
+    background-color: darkgrey;
+}
