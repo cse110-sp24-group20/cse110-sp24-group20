@@ -108,12 +108,11 @@ document.addEventListener('DOMContentLoaded', () => {
     editBtn.innerText = "edit";
     editBtn.classList.add('edit-item');
     editBtn.addEventListener('click', () => {
-      let reflections = document.querySelectorAll('textarea');
-      reflections[reflection.id-1].disabled = false;
-      console.log(reflection.id-1);
-      console.log(reflection);
-      reflections[reflection.id-1].addEventListener('input', () => {
-        reflection.text = reflections[reflection.id-1].value; // Update the reflection text
+      let reflections = document.querySelectorAll('textarea'); //get all textboxes
+      let selection = reflections[reflection.id-1]; //select desired one based on id of reflection target
+      selection.disabled = false; //enable textbox
+      selection.addEventListener('input', () => {
+        reflection.text = selection.value; // Update the reflection text
         saveReflection(reflection); // Save the updated reflection
       });
     });
