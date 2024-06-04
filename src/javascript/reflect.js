@@ -1,31 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Container for add, remove, previous-reflection, and reflection counter
   const addReflectionButton = document.querySelector('.add-button');
-  const removeReflectionButton = document.querySelector('.remove-button');
+  //const removeReflectionButton = document.querySelector('.remove-button');
   const reflectionsContainer = document.querySelector('.previous-reflections');
   const reflectCountSpan = document.querySelector('#reflect-count');
+  const sentimentDialog = document.querySelector('.sentiment-widget');
   
   // Add event listeners to the buttons
-  addReflectionButton.addEventListener('click', addReflection);
-  removeReflectionButton.addEventListener('click', removeReflection);
+  addReflectionButton.addEventListener('click', showSentimentDialog);
+  //removeReflectionButton.addEventListener('click', removeReflection);
 
   let reflectionCount = 0; // Counter for reflection index
 
   // Load existing reflections from localStorage
   const storedReflections = JSON.parse(localStorage.getItem('reflections')) || [];
+
   // Create elements for each stored reflection
   storedReflections.forEach(reflection => createReflectionElement(reflection));
   reflectionCount = storedReflections.length; // Set the initial reflectionCount based on stored reflections
   updateReflectionCount(); // Update counter on load
 
-  // Function to add a new reflection
-  function addReflection() {
+  /**
+   * show the SentimentDialog when click the add button
+   */
+  function showSentimentDialog() {
+    sentimentDialog.style.display = "flex";
+  }
+
+  /**
+   *  Function to add a new reflection withe sentiment value
+   *  @param {value} value Number to store sentiment value.
+   */ 
+  function addReflection(value) {
       const date = new Date().toLocaleDateString(); // Get the current date
       let feeling;
 
       try {
         // Prompt user for their feeling rating
-        feeling = prompt('Rate your feeling for the day (input 1[Very Angry] - 5[Very Happy]):');
+        //feeling = prompt('Rate your feeling for the day (input 1[Very Angry] - 5[Very Happy]):');
+        feeling = value;
         // Check if the input is valid
         if (![1, 2, 3, 4, 5].includes(Number(feeling))) {
           throw new Error('No reflection was added.');
@@ -42,7 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   }
 
-  // Function to create a reflection element and add it to the container
+  /**
+   * Function to create a reflection element and add it to the container
+   * @param {reflection}  reflection 
+   * @param {editable} editable 
+   */
   function createReflectionElement(reflection, editable = false) {
     const table = document.createElement('table'); // Create a table element
     table.setAttribute('data-id', reflection.id); // Set data-id attribute for identification
@@ -78,6 +95,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const dateCell = document.createElement('td'); // Create a cell for the date
     dateCell.colSpan = 3; // Make the date cell span across multiple columns
     dateCell.textContent = `Date: ${reflection.date}`; // Set the date text
+    dateCell.classList.add('date-cell');
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.innerText = 'delete';
+    deleteBtn.classList.add('delete-item');
+    deleteBtn.addEventListener('click', () => removeReflection(reflection.id));
+    dateCell.appendChild(deleteBtn);
 
     // Append cells to the row
     reflectionRow.appendChild(indexCell);
@@ -107,9 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Function to remove a reflection
-  function removeReflection() {
-    const reflectionToRemove = prompt('Enter the reflection number to remove:'); // Prompt user for reflection ID to remove
-
+  function removeReflection(reflectId) {
+    //const reflectionToRemove = prompt('Enter the reflection number to remove:'); // Prompt user for reflection ID to remove
+    const reflectionToRemove = reflectId;
     if (reflectionToRemove) {
       const storedReflections = JSON.parse(localStorage.getItem('reflections')) || []; // Get stored reflections
       const updatedReflections = storedReflections.filter(reflection => reflection.id !== parseInt(reflectionToRemove)); // Filter out the reflection to remove
@@ -132,5 +156,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to update reflection counts
   function updateReflectionCount() {
     reflectCountSpan.textContent = reflectionCount;
-}
+  }
+
+  let sentiment_select = document.getElementsByName("rating");
+    sentiment_select.forEach((select) => {
+    select.addEventListener("click", () => {
+      let value = select.value;
+      addReflection(value);
+      sentimentDialog.style.display = "none";
+    });
+  })
 });
