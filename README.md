@@ -18,7 +18,7 @@ Our repository is the command center of our project. Here's your mission briefin
 ### How To Use
 *Ready to launch? Here's your pre-flight checklist:*
 
-1. **You can access the journal here**: [Developer Journal](https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/html/index.html)
+1. **You can access the journal here**: [Developer Journal](https://cse110-sp24-group20.github.io/cse110-sp24-group20/)
 
 2. **Using the Homepage**:
    - When you first visit the Developer Journal, you will be greeted by the homepage, which features a space-themed interface.
