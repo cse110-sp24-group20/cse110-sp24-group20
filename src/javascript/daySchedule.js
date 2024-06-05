@@ -9,7 +9,11 @@ var eventForm = document.getElementById("eventForm");
 // Variable to track if we are editing an existing item
 var editingItem = null;
 
-// Show modal on add button click
+/**
+ * Show modal on add button click
+ * This event listener is triggered when the add button is clicked.
+ * It displays the modal and resets the form for a new entry.
+ */
 addBtn.addEventListener("click", () => {
     modal.style.display = "block";
     eventForm.reset(); // Reset the form
@@ -17,19 +21,33 @@ addBtn.addEventListener("click", () => {
     editingItem = null; // Reset the editing item
 });
 
-// Hide modal on close button click
+/**
+ * Hide modal on close button click
+ * This event listener is triggered when the close button on the modal is clicked.
+ * It hides the modal and resets the editing item.
+ */
 closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
     editingItem = null; // Reset the editing item
 });
 
-// Function to format the date and time for display
+/**
+ * Format the date and time for display
+ * Converts the date and time string to a more readable format.
+ * @param {string} dateTime - The date and time string to format
+ * @returns {string} - The formatted date and time string
+ */
 function formatDateTimeForDisplay(dateTime) {
     var options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
     return new Date(dateTime).toLocaleString('en-US', options);
 }
 
-// Function to format the date and time for input
+/**
+ * Format the date and time for input
+ * Converts the date and time string to a format suitable for input fields.
+ * @param {string} dateTime - The date and time string to format
+ * @returns {string} - The formatted date and time string in input format
+ */
 function formatDateTimeForInput(dateTime) {
     var date = new Date(dateTime);
     var year = date.getFullYear();
@@ -40,7 +58,11 @@ function formatDateTimeForInput(dateTime) {
     return `${year}-${month}-${day}T${hours}:${minutes}`;
 }
 
-// Function to create or update a todo item
+/**
+ * Create or update a todo item
+ * Handles the creation of a new todo item or updating an existing item.
+ * @param {Event} event - The event object
+ */
 function createTodoItem(event) {
     event.preventDefault();
 
@@ -59,11 +81,13 @@ function createTodoItem(event) {
         editingItem.querySelector("span.title").style.backgroundColor = color;
         editingItem.querySelector("input.width").value = description;
         editingItem.querySelector(".datetime").textContent = formattedDateTime;
+        editingItem.setAttribute("data-datetime", dateTime);
         editingItem = null; // Reset editing item
     } else {
         // Create a new todo item
         var li = document.createElement("li");
         li.classList.add("todo-item");
+        li.setAttribute("data-datetime", dateTime);
 
         // Add delete button
         var deleteBtn = document.createElement("button");
@@ -132,12 +156,19 @@ function createTodoItem(event) {
     // Save tasks to local storage
     saveTasks();
 
+    // Sort tasks by date and time
+    sortTasks();
+
     // Hide modal and reset form
     modal.style.display = "none";
     eventForm.reset();
 }
 
-// Function to edit a todo item
+/**
+ * Edit a todo item
+ * Populates the modal with the current values of the selected todo item for editing.
+ * @param {HTMLLIElement} li - The list item element to edit
+ */
 function editTodoItem(li) {
     // Get current values
     var eventName = li.querySelector("span.title").textContent;
@@ -159,13 +190,21 @@ function editTodoItem(li) {
     editingItem = li;
 }
 
-// Helper function to convert rgb color to hex
+/**
+ * Helper function to convert rgb color to hex
+ * Converts an RGB color value to a hex color string.
+ * @param {string} rgb - The rgb color string
+ * @returns {string} - The hex color string
+ */
 function rgbToHex(rgb) {
     var result = rgb.match(/\d+/g);
     return "#" + ((1 << 24) + (parseInt(result[0]) << 16) + (parseInt(result[1]) << 8) + parseInt(result[2])).toString(16).slice(1).toUpperCase();
 }
 
-// Save tasks to local storage
+/**
+ * Save tasks to local storage
+ * Stores the current list of tasks in local storage.
+ */
 function saveTasks() {
     var tasks = [];
     document.querySelectorAll(".todo-item").forEach(item => {
@@ -174,13 +213,17 @@ function saveTasks() {
             description: item.querySelector("input.width").value,
             color: item.querySelector("span.title").style.backgroundColor,
             dateTime: item.querySelector(".datetime").textContent,
+            dataDateTime: item.getAttribute("data-datetime"),
             checked: item.classList.contains("checked")
         });
     });
     localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-// Load tasks from local storage
+/**
+ * Load tasks from local storage
+ * Retrieves the list of tasks from local storage and populates the todo list.
+ */
 function loadTasks() {
     var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -190,6 +233,7 @@ function loadTasks() {
         if (task.checked) {
             li.classList.add("checked");
         }
+        li.setAttribute("data-datetime", task.dataDateTime);
 
         // Add delete button
         var deleteBtn = document.createElement("button");
@@ -254,6 +298,19 @@ function loadTasks() {
         // Append todo item to the list
         todoList.appendChild(li);
     });
+
+    // Sort tasks by date and time
+    sortTasks();
+}
+
+/**
+ * Sort tasks by date and time
+ * Sorts the tasks in the todo list by their date and time in ascending order.
+ */
+function sortTasks() {
+    var items = Array.from(todoList.children);
+    items.sort((a, b) => new Date(a.getAttribute("data-datetime")) - new Date(b.getAttribute("data-datetime")));
+    items.forEach(item => todoList.appendChild(item));
 }
 
 // Add event listener to the submit button
