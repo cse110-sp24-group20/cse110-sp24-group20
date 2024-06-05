@@ -1,10 +1,10 @@
 // Selecting DOM elements
-let addBtn = document.querySelector(".add_button"); // button to add tasks
-let modal = document.getElementsByClassName("modal")[0]; //gets the modal display
-let closeBtn = document.getElementsByClassName("close")[0]; //button to close the modal display
-let submitBtn = document.querySelector(".submit"); //button to submit the form
-let todoList = document.querySelector(".todo-list"); //gets the TODO list
-let eventForm = document.getElementById("eventForm"); //gets the form
+var addBtn = document.querySelector(".add_button"); // button to add tasks
+var modal = document.getElementsByClassName("modal")[0]; //gets the modal display
+var closeBtn = document.getElementsByClassName("close")[0]; //button to close the modal display
+var submitBtn = document.querySelector(".submit"); //button to submit the form
+var todoList = document.querySelector(".todo-list"); //gets the TODO list
+var eventForm = document.getElementById("eventForm"); //gets the form
 
 // Variable to track if we are editing an existing item
 var editingItem = null;
@@ -19,16 +19,6 @@ addBtn.addEventListener("click", () => { //event listener for the add button
     eventForm.reset(); // Reset the form
     document.getElementById("color").value = "#ADD8E6"; // sets default color
     editingItem = null; // reset the editing item
-    // //set default date on the modal
-    // const now = new Date(); //creates new Date object
-    // const year = now.getFullYear(); //gets the full current year
-    // const month = String(now.getMonth() + 1).padStart(2, '0'); // gets the current month
-    // const day = String(now.getDate()).padStart(2, '0'); // gets the current date
-    // const hours = String(now.getHours()).padStart(2, '0'); // gets the current time in hours
-    // const minutes = String(now.getMinutes()).padStart(2, '0'); // gets the current time in minutes
-    
-    // const formattedDateTime = `${year}-${month}-${day}T${hours}:${minutes}`; // format for DateTime
-    // document.getElementById("dateTime").value = formattedDateTime; //changes the time to be formatted
 });
 
 /**
@@ -120,11 +110,11 @@ function createTodoElement(eventName, description, color, dateTime, checked = fa
     let deleteBtn = createDeleteButton(li); //creates delete button for the item
 
     // Add edit button
-    var editBtn = document.createElement("button");
-    editBtn.classList.add("edit_button");
-    editBtn.innerHTML = "edit";
-    editBtn.addEventListener("click", () => {
-        editTodoItem(li);
+    var editBtn = document.createElement("button"); //creates edit button
+    editBtn.classList.add("edit_button"); // adds class "edit_button" to the element
+    editBtn.innerHTML = "edit"; // sets text to be "edit"
+    editBtn.addEventListener("click", () => { // if clicked
+        editTodoItem(li); // edit the item
     });
 
     // creates Title as a span
@@ -173,7 +163,7 @@ function createTodoElement(eventName, description, color, dateTime, checked = fa
  * @param {Event} event - The event object
  */
 function createTodoItem(event) {
-    event.preventDefault();
+    event.preventDefault(); // prevents default behavior
 
     // Get form values
     let eventName = document.getElementById("eventName").value; // name of event
@@ -184,7 +174,7 @@ function createTodoItem(event) {
     //Check if the input is valid
     if (eventName == "") {
         event.preventDefault();
-        alert("Event Name cannot be empty!")
+        alert("Event Name cannot be empty!") //ensures that the eventName is required
     }
 
     // makes dateTime optional
@@ -192,23 +182,24 @@ function createTodoItem(event) {
 
     if (editingItem) {
         // Update the existing item
-        editingItem.querySelector("span.title").textContent = eventName;
-        editingItem.querySelector("span.title").style.backgroundColor = color;
-        editingItem.querySelector("input.width").value = description;
-        editingItem.querySelector(".datetime").textContent = formattedDateTime;
-        editingItem.setAttribute("data-datetime", dateTime);
+        editingItem.querySelector("span.title").textContent = eventName; //updates the title
+        editingItem.querySelector("span.title").style.backgroundColor = color; //updates the background color
+        editingItem.querySelector("input.width").value = description; // updates the description
+        editingItem.querySelector(".datetime").textContent = formattedDateTime; // updates the dateTime
+        editingItem.setAttribute("data-datetime", dateTime); // sets data-datetime of the exisiting item
         editingItem = null; // Reset editing item
     } else {
-        let todoItem = createTodoElement(eventName, description, color, dateTime);
+        let todoItem = createTodoElement(eventName, description, color, dateTime); // creates a new todo element
         todoList.appendChild(todoItem); //append todo item to the list
     }
     // Save tasks to local storage
     saveTasks();
 
-    sortTasks();
+    sortTasks(); //sorts tasks
+
     // Hide modal and reset form
-    modal.style.display = "none";
-    eventForm.reset();
+    modal.style.display = "none"; //hides modal
+    eventForm.reset(); //resets form inputs
 }
 
 /**
@@ -244,8 +235,8 @@ function editTodoItem(li) {
  * @returns {string} - The hex color string
  */
 function rgbToHex(rgb) {
-    var result = rgb.match(/\d+/g);
-    return "#" + ((1 << 24) + (parseInt(result[0]) << 16) + (parseInt(result[1]) << 8) + parseInt(result[2])).toString(16).slice(1).toUpperCase();
+    var result = rgb.match(/\d+/g); //matches the numbers in the RGB string
+    return "#" + ((1 << 24) + (parseInt(result[0]) << 16) + (parseInt(result[1]) << 8) + parseInt(result[2])).toString(16).slice(1).toUpperCase(); //converts to hex
 }
 
 /**
@@ -255,16 +246,16 @@ function rgbToHex(rgb) {
 function saveTasks() {
     let tasks = [];
     document.querySelectorAll(".todo-item").forEach(item => {
-        tasks.push({
+        tasks.push({ //retrieves all this data of each todo item
             eventName: item.querySelector("span.title").textContent,
             description: item.querySelector("input.width").value,
             color: item.querySelector("span.title").style.backgroundColor,
             dateTime: item.querySelector(".datetime").textContent,
             dataDateTime: item.getAttribute("data-datetime"),
-            checked: item.classList.contains("checked")
+            checked: item.classList.contains("checked") 
         });
     });
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem("tasks", JSON.stringify(tasks)); //saves tasks to localStorage
 }
 
 /**
@@ -272,22 +263,22 @@ function saveTasks() {
  * Retrieves the list of tasks from local storage and populates the todo list.
  */
 function loadTasks() {
-    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || []; // gets tasks from localStorage
 
     tasks.forEach(task => {
-        let todoItem = createTodoElement(task.eventName, task.description, task.color, task.dateTime, task.checked);
-        todoList.appendChild(todoItem);
+        let todoItem = createTodoElement(task.eventName, task.description, task.color, task.dateTime, task.checked); // creates TODO element
+        todoList.appendChild(todoItem); //populates the todo list
     });
-    sortTasks();
+    sortTasks(); //sort tasks
 }
 /**
  * Sort tasks by date and time
  * Sorts the tasks in the todo list by their date and time in ascending order.
  */
 function sortTasks() {
-    var items = Array.from(todoList.children);
-    items.sort((a, b) => new Date(a.getAttribute("data-datetime")) - new Date(b.getAttribute("data-datetime")));
-    items.forEach(item => todoList.appendChild(item));
+    var items = Array.from(todoList.children); // creates an array of the items in the todo list
+    items.sort((a, b) => new Date(a.getAttribute("data-datetime")) - new Date(b.getAttribute("data-datetime"))); // sorts based on time
+    items.forEach(item => todoList.appendChild(item)); //append based on new order
 }
 
 // Add event listener to the submit button
