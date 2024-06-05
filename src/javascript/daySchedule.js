@@ -65,7 +65,7 @@ function formatDateTimeForInput(dateTime) {
  */
 function createDeleteButton(li) {
     let deleteBtn = document.createElement("button"); //creates button element
-    deleteBtn.classList.add("remove_button"); //adds the "remove_button" class to the element
+    deleteBtn.classList.add("delete_button"); //adds the "remove_button" class to the element
     deleteBtn.innerHTML = "delete"; //button will say "delete"
     deleteBtn.addEventListener("click", () => { //listens for if the button is clicked
         todoList.removeChild(li); // then remove the child

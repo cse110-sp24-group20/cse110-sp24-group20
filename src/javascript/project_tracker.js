@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const addButton = document.querySelector('.add_button'); // Button to add new projects
-    const removeButton = document.querySelector('.remove_button'); // Button to remove projects
+    // const removeButton = document.querySelector('.remove_button'); // Button to remove projects
     const projectsContainer = document.querySelector('.projects'); // Container for all project elements
     const projectCountElement = document.getElementById('project-count'); // Element to display the project count
   
     addButton.addEventListener('click', addProject); // Event listener for the add button
-    removeButton.addEventListener('click', removeProject); // Event listener for the remove button
+    // removeButton.addEventListener('click', createDeleteButton); // Event listener for the remove button
   
     /**
      * Prompts the user for a project name and adds the project.
@@ -87,13 +87,18 @@ document.addEventListener('DOMContentLoaded', () => {
         inputRange.max = '100'; // Set the maximum value to 100
         inputRange.step = '1'; // Set the step value to 1
         inputRange.className = 'progress-bar'; // Add the 'progress-bar' class to the input
-        //inputRange.addEventListener('input', updateColor); // Add an event listener to update the color on input
-        inputRange.disabled = true; // disable user interaction
+        inputRange.addEventListener('input', updateColor); // Add an event listener to update the color on input
+        
+        // create the delete button for each project
+        const deleteProject = document.createElement("div"); // creates a new div element
+        const deleteBtn = deleteButton(name); //creates delete button for the item
+        deleteProject.appendChild(deleteBtn); // Appends the delete button
 
         progressDiv.appendChild(inputRange); // Append the input element to the progress div
         newProject.appendChild(createdDateSpan);
         newProject.appendChild(projectNameSpan); // Append the project name span to the project div
         newProject.appendChild(deadlineSpan);
+        newProject.appendChild(deleteProject); // Append the project delete button to the project div
         newProject.appendChild(rocket); // Append the rocket div to the project div
         newProject.appendChild(progressDiv); // Append the progress div to the project div
         projectsContainer.appendChild(newProject); // Append the new project div to the projects container
@@ -175,23 +180,23 @@ document.addEventListener('DOMContentLoaded', () => {
         projectCountElement.textContent = currentCount + change; // Update the project count
     }
   
+
     /**
-     * Prompts the user to select a project to remove and removes it.
+     * Function to create a delete button
+     * @param {HTMLElement} li - list item element to append the delete button to
+     * @returns {HTMLButtonElement} - created delete button
      */
-    function removeProject() {
-        const projectName = prompt("Enter the name of the project to remove:"); // Prompt the user for the project name to remove
-        if (!projectName) {
-            return; // Exit if no name is provided
-        }
-  
-        const projectElement = projectsContainer.querySelector(`.project[data-name="${projectName}"]`); // Find the project element by its data-name attribute
-        if (projectElement) {
+    function deleteButton(name) {
+        let deleteBtn = document.createElement("button"); //creates button element
+        deleteBtn.classList.add("remove_button"); //adds the "remove_button" class to the element
+        deleteBtn.innerHTML = "delete"; //button will say "delete"
+        deleteBtn.addEventListener("click", () => { 
+            const projectElement = projectsContainer.querySelector(`.project[data-name="${name}"]`); // Find the project element by its data-name attribute
             projectsContainer.removeChild(projectElement); // Remove the project element from the DOM
             updateProjectCount(-1); // Decrement the project count
-            removeProjectFromStorage(projectName); // Remove the project from local storage
-        } else {
-            alert("Project not found."); // Alert the user if the project was not found
-        }
+            removeProjectFromStorage(name); // Remove the project from local storage
+        });
+        return deleteBtn; // returns the created delete button
     }
   
     /**
