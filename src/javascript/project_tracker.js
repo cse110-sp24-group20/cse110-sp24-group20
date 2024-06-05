@@ -15,7 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const deadline = prompt("Enter the project deadline (YYYY-MM-DD): ");
         if (!projectName || !deadline) {
             alert("Project name and deadline are required");
-            return; // Exit if no name is provided
+            return; // Exit if no name or deadline is provided
+        }
+        const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+        if (!dateRegex.test(deadline)){
+            alert("The deadline must be in the format YYYY-MM-DD.");
+            return;
         }
         const currentDate = new Date().toISOString().split('T')[0]; // get current date in (YYYY-MM-DD) format
         createProjectElement(projectName, currentDate, deadline); // Create a new project element with the given name
@@ -23,6 +28,16 @@ document.addEventListener('DOMContentLoaded', () => {
         saveProject(projectName, currentDate, deadline); // Save the project name to local storage
     }
 
+    function checkDate(createdDate, deadline){
+        const projectCreatedDate = new Date(createdDate);
+        const projectDeadline = new Date(deadline);
+
+        if ((projectDeadline - projectCreatedDate) < 0 ){
+            alert("Deadline entered has already passed");
+            return false;
+        }
+        return true;
+    }
     /**
      * Creates a new project element with the specified name, creation date, and deadline, then adds it to the DOM.
      * @param {string} name - The name of the project.
@@ -32,6 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function createProjectElement(name, createdDate, deadline) {
         if (!name || !createdDate || !deadline) {
             alert("Input a valid name and deadline");
+            return;
+        }
+        if (!checkDate(createdDate, deadline)){
+            alert("Invalid date, try again");
             return;
         }
         const newProject = document.createElement('div'); // Create a new div element for the project
@@ -45,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         projectNameSpan.textContent = name; // Set the text content to the project name
   
         const createdDateSpan = document.createElement('span');
-        createdDateSpan.className = 'deadline';
+        createdDateSpan.className = 'created-date';
         createdDateSpan.textContent = `Created On: ${createdDate}`;
 
         const deadlineSpan = document.createElement('span');
@@ -104,8 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const totalTime = projectDeadline - projectCreatedDate;
         const timePassed = currentDate - projectCreatedDate;
-        //const timeDifference = projectDeadline.getTime() - currentDate.getTime();
-        //const timeRemaining = Math.max(0, timeDifference); // Ensure time remaining is not negative
+       
         const percentage = (timePassed / totalTime) * 100;
         return Math.min(Math.max(percentage, 0), 100); // Ensure the percentage is not negative and not greater than 100
     }
@@ -117,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateProgressBar(projectElement) {
         const createdDate = projectElement.dataset.createdDate;
         const deadline = projectElement.dataset.deadline;
-
+        
         const percentage = calculateTimePassed(createdDate, deadline);
         const progressBar = projectElement.querySelector('.progress-bar');
         progressBar.value = percentage;
@@ -186,5 +204,5 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('projects', JSON.stringify(projects)); // Save the updated array to local storage
     }
   
-    //loadProjects(); // Load projects from local storage when the page is loaded
+    loadProjects(); // Load projects from local storage when the page is loaded
   });
