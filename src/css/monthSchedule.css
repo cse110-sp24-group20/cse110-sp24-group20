@@ -22,7 +22,11 @@ td {
     text-align: left;
     padding: 8px;
     height: 50px;
-    background-color: whitesmoke;
+    background-color: rgb(245, 245, 245);
+}
+
+tr th{
+    background-color: rgb(60, 183, 214);
 }
   
 caption {
@@ -238,4 +242,29 @@ body {
     background-repeat: no-repeat; /* Prevent the image from repeating */
     overflow-x: hidden;
     background-attachment: fixed;
+}
+
+.instruction-box {
+    background-color: #0bc6d3;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-right: 15%;
+    margin-left: auto;
+}
+
+.instruction-box h2 {
+    margin-top: 0;
+    color: #0b025a;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.instruction-box p {
+    color: #241818;
+    font-size: 16px;
+    line-height: 1.5;
 }

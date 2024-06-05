@@ -1,16 +1,27 @@
 // Selecting DOM elements
-var addBtn = document.querySelector(".add_button");
-var modal = document.getElementsByClassName("modal")[0];
-var closeBtn = document.getElementsByClassName("close")[0];
-var submitBtn = document.querySelector(".submit");
-var todoList = document.querySelector(".todo-list");
-var eventForm = document.getElementById("eventForm");
+let addBtn = document.querySelector(".add_button");
+let modal = document.getElementsByClassName("modal")[0];
+let closeBtn = document.getElementsByClassName("close")[0];
+let submitBtn = document.querySelector(".submit");
+let todoList = document.querySelector(".todo-list");
+let eventForm = document.getElementById("eventForm");
 
 // Show modal on add button click
 addBtn.addEventListener("click", () => {
     modal.style.display = "block";
     // set default color to transparent
-    document.getElementById("color").value = "#ffffff";
+    document.getElementById("color").value = "#ADD8E6";
+    
+    //set default date on the modal
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    
+    const formattedDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
+    document.getElementById("dateTime").value = formattedDateTime;
 });
 
 // Hide modal on close button click
@@ -20,7 +31,7 @@ closeBtn.addEventListener("click", () => {
 
 // Function to format the date and time
 function formatDateTime(dateTime) {
-    var options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+    let options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
     return new Date(dateTime).toLocaleString('en-US', options);
 }
 
@@ -29,13 +40,19 @@ function createTodoItem(event) {
     event.preventDefault();
 
     // Get form values
-    var eventName = document.getElementById("eventName").value;
-    var description = document.getElementById("description").value;
-    var color = document.getElementById("color").value;
-    var dateTime = document.getElementById("dateTime").value;
+    let eventName = document.getElementById("eventName").value;
+    let description = document.getElementById("description").value;
+    let color = document.getElementById("color").value;
+    let dateTime = document.getElementById("dateTime").value;
+
+    //Check if the input is valid
+    if (eventName == "") {
+        event.preventDefault();
+        alert("Event Name cannot be empty!")
+    }
 
     // Format the date and time
-    //     if dateTime is null, no error
+    // if dateTime is null, no error
     if (!dateTime) {
         dateTime = "";
     } else {
@@ -43,12 +60,12 @@ function createTodoItem(event) {
     }
 
     // Create todo item
-    var li = document.createElement("li");
+    let li = document.createElement("li");
     li.classList.add("todo-item");
 
 
     // Add delete button
-    var deleteBtn = document.createElement("button");
+    let deleteBtn = document.createElement("button");
     deleteBtn.classList.add("remove_button");
     deleteBtn.innerHTML = "delete";
     deleteBtn.addEventListener("click", () => {
@@ -58,31 +75,31 @@ function createTodoItem(event) {
     //li.appendChild(deleteBtn);
 
 
-    var span = document.createElement("span");
+    let span = document.createElement("span");
     span.style.backgroundColor = color;
     span.textContent = eventName;
     span.classList.add("title");
 
-    var titleContainer = document.createElement("div");
+    let titleContainer = document.createElement("div");
     titleContainer.appendChild(span);
     titleContainer.appendChild(deleteBtn);
     titleContainer.classList.add("title-container");
     
 
-    var div = document.createElement("div");
+    let div = document.createElement("div");
     div.classList.add("task");
 
-    var input = document.createElement("input");
+    let input = document.createElement("input");
     input.type = "text";
     input.value = description;
     input.classList.add("width");
     input.disabled = true;
 
-    var dateTimeDiv = document.createElement("div");
+    let dateTimeDiv = document.createElement("div");
     dateTimeDiv.classList.add("datetime");
     dateTimeDiv.textContent = formattedDateTime;
 
-    var checkbox = document.createElement("button");
+    let checkbox = document.createElement("button");
     checkbox.classList.add("checkbox");
     checkbox.innerHTML = "✔";
 
@@ -116,7 +133,7 @@ function createTodoItem(event) {
 
 // Save tasks to local storage
 function saveTasks() {
-    var tasks = [];
+    let tasks = [];
     document.querySelectorAll(".todo-item").forEach(item => {
         tasks.push({
             eventName: item.querySelector("span").textContent,
@@ -131,42 +148,56 @@ function saveTasks() {
 
 // Load tasks from local storage
 function loadTasks() {
-    var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
     tasks.forEach(task => {
-        var li = document.createElement("li");
+        let li = document.createElement("li");
         li.classList.add("todo-item");
         if (task.checked) {
             li.classList.add("checked");
         }
         // Add delete button
-        var deleteBtn = document.createElement("button");
+        // let deleteBtn = document.createElement("button");
+        // deleteBtn.classList.add("remove_button");
+        // deleteBtn.innerHTML = "-";
+        // deleteBtn.addEventListener("click", () => {
+        //     todoList.removeChild(li);
+        //     saveTasks();
+        // });
+        // li.appendChild(deleteBtn);
+        // Add delete button
+        let deleteBtn = document.createElement("button");
         deleteBtn.classList.add("remove_button");
-        deleteBtn.innerHTML = "-";
+        deleteBtn.innerHTML = "delete";
         deleteBtn.addEventListener("click", () => {
             todoList.removeChild(li);
             saveTasks();
         });
-        li.appendChild(deleteBtn);
 
-        var span = document.createElement("span");
+        let span = document.createElement("span");
         span.style.backgroundColor = task.color;
         span.textContent = task.eventName;
+        span.classList.add("title");
 
-        var div = document.createElement("div");
+        let titleContainer = document.createElement("div");
+        titleContainer.appendChild(span);
+        titleContainer.appendChild(deleteBtn);
+        titleContainer.classList.add("title-container");
+
+        let div = document.createElement("div");
         div.classList.add("task");
 
-        var input = document.createElement("input");
+        let input = document.createElement("input");
         input.type = "text";
         input.value = task.description;
         input.classList.add("width");
         input.disabled = true;
 
-        var dateTimeDiv = document.createElement("div");
+        let dateTimeDiv = document.createElement("div");
         dateTimeDiv.classList.add("datetime");
         dateTimeDiv.textContent = task.dateTime;
 
-        var checkbox = document.createElement("button");
+        let checkbox = document.createElement("button");
         checkbox.classList.add("checkbox");
         checkbox.innerHTML = "✔";
 
@@ -176,7 +207,7 @@ function loadTasks() {
         div.appendChild(checkbox);
 
         // Append elements to the todo item
-        li.appendChild(span);
+        li.appendChild(titleContainer);
         li.appendChild(div);
 
         // Add event listener to the checkbox
