@@ -160,7 +160,7 @@ function convertDate(dateStr) {
 }
 
 /**
- * initial the event list to the calendar when the mouse hover
+ * initial the event list to the calendar
  */
 function initialEventList() {
     let eventList = JSON.parse(localStorage.getItem("tasks"));
@@ -170,7 +170,7 @@ function initialEventList() {
 
         let time = dateTime[1];
         let date = convertDate(dateTime[0]);
-        let eventId = date + "-" + time;
+        let eventId = date + "-" + time + "+" + eventList[i].eventName;
 
         let td = document.querySelector(`td[id="${date}"]`);
         if (td) {
