@@ -39,6 +39,7 @@
 .home-menu button:hover { 
     width: calc(13vh + 7vw); /*Increases width on hover*/
     height: calc(13vh + 7vw); /*Increasing height on hover*/
+    animation-play-state: paused; /* Stop animation when hover */
 }
 /*Keyframes for spaceship spinning animation*/
 @keyframes spin {
@@ -65,29 +66,46 @@
 }
 /*Reflect on the Day positioning and styling */
 .reflect-button {
-    top: calc(50% - 30vh); /*Positions button above center*/
-    left: 50%; /*Positions button horizontally in the middle*/
+    top: calc(42% - 30vh); /*Positions button above center*/
+    left: 42%; /*Positions button horizontally in the middle*/
     background-image: url(../../img/planets/earth-text.png); /*Set background image*/
     transform: translate(-50% -50%); /*Centers the button*/
+    animation: floating 4s infinite; /* Floating animation*/
 }
 /*Schedule your Day positioning and styling*/
 .day-schedule-button {
-    top: 50%; /*Positions button vertically in the middle*/
-    left: calc(50% - 25vw); /*Positions button to the left of center*/
+    top: 42%; /*Positions button vertically in the middle*/
+    left: calc(42% - 25vw); /*Positions button to the left of center*/
     background-image: url(../../img/planets/mars-text.png); /*Sets background image*/
     transform: translate(-50% -50%); /*Centers the button*/
+    animation: floating 3.5s infinite; /* Floating animation*/
 }
 /*Scheule your Month positioning and styling*/
 .month-schedule-button {
-    top: 50%; /*Positiong button vertically in the middle*/
-    left: calc(50% + 25vw); /*Positions button to the right of the center*/
+    top: 42%; /*Positiong button vertically in the middle*/
+    left: calc(42% + 25vw); /*Positions button to the right of the center*/
     background-image: url(../../img/planets/neptune-text.png); /*Sets background image*/
     transform: translate(-50% -50%); /*Centers the button*/
+    animation: floating 4.5s infinite; /* Floating animation*/
 }
 /*Track Project positioning and styling*/
 .project-button {
-    top: calc(50% + 30vh); /*Positions button below center*/
-    left: 50%; /*Positions button horizontally in the middle*/
+    top: calc(42% + 30vh); /*Positions button below center*/
+    left: 42%; /*Positions button horizontally in the middle*/
     background-image: url(../../img/planets/jupiter-text.png); /*Set the background image*/
     transform: translate(-50% -50%); /*Centers the button*/
+    animation: floating 5s infinite; /* Floating animation*/
+}
+
+/* Floating Animation Function for All Planet Icons */
+@keyframes floating {
+    0% {
+        transform: translateY(0); /* 起始位置 */
+    }
+    50% {
+        transform: translateY(-10px); /* 向上移动20像素 */
+    }
+    100% {
+        transform: translateY(0); /* 返回起始位置 */
+    }
 }
