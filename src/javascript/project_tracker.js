@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function addProject() {
         const projectName = prompt("Enter the project name:"); // Prompt the user for a project name
-        if (!projectName) {
+        const deadline = prompt("Enter the project deadline (YYYY-MM-DD): ");
+        if (!projectName || !deadline) {
             return; // Exit if no name is provided
         }
   
@@ -20,7 +21,15 @@ document.addEventListener('DOMContentLoaded', () => {
         updateProjectCount(1); // Increment the project count
         saveProject(projectName); // Save the project name to local storage
     }
-  
+    
+    function calculateTimeRemaining(deadline) {
+        const currentDate = new Date();
+        const projectDeadline = new Date(deadline);
+        const timeDifference = projectDeadline.getTime() - currentDate.getTime();
+        const timeRemaining = Math.max(0, timeDifference); // Ensure time remaining is not negative
+        return timeRemaining;
+    }
+    
     /**
      * Creates a new project element with the specified name and adds it to the DOM.
      * @param {string} name - The name of the project.
