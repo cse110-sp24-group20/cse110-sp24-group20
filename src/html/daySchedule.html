@@ -17,7 +17,7 @@
         <h1>Schedule Your Day</h1>
       </div>
       <div class="button-container">
-        <button class="add_button">+</button>
+        <button class="add_button">+ add new event</button>
       </div>
       <!--Store all todo-items in a todo-list ul element-->
       <ul class="todo-list">
@@ -28,10 +28,10 @@
               <h2 class="modal-title">Add Event</h2>
               <form id="eventForm">
                   <label for="eventName">Event Name:</label>&nbsp;
-                  <input type="text" id="eventName" name="eventName" required><br>
+                  <input type="text" id="eventName" name="eventName" placeholder="Set up your goal" required><br>
   
                   <label for="description">Description:</label>&nbsp;
-                  <textarea id="description" name="description" required></textarea><br>
+                  <textarea id="description" name="description" placeholder="What are you planning to do today?" required></textarea><br>
 
                   <div>
                     <label for="color">Select Tag Color:</label>&nbsp;
@@ -52,7 +52,7 @@
         <button class="month-schedule-button" onclick="location.href='monthSchedule.html'"></a>
         <button class="reflect-button" onclick="location.href='reflectDay.html'"></button>
         <button class="project-button" onclick="location.href='projectTracker.html'"></button>
-        <div class="home-button-container" onclick="location.href='index.html'">
+        <div class="home-button-container" onclick="location.href='../../index.html'">
             <img class="spaceship" src="../../img/misc/spaceship1.png" alt="image">
         </div>
     </div>
