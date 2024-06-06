@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     submitButton.addEventListener("click", (event) => {
         event.preventDefault();
         const projectName = document.getElementById("eventName").value;
+        const deadline = document.getElementById("dateTime").value;
         if (projectName) {
             createProjectElement(projectName); // Create a new project element with the given name
             updateProjectCount(1); // Increment the project count
