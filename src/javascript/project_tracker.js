@@ -22,16 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("The deadline must be in the format YYYY-MM-DD.");
             return;
         }
-        const currentDate = new Date().toISOString().split('T')[0]; // get current date in (YYYY-MM-DD) format
+        const date = new Date()
+        const currentDate = date.toISOString().split('T')[0]; // get current date in (YYYY-MM-DD) format
         createProjectElement(projectName, currentDate, deadline); // Create a new project element with the given name
-        updateProjectCount(1); // Increment the project count
-        saveProject(projectName, currentDate, deadline); // Save the project name to local storage
     }
 
     function checkDate(createdDate, deadline){
         const projectCreatedDate = new Date(createdDate);
         const projectDeadline = new Date(deadline);
 
+        // Check if the provided dates are valid
+        if (isNaN(projectCreatedDate.getTime()) || isNaN(projectDeadline.getTime())) {
+            alert("Invalid date format. Please enter dates in the format YYYY-MM-DD.");
+            return false;
+        }
         if ((projectDeadline - projectCreatedDate) < 0 ){
             alert("Deadline entered has already passed");
             return false;
@@ -50,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         if (!checkDate(createdDate, deadline)){
-            alert("Invalid date, try again");
             return;
         }
         const newProject = document.createElement('div'); // Create a new div element for the project
@@ -87,8 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
         inputRange.max = '100'; // Set the maximum value to 100
         inputRange.step = '1'; // Set the step value to 1
         inputRange.className = 'progress-bar'; // Add the 'progress-bar' class to the input
-        inputRange.addEventListener('input', updateColor); // Add an event listener to update the color on input
-        
+        //inputRange.addEventListener('input', updateColor); // Add an event listener to update the color on input
+        inputRange.disabled = true; // disable user interaction
+
         // create the delete button for each project
         const deleteProject = document.createElement("div"); // creates a new div element
         const deleteBtn = deleteButton(name); //creates delete button for the item
@@ -105,8 +109,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Initial progress update
         updateProgressBar(newProject);
-        // // Initial color update
-        // updateColor({ target: inputRange });
+
+        updateProjectCount(1); // Increment the project count
+        saveProject(projectName, currentDate, deadline); // Save the project name to local storage
     }
   
     /**
@@ -180,7 +185,6 @@ document.addEventListener('DOMContentLoaded', () => {
         projectCountElement.textContent = currentCount + change; // Update the project count
     }
   
-
     /**
      * Function to create a delete button
      * @param {HTMLElement} li - list item element to append the delete button to
