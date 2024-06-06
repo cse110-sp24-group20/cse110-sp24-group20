@@ -14,8 +14,7 @@
 }
 
 .reflect-count {
-    position: relative;
-    margin-top: -10%;
+    position: absolute;
     margin-right: -68%;
     font-size: 18px;
     color: #333;
@@ -88,7 +87,9 @@ tr, td, th {
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
-
+.add-button{
+    margin-top:-110px
+}
 .add-button:hover, .remove-button:hover {
     background-color: #4c63ca;
     color: white;
@@ -225,16 +226,16 @@ body {
     display: none;
     justify-content: space-around;
     width: 50%;
+    height: 60px;
     max-width: 600px;
     padding: 5px;
     border-radius: 15px;
     background-color: #74c2f0; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    position: fixed;
+    top: 32%;
+    left:60%;
     transform: translate(-50%, -50%);
-    z-index: 1000;
     overflow-x: auto;
 }
 
