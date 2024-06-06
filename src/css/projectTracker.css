@@ -99,7 +99,6 @@ input[type="range"]::-webkit-slider-thumb {
     height: 40px; /* Adjust size as needed */
     background: url('../image/spaceship-1.png') no-repeat center center;
     background-size: contain;
-    cursor: pointer;
     border: none;
 }
 
