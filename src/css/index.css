@@ -1,4 +1,18 @@
-/*Fullscreen background video styling*/
+/*Styling for background container*/
+#backgroud {
+    position: relative; /*Position the container relative to its normal position*/
+}
+/*Styling for fallback image*/
+#fallback-image {
+    position: absolute; /*Position the image absolutely within the container*/
+    top: 0; /*Align the image to the top of the container*/
+    left: 0; /*Align the image to the left of the container*/
+    width: 100%; /*Set the image width to fill the container */
+    height: 100%; /*Set the image height to fill the container */
+    object-fit: cover; /*Scale the image to cover the entire container while maintaining aspect ratio*/
+    z-index: 1; /*Ensure the fallback image is above the video*/
+}
+/*Styling for background space video*/
 #spaceVideo {
     position: fixed; /* Fixes the video in place*/
     right: 0; /*Aligns to the right edge of the viewport*/
@@ -6,7 +20,8 @@
     width: 100%; /*Full width of the viewport*/
     height: 100%; /*Full height of the viewport*/
     object-fit: cover; /*Ensures the video covers the entire viewport without stretching*/
-    z-index: -1; /*Places the video behind other content*/
+    z-index: 0; /*Places the video behind fallback image*/
+    display: none; /*Initially hide the video*/
 }
 /*Centering the home-menu items*/
 .home-menu {
