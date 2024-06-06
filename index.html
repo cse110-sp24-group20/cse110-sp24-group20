@@ -11,10 +11,13 @@
     </head>
     <!--Body: Contains the visible content of the HTML document-->
     <body>
-        <!--Play background video of stars on loop-->
-        <video autoplay muted loop id="spaceVideo">
-            <source src="./img/backgrounds/space.mp4" type="video/mp4">
-        </video>
+        <div id="background">
+            <img src="./img/backgrounds/space.jpg" id="fallback-image" alt="Fallback Image">
+            <video autoplay muted loop id="spaceVideo">
+                <source src="./img/backgrounds/space.mp4" type="video/mp4">
+                Your browser does not support this video tag.
+            </video>
+        </div>
         <!--Home menu section for each of the four main buttons to be stylized-->
         <div class="home-menu">
             <img class="spaceship" src="./img/misc/spaceship1.png" alt="image">
