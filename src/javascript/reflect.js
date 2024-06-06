@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * show the SentimentDialog when click the add button
    */
   function showSentimentDialog() {
+    
     sentimentDialog.style.display = "flex";
   }
 
@@ -96,13 +97,26 @@ document.addEventListener('DOMContentLoaded', () => {
     dateCell.colSpan = 3; // Make the date cell span across multiple columns
     dateCell.textContent = `Date: ${reflection.date}`; // Set the date text
     dateCell.classList.add('date-cell');
+    
+
 
     // Add delete button to reflection
+
+
     const deleteBtn = document.createElement('button');
     deleteBtn.innerText = 'delete';
     deleteBtn.classList.add('delete-item');
     deleteBtn.addEventListener('click', () => removeReflection(reflection.id));
     dateCell.appendChild(deleteBtn);
+
+
+    const editSentimentBtn = document.createElement('button');
+    editSentimentBtn.innerText = 'edit sentiment';
+    editSentimentBtn.classList.add('edit-sentiment-item');
+    editSentimentBtn.addEventListener('click', () => editSentiment(reflection));
+    // editSentimentBtn.addEventListener('click', showSentimentDialog);
+    dateCell.appendChild(editSentimentBtn);
+  
 
     const editBtn = document.createElement('button');
     editBtn.innerText = "edit";
@@ -117,7 +131,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    
     dateCell.appendChild(editBtn);
+
+
+
 
     // Append cells to the row
     reflectionRow.appendChild(indexCell);
@@ -173,13 +191,35 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateReflectionCount() {
     reflectCountSpan.textContent = reflectionCount;
   }
-
+  let currentEditingReflection = null;
   let sentiment_select = document.getElementsByName("rating");
     sentiment_select.forEach((select) => {
     select.addEventListener("click", () => {
       let value = select.value;
-      addReflection(value);
+      if (currentEditingReflection) {
+        // Update the existing reflection if editing
+        updateReflectionSentiment(currentEditingReflection, value);
+      } else {
+        // Add a new reflection if not editing
+        addReflection(value);
+      }
       sentimentDialog.style.display = "none";
+      currentEditingReflection = null;
     });
   })
+  function updateReflectionSentiment(reflection, newFeeling) {
+    if (newFeeling && [1, 2, 3, 4, 5].includes(Number(newFeeling))) {
+        reflection.feeling = Number(newFeeling);
+        const icon = document.querySelector(`table[data-id="${reflection.id}"] .widget-select-icon img`);
+        icon.src = `../../img/emoticons/Team404_Emoticons${newFeeling}.png`;
+        saveReflection(reflection);
+    } else {
+        alert('Invalid sentiment value.');
+    }
+  }
+  function editSentiment(reflection) {
+    currentEditingReflection = reflection; // Set the current reflection being edited
+    sentimentDialog.style.display = "flex"; // Show the sentiment dialog
+  }
+
 });
