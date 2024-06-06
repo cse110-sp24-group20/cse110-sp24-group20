@@ -116,18 +116,42 @@ input[type="range"].progress-bar {
     background: linear-gradient(to right, red, yellow, green);
 }
 
-.add_button, .remove_button {
+.add_button {
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 25px;
-    width: 20%;
+    width: 30%;
     height: 100%;
     justify-content: center;
     align-items: center;
     /* margin-left: 17%; */
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.remove_button {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    width: 60px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 17%; */
+    position: relative;
+    bottom: 25px;
+    left: 90%;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.add_button span {
+    font-size: 20px;
+    position: relative;
+    bottom: 2px;
+    margin-left: 15px
 }
 
 .add_button:hover, .remove_button:hover {
@@ -194,7 +218,7 @@ input[type="range"].progress-bar {
     margin-left: 20pt;
     align-items: center;
     background-position: 50% 50%;
-    background-image: url(../../img/planets/jupiter-text.png);
+    background-image: url(../../img/planets/neptune-text.png);
 }
 
 .month-schedule-button:hover {
