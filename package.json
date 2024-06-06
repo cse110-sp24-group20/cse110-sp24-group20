@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "e2etest": "jest",
     "lint": "eslint .",
     "generate-docs": "jsdoc --configure jsdoc.json --verbose",
     "start": "node index.js"
@@ -28,6 +29,7 @@
   "type": "module",
   "jest": {
     "transform": {},
+    "preset": "jest-puppeteer",
     "verbose": true
   }
 }
