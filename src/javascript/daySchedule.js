@@ -19,6 +19,17 @@ addBtn.addEventListener("click", () => { //event listener for the add button
     eventForm.reset(); // Reset the form
     document.getElementById("color").value = "#ADD8E6"; // sets default color
     editingItem = null; // reset the editing item
+
+    //set default date on the modal
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    
+    const formattedDateTime = `${year}-${month}-${day}T${hours}:${minutes}`;
+    document.getElementById("dateTime").value = formattedDateTime;
 });
 
 /**
@@ -175,6 +186,7 @@ function createTodoItem(event) {
     if (eventName == "") {
         event.preventDefault();
         alert("Event Name cannot be empty!") //ensures that the eventName is required
+        return; //Terminate the function execution
     }
 
     // makes dateTime optional
