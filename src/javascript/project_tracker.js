@@ -1,25 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
     const addButton = document.querySelector('.add_button'); // Button to add new projects
-    // const removeButton = document.querySelector('.remove_button'); // Button to remove projects
     const projectsContainer = document.querySelector('.projects'); // Container for all project elements
     const projectCountElement = document.getElementById('project-count'); // Element to display the project count
-  
-    addButton.addEventListener('click', addProject); // Event listener for the add button
-    // removeButton.addEventListener('click', createDeleteButton); // Event listener for the remove button
-  
+    
+    // Modal elements
+    const modal = document.getElementsByClassName("modal")[0];
+    const closeButton = document.getElementsByClassName("close")[0];
+    const submitButton = document.querySelector(".submit");
+    const eventForm = document.getElementById("eventForm");
+
+    addButton.addEventListener('click', () => { // Event listener for the add button
+        modal.style.display = "block"; //modal display as a block
+        eventForm.reset(); // Reset the form
+    }); 
+
+    closeButton.addEventListener("click", () => {
+        modal.style.display = "none";
+    })
     /**
      * Prompts the user for a project name and adds the project.
      */
-    function addProject() {
-        const projectName = prompt("Enter the project name:"); // Prompt the user for a project name
-        if (!projectName) {
-            return; // Exit if no name is provided
+    submitButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        const projectName = document.getElementById("eventName").value;
+        if (projectName) {
+            createProjectElement(projectName); // Create a new project element with the given name
+            updateProjectCount(1); // Increment the project count
+            saveProject(projectName); // Save the project name to local storage
+            modal.style.display = "none";
+            eventForm.reset();
         }
-  
-        createProjectElement(projectName); // Create a new project element with the given name
-        updateProjectCount(1); // Increment the project count
-        saveProject(projectName); // Save the project name to local storage
-    }
+    });
   
     /**
      * Creates a new project element with the specified name and adds it to the DOM.
