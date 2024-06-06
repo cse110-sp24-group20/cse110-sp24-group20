@@ -152,11 +152,14 @@ function setDate() {
 
 
 function convertDate(dateStr) {
-    // Separate date string
-    const [monthName, day, year] = dateStr.replace(',', '').split(' ');
-    // Get the digital representation of the month
-    const month = monthsNameToNum[monthName];
-    return `${year}-${month}-${day}`;
+    // Split the date string into year, month, and day
+    const [year, month, day] = dateStr.split('-');
+    
+    // Remove leading zeroes from month and day
+    const formattedMonth = parseInt(month, 10).toString();
+    const formattedDay = parseInt(day, 10).toString();
+    
+    return `${year}-${formattedMonth}-${formattedDay}`;
 }
 
 /**
@@ -166,7 +169,7 @@ function initialEventList() {
     let eventList = JSON.parse(localStorage.getItem("tasks"));
     console.log(eventList);
     for (let i = 0; i < eventList.length; i++) {
-        let dateTime = eventList[i].dateTime.split("at");
+        let dateTime = eventList[i].dateTime.split("T");
 
         let time = dateTime[1];
         let date = convertDate(dateTime[0]);
