@@ -25,4 +25,53 @@ describe('Basic user flow for Website', () => {
       // Expect there that array from earlier to be of length 20, meaning 20 <product-item> elements where found
       expect(numFeatures).toBe(4);
     });
+
+    // Test navigation to Day Schedule page
+    it('Navigate to Schedule Your Day page', async () => {
+      await page.click('.day-schedule-button');
+      await page.waitForSelector('.container');
+      const title = await page.title();
+      expect(title).toBe('Schedule Your Day');
+    });
+    // Test navigation to Reflect Day page
+    it('Navigate to Reflect On Your Day page', async () => {
+      await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/');
+      await page.click('.reflect-button');
+      await page.waitForSelector('.reflect');
+      const title = await page.title();
+      expect(title).toBe('Reflect On The Day');
+    });
+    // Test navigation to Month Schedule page
+    it('Navigate to Schedule Your Month page', async () => {
+      await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/');
+      await page.click('.month-schedule-button');
+      await page.waitForSelector('.calendar');
+      const title = await page.title();
+      expect(title).toBe('Monthly Calendar');
+    });
+    // Test navigation to Project Tracker page
+    it('Navigate to Track Your Project Page', async () => {
+      await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/');
+      await page.click('.project-button');
+      await page.waitForSelector('.project-tracker');
+      const title = await page.title();
+      expect(title).toBe('Track Your Project');
+    });
+    
+    /** 
+     * Testing for Day Schedule Page
+    */
+    
+    /**
+     * Testing for Reflect Day page
+    */
+    
+    /**
+     * Testing for Month Schedule page
+    */
+    
+    /**
+     * Testing for Project Tracker page
+    */
+    
   });
