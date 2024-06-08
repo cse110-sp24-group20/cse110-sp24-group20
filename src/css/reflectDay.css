@@ -224,7 +224,7 @@ body {
 .sentiment-widget {
     display: none;
     justify-content: space-around;
-    width: 50%;
+    width: 90%;
     max-width: 600px;
     padding: 5px;
     border-radius: 15px;
@@ -235,6 +235,26 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     overflow-x: auto;
+    z-index: 1000;
+}
+
+/* Media queries for further responsiveness */
+@media (min-width: 600px) {
+    .sentiment-widget {
+        width: 80%; /* Adjust width for medium screens */
+    }
+}
+
+@media (min-width: 768px) {
+    .sentiment-widget {
+        width: 70%; /* Adjust width for larger screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .sentiment-widget {
+        width: 50%; /* Adjust width for extra large screens */
+    }
 }
 
 .sentiment-widget label {
