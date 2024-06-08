@@ -76,3 +76,14 @@ describe('Day Schedule Tests', () => {
         expect(rgbToHex("000000")).toBe(expectedReturn);
     });
 });
+
+/**
+ * Project Tracker Page
+ */
+describe('Basic user flow for Website', () => {
+    beforeAll(async () => {
+        await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/html/projectTracker.html');
+    });
+
+
+})

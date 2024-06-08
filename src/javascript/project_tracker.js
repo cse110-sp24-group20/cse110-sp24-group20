@@ -146,7 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateProgressBar(projectElement);
             }
         });
-        updateProjectCount(projects.length); // Update the project count with the number of loaded projects
     }
     
     /**
