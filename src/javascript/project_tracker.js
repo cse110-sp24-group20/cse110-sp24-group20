@@ -35,6 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function createProjectElement(name) {
+        if (typeof name != 'string' || name === null){
+            console.error('Project name is undefined or null. Cannot create project');
+            return;
+        }
         const newProject = document.createElement('div'); // Create a new div element for the project
         newProject.className = 'project'; // Add the 'project' class to the div
         newProject.dataset.name = name; // Store the project name in a data attribute for later reference
