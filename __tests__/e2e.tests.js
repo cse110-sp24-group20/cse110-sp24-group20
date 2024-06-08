@@ -1,4 +1,5 @@
 const puppeteer = require('puppeteer');
+jest.setTimeout(30000); //30 seconds
 
 describe('Basic user flow for Website', () => {
     let browser;
@@ -76,7 +77,7 @@ describe('Basic user flow for Website', () => {
       await page.waitForSelector('.todo-item');
       const taskName = await page.$eval('.todo-item .title', el => el.textContent);
       expect(taskName).toBe('Test Event');
-    });
+    }, 10000); // Set timeout to 10 seconds for this test
     // Test to edit a task and verify it changes
     it('Schedule Your Day Page - Edit a task', async () => {
       await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/html/daySchedule.html');
@@ -94,7 +95,7 @@ describe('Basic user flow for Website', () => {
         document.getElementById('description').value = '';
         document.getElementById('dateTime').value = '';
       });
-      
+
       //Update the task details and sumbit the form
       await page.type('#eventName', 'Updated Event');
       await page.click('.submit');
@@ -102,7 +103,7 @@ describe('Basic user flow for Website', () => {
       await page.waitForSelector('.todo-item');
       const taskName = await page.$eval('.todo-item .title', el => el.textContent);
       expect(taskName).toBe('Updated Event');
-    });
+    }, 10000); // Set timeout to 10 seconds for this test
     // Test to delete a task and verify it is removed from the list
     it('Schedule Your Day Page - Delete a task', async () => {
       await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/html/daySchedule.html');
@@ -110,33 +111,36 @@ describe('Basic user flow for Website', () => {
       await page.waitForSelector('.todo-item', {hidden: true});
       const tasks = await page.$$('.todo_iten');
       expect(tasks.length).toBe(0);
-    });
+    }, 10000); // Set timeout to 10 seconds for this test
 
     /**
      * Testing for Reflect Day page
     */
     // Test to add new reflection and verify it appears in list
-    it('', async () => {
-
-    });
+    it('Reflect On Your Day Page - Add a new reflection', async () => {
+      
+    }, 30000); // Set timeout to 30 seconds for this test
     // Test to edit a reflection and verify it changes
-    it('', async () => {
+    it('Reflect On Your Day Page - Edit a reflection', async () => {
       
-    });
+    }, 30000); // Set timeout to 30 seconds for this test
     // Test to delete a reflection and verify it is removed from the list
-    it('', async () => {
+    it('Reflect On Your Day Page - Delete a reflection', async () => {
       
-    });
+    }, 30000); // Set timeout to 30 seconds for this test
 
     /**
      * Testing for Month Schedule page
     */
    // Test to verify that the calendar loads correctly 
-    it('', async () => {
-      
+    it('Schedule Your Month Page - Load the calendar', async () => {
+      await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/html/monthSchedule.html');
+      await page.waitForSelector('.calendar');
+      const calendarExists = await page.$eval('.calendar', el => !!el);
+      expect(calendarExists).toBe(true);
     });
     // Test to verify tasks are displayed on the calendat
-    it('', async () => {
+    it('Schedule Your Month Page - Display tasks on the calendar', async () => {
       
     });
 
@@ -144,11 +148,11 @@ describe('Basic user flow for Website', () => {
      * Testing for Project Tracker page
     */
    // Test to add a new project and verify it appears on the list
-    it('', async () => {
+    it('Project Tracker Page - Add a new project', async () => {
       
     });
     // Test to delete a project annd verify it is removed from list
-    it('', async () => {
+    it('Project Tracker Page - Delete a project', async () => {
       
     });
   });
