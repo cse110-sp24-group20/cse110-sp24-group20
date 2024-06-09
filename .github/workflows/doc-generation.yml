@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - main
-      - js-team1
-      - js-team2
+      - "**"
 
 jobs:
   build-docs:
