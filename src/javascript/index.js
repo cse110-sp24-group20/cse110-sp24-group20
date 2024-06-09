@@ -1,3 +1,7 @@
+/**
+ @module index
+*/
+
 document.addEventListener("DOMContentLoaded", function(){
     var video = document.getElementById("spaceVideo");
     var fallbackImage = document.getElementById("fallback-image");

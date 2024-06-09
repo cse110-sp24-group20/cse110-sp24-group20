@@ -1,3 +1,7 @@
+/**
+  @module Reflect
+*/
+
 document.addEventListener('DOMContentLoaded', () => {
   // Container for add, remove, previous-reflection, and reflection counter
   const addReflectionButton = document.querySelector('.add-button');
@@ -101,8 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Add delete button to reflection
-
-
     const deleteBtn = document.createElement('button');
     deleteBtn.innerText = 'delete';
     deleteBtn.classList.add('delete-item');

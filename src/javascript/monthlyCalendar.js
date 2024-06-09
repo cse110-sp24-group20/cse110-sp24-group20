@@ -1,3 +1,7 @@
+/**
+    @module projectTracker
+*/
+
 const months = {
     1: "January",
     2: "February",
