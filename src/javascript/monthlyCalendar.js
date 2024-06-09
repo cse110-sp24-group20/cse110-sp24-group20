@@ -150,7 +150,11 @@ function setDate() {
     initialEventList();
 }
 
-
+/**
+ * 
+ * @param {dateStr} date string
+ * @returns return the date in correct format year-month-day
+ */
 function convertDate(dateStr) {
     // Split the date string into year, month, and day
     const [year, month, day] = dateStr.split('-');

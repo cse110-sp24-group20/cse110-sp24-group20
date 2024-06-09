@@ -1,4 +1,6 @@
-const puppeteer = require('puppeteer');
+//const puppeteer = require('puppeteer');
+import {jest} from '@jest/globals'
+import puppeteer from "puppeteer";
 jest.setTimeout(30000); //30 seconds
 
 describe('Basic user flow for Website', () => {
@@ -16,14 +18,13 @@ describe('Basic user flow for Website', () => {
         await browser.close();
     });
   
-    // Next, check to make sure that all 20 <product-item> elements have loaded
+    // Next, Check for all four feature buttons
     it('Initial Home Page - Check for all four feature buttons', async () => {
       console.log('Checking for 20 product items...');
-      // Query select all of the <product-item> elements and return the length of that array
       const numFeatures = await page.$$eval('button', (buttons) => {
         return buttons.length;
       });
-      // Expect there that array from earlier to be of length 20, meaning 20 <product-item> elements where found
+      // Expect there that array from earlier to be of length 4, meaning 4 buttons elements where found
       expect(numFeatures).toBe(4);
     });
 
@@ -71,13 +72,33 @@ describe('Basic user flow for Website', () => {
       // Fill in the task details and submit the form
       await page.type('#eventName', 'Test Event');
       await page.type('#description', 'This is a test event.');
-      await page.type('#dateTime', '2024-06-07T10:00');
+      //await page.type('#dateTime', '2024-06-07T10:00');
+      await page.evaluate(() => {
+        document.querySelector('#dateTime').value = '2024-06-07T10:00';
+      });
       await page.click('.submit');
 
       await page.waitForSelector('.todo-item');
       const taskName = await page.$eval('.todo-item .title', el => el.textContent);
       expect(taskName).toBe('Test Event');
     }, 10000); // Set timeout to 10 seconds for this test
+
+    // Test to verify tasks are displayed on the calendar
+    it('Schedule Your Month Page - Display tasks on the calendar', async () => {
+      await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/html/monthSchedule.html');
+      await page.waitForSelector('#\\32 024-6-7');
+      // Evaluate inside the browser context
+      const eventExists = await page.evaluate(() => {
+        const td = document.querySelector('#\\32 024-6-7'); // Using escape sequences for the selector
+        if (td) {
+          const event = td.querySelector('.event');
+          return event !== null;
+        }
+        return false
+      })
+      expect(eventExists).toBe(true);
+    }, 10000);
+
     // Test to edit a task and verify it changes
     it('Schedule Your Day Page - Edit a task', async () => {
       await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/html/daySchedule.html');
@@ -104,6 +125,7 @@ describe('Basic user flow for Website', () => {
       const taskName = await page.$eval('.todo-item .title', el => el.textContent);
       expect(taskName).toBe('Updated Event');
     }, 10000); // Set timeout to 10 seconds for this test
+
     // Test to delete a task and verify it is removed from the list
     it('Schedule Your Day Page - Delete a task', async () => {
       await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/html/daySchedule.html');
@@ -112,6 +134,22 @@ describe('Basic user flow for Website', () => {
       const tasks = await page.$$('.todo_iten');
       expect(tasks.length).toBe(0);
     }, 10000); // Set timeout to 10 seconds for this test
+
+    // Test to verify tasks are remove on the calendar
+    it('Schedule Your Month Page - Remove tasks on the calendar', async () => {
+      await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/html/monthSchedule.html');
+      await page.waitForSelector('#\\32 024-6-7');
+      // Evaluate inside the browser context
+      const eventExists = await page.evaluate(() => {
+        const td = document.querySelector('#\\32 024-6-7'); // Using escape sequences for the selector
+        if (td) {
+          const event = td.querySelector('.event');
+          return event == null;
+        }
+        return false
+      })
+      expect(eventExists).toBe(true);
+    }, 10000);
 
     /**
      * Testing for Reflect Day page
@@ -139,11 +177,7 @@ describe('Basic user flow for Website', () => {
       const calendarExists = await page.$eval('.calendar', el => !!el);
       expect(calendarExists).toBe(true);
     });
-    // Test to verify tasks are displayed on the calendat
-    it('Schedule Your Month Page - Display tasks on the calendar', async () => {
-      
-    });
-
+ 
     /**
      * Testing for Project Tracker page
     */
