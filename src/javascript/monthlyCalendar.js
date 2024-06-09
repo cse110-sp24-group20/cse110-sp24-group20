@@ -36,21 +36,9 @@ const monthsNameToNum = {
  * Initial the data, calendar and eventList when the web load.
  */
 window.onload = function() {
-    initialData().then(() => {
-        initialCalendar();
-        initialEventList();
-    });
+    initialCalendar();
+    initialEventList();
 }
-
-/**
- * Initial sample data from sample.json to the localstorage.
- */
-async function initialData() {
-    const response = await fetch("../javascript/sample.json");
-    const data = await response.json();
-    localStorage.setItem("data", JSON.stringify(data));
-}
-
 
 /**
  * initial the Calendar with the current date
