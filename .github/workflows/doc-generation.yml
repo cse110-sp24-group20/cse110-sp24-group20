@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - main
-      - js-team1
-      - js-team2
+      - "**"
 
 jobs:
   build-docs:
@@ -37,4 +36,4 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: "Generated JSDocs"
-          add: "./docs"
+          add: "./src/javascript/docs/"
