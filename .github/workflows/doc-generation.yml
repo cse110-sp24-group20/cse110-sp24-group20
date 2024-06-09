@@ -36,4 +36,4 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: "Generated JSDocs"
-          add: "./docs"
+          add: "./src/javascript/docs/"
