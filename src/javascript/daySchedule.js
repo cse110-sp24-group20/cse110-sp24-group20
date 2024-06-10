@@ -1,3 +1,7 @@
+/**
+    @module daySchedule
+*/
+
 // Selecting DOM elements
 var addBtn = document.querySelector(".add_button");
 var modal = document.getElementsByClassName("modal")[0];

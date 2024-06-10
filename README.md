@@ -3,14 +3,14 @@ Welcome to the repository for Team 404, a stellar project group for CSE110 at UC
 
 ## Introduction
 *Welcome aboard space cadets!*<br>
-Team 404 is committed to exploring the vast universe of software development. Out project inegrate a captivating space them, offering a unique and engaging way for developers to document their journey. From designing glaxies of code to solving interstellar gugs, our project aims to provide a robust and immersive experience.
+Team 404 is committed to exploring the vast universe of software development. Out project inegrate a captivating space, offering a unique and engaging way for developers to document their journey. From designing galaxies of code to solving interstellar gugs, our project aims to provide a robust and immersive experience.
 
 ## Our Repository
 Our repository is the command center of our project. Here's your mission briefing on its layout:
 - `admin/`: Contains all administrative resources, including our Team 404 branding assets, CI/CD pipeline information, meeting notes, and weekly progress reports.
 - `design in specs/`: Houses all our design boards for the homepage and each individual feature, created on Miro.
 - `docs/`: <span style="color:pink">I do not know what's in here, can someone add pls</span>
-- `img/`: Contains useful elements'images like our emoticons, the planets shown throughout the project, and other miscellaneous animations.
+- `img/`: Contains useful elements & images like our emoticons, the planets shown throughout the project, and other miscellaneous animations.
 - `specs/`: Contains our ADRs, individual team member brainstorms, and our pitch slides.
 - `src/`: The core of our project where all the source code resides. 
 
@@ -48,15 +48,15 @@ Our repository is the command center of our project. Here's your mission briefin
    - This feature helps you stay on top of your projects and ensures you meet your milestones.
    
 <br>*Check out our demo video for a guided tour of the finished product: [Demo Video Link]()*<br>
-<span style="color:red">**INSERT DEMO VIDEO ONCE COMPLETED** </span> 
+<span style="color:red">[**INSERT DEMO VIDEO ONCE COMPLETED**](https://www.youtube.com/watch?v=wJNikDr-aNM) </span> 
 
 ### Testing Utilized and General Build Process
-To ensure our project remains stable and bug-free as it travels through the cosmos, we employ a rigourous testing and review process:
+To ensure our project remains stable and bug-free as it travels through the cosmos, we employ a rigorous testing and review process:
 
 - **Jest Unit Testing**: Every component is tested to ensure it functions correctly.
 - **Protected Main Branch**: All changes to the main branch require human review and testing. 
 - **Codacy Automatic Review**: Our code is automatically reviewed for quality and consistency.
-- **Dedicated PR Review Team**: A  team of developers reviews all pull requests to maintain code integriity.
+- **Dedicated PR Review Team**: A team of developers reviews all pull requests to maintain code integriity.
 - **E2E Testing with Puppetteer**: End-to-end testing to simulate user interactions and ensure everything works as expected.
 
 ### Fun Features
@@ -75,7 +75,7 @@ To ensure our project remains stable and bug-free as it travels through the cosm
 - [Week 4 - Sentiment Widget Planning](https://docs.google.com/document/d/1ysq4WFbjsmEBw-Oj4d_Fahja3ulLQXkpKWMOmJw4Wbw/edit)
 - [Week 5 - Brainstorming/Starting Pitch](https://docs.google.com/document/d/1mrsB5nUFdbxZu8t8xpUFAwBF3jD9fcPrrDOP-OsmXrE/edit)
 - [Week 6 - ADR/Pipeline assignments](https://docs.google.com/document/d/1eZZqLK8mjrwdlCh4X4SJAX0UNBqJf80z57Zfoi1hcS0/edit?usp=sharing)
-- [Week 7 - Final Project Team assignments and Feature Outline](https://docs.google.com/document/d/1dZmwqVCs0ZC4plcDEWnxN-K4PJR0swP2MpI4Dj3yGbQ/edit?usp=sharing)
+- [Week 7 - Final Project Team Assignments and Feature Outline](https://docs.google.com/document/d/1dZmwqVCs0ZC4plcDEWnxN-K4PJR0swP2MpI4Dj3yGbQ/edit?usp=sharing)
 - [Week 8 - Team Progress Check](https://docs.google.com/document/d/1jyHvgMBJ21IVbKARUtSgecBZsP3IoNrsW3pQSRrcHDA/edit)
 - [Week 9]()
 - [Week 10]()

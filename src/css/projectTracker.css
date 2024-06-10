@@ -1,9 +1,10 @@
 /* project tracker */
 .project-tracker {
-    width: 80%;
+    width: 65%;
     max-width: 1200px;
     padding: 20px;
-    margin-left: 5%;
+    margin: 0 auto;
+    margin-top: 5%;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -14,9 +15,9 @@
 }
 
 .project-count {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: relative;
+    margin-top: -10%;
+    margin-right: -68%;
     font-size: 18px;
     color: #333;
     background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
@@ -29,7 +30,7 @@
 .project-tracker h1 {
     text-align: center;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 100%;
 }
 
@@ -37,7 +38,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 90%;
     margin-top: 20px;
 }
 
@@ -47,12 +48,13 @@
     display: flex;
     flex-direction: column-reverse; /* Ensures projects are added at the bottom */
     overflow-y: auto; /* Make the project list scrollable */
-    gap: 20px;
+    gap: 10px;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 20px;
     border-radius: 10px;
-    max-height: 500px; /* Set a max height to the projects container */
-    box-sizing: border-box;
+    max-height: 400px; /* Set a max height to the projects container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
 }
 
 .project {
@@ -76,9 +78,11 @@
 
 .project-input-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 20px;
-    width: 100%;
+    /**gap: 20px;*/
+    width: 80%;
+    margin-top: 20px;
 }
 
 input[type="range"] {
@@ -278,7 +282,11 @@ body {
     display: flex;
     margin-right: 2%;
     flex-direction: row-reverse;
-    width: 100%;
+    width: 90%;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
 }
 
 /* modal styling */
