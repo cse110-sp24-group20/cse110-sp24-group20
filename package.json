@@ -4,11 +4,7 @@
   "description": "This is the repository for Team 404! A project group for cse110 at UCSD aimed at creating a robust team for the completion of a software development project!",
   "main": "index.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "e2etest": "jest",
-    "lint": "eslint .",
-    "generate-docs": "jsdoc --configure jsdoc.json --verbose",
-    "start": "node index.js"
+    "test": "nyc --reporter=lcov --reporter=text npm test"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +20,7 @@
     "jest": "^29.7.0",
     "jest-puppeteer": "^10.0.1",
     "jsdoc": "^4.0.3",
+    "nyc": "^17.0.0",
     "puppeteer": "^22.10.0"
   },
   "type": "module",
@@ -31,5 +28,9 @@
     "transform": {},
     "preset": "jest-puppeteer",
     "verbose": true
+  },
+  "scripts": {
+    "test": "nyc --reporter=lcov --reporter=text npm test"
   }
+  
 }

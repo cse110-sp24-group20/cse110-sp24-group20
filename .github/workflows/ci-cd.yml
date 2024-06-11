@@ -1,15 +1,36 @@
-export CODACY_PROJECT_TOKEN=c30d0e2813bc4bd9aeb2c55e4db4c161
+name: Unit Tests
 
-name: Unit Tests # name of the test
+on: [push]
 
-on: [push] # the Github Action will activate "on" the event that you "push" to the repo
+jobs:
+  tests:
+    runs-on: ubuntu-latest
 
-jobs: # the things being executed
-  tests: # the name of your status check, will become important when you do branch protection
-    runs-on: ubuntu-latest # which device on Github's server that you are running the Actions on
+    env:
+      CODACY_PROJECT_TOKEN: ${{c30d0e2813bc4bd9aeb2c55e4db4c161}}
+
     steps:
-      - uses: actions/checkout@v4 # using version 4 of Actions
+      - uses: actions/checkout@v4
+
+      - name: Cache Node Modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install Dependencies
         run: npm install
-      - name: Unit Test
-        run: npm test ./__tests__/pipeline.test.js
+
+      - name: Run Tests and Generate Coverage Report
+        run: npm test
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # Add your Codecov token in the GitHub secrets
+          files: ./coverage/lcov.info
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: true
