@@ -1,3 +1,5 @@
+export CODACY_PROJECT_TOKEN=c30d0e2813bc4bd9aeb2c55e4db4c161
+
 name: Unit Tests # name of the test
 
 on: [push] # the Github Action will activate "on" the event that you "push" to the repo
