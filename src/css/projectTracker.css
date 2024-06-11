@@ -1,382 +1,417 @@
-/* project tracker */
+/* Styling for project tracker container */
 .project-tracker {
-    width: 65%;
-    max-width: 1200px;
-    padding: 20px;
-    margin: 0 auto;
-    margin-top: 5%;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
+    width: 65%; /* Set the width to 65% of the parent */
+    max-width: 1200px; /* Maximum width of 1200px */
+    padding: 20px; /* Padding of 20px on all sides */
+    margin: 0 auto; /* Center the container horizontally */
+    margin-top: 5%; /* Top margin of 5% */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    display: flex; /* Use flexbox for layout */
+    position: relative; /* Relative positioning */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
 }
 
+/* Styling for project count display */
 .project-count {
-    position: relative;
-    margin-top: -10%;
-    margin-right: -68%;
-    font-size: 18px;
-    color: #333;
+    position: relative; /* Relative positioning */
+    margin-top: -10%; /* Negative top margin */
+    margin-right: -68%; /* Negative right margin */
+    font-size: 18px; /* Font size */
+    color: #333; /* Dark text color */
     background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent background */
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 10px 20px; /* Padding of 10px top/bottom and 20px left/right */
+    border-radius: 10px; /* Rounded corners */
     backdrop-filter: blur(10px); /* Blurred background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
 
+/* Styling for h1 within project tracker */
 .project-tracker h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 40px;
-    width: 100%;
+    text-align: center; /* Center the text */
+    color: #333; /* Dark text color */
+    margin-bottom: 40px; /* Bottom margin of 40px */
+    width: 100%; /* Full width */
 }
 
+/* Container for projects */
 .projects-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    margin-top: 20px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    width: 90%; /* Set the width to 90% */
+    margin-top: 20px; /* Top margin of 20px */
 }
 
+/* Styling for the projects list */
 .projects {
-    flex: 1;
-    width: 100%;
-    display: flex;
-    flex-direction: column-reverse; /* Ensures projects are added at the bottom */
+    flex: 1; /* Take up remaining space */
+    width: 100%; /* Full width */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column-reverse; /* Ensure projects are added at the bottom */
     overflow-y: auto; /* Make the project list scrollable */
-    gap: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+    gap: 10px; /* Space between projects */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    padding: 20px; /* Padding of 20px */
+    border-radius: 10px; /* Rounded corners */
     max-height: 400px; /* Set a max height to the projects container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    align-items: center; /* Center children horizontally */
 }
 
+/* Styling for individual project */
 .project {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    gap: 10px; /* Space between children */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    padding: 20px; /* Padding of 20px */
+    border-radius: 10px; /* Rounded corners */
+    width: 100%; /* Full width */
     backdrop-filter: blur(10px); /* Blurred background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
+/* Styling for project title */
 .project-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+    font-size: 18px; /* Font size */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Dark text color */
 }
 
+/* Container for project input elements */
 .project-input-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /**gap: 20px;*/
-    width: 80%;
-    margin-top: 20px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    width: 80%; /* Set the width to 80% */
+    margin-top: 20px; /* Top margin of 20px */
 }
 
+/* Styling for range input elements */
 input[type="range"] {
-    -webkit-appearance: none;
-    width: 100%; /* Make the input take up remaining space */
-    height: 8px;
-    background: #ddd;
-    outline: none;
-    opacity: 0.7;
-    transition: opacity .2s;
-    box-sizing: border-box;
+    -webkit-appearance: none; /* Remove default webkit styling */
+    width: 100%; /* Full width */
+    height: 8px; /* Fixed height */
+    background: #ddd; /* Light gray background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Semi-transparent */
+    transition: opacity .2s; /* Smooth transition for opacity */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
+/* Styling for range input thumb in webkit browsers */
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 40px; /* Adjust size as needed */
-    height: 40px; /* Adjust size as needed */
-    background: url('../image/spaceship-1.png') no-repeat center center;
-    background-size: contain;
-    cursor: pointer;
-    border: none;
+    -webkit-appearance: none; /* Remove default webkit styling */
+    appearance: none; /* Remove default styling */
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    background: url('../image/spaceship-1.png') no-repeat center center; /* Custom background image */
+    background-size: contain; /* Contain background image within the thumb */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* Remove border */
 }
 
+/* Styling for range input thumb in Firefox */
 input[type="range"]::-moz-range-thumb {
-    width: 40px; /* Adjust size as needed */
-    height: 40px; /* Adjust size as needed */
-    background: url('../image/spaceship-1.png') no-repeat center center;
-    background-size: contain;
-    cursor: pointer; 
-    border: none;
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    background: url('../image/spaceship-1.png') no-repeat center center; /* Custom background image */
+    background-size: contain; /* Contain background image within the thumb */
+    cursor: pointer; /* Pointer cursor on hover */
+    border: none; /* Remove border */
 }
 
+/* Additional styling for range input with progress bar class */
 input[type="range"].progress-bar {
-    background: linear-gradient(to right, red, yellow, green);
+    background: linear-gradient(to right, red, yellow, green); /* Gradient background */
 }
 
+/* Styling for add button */
 .add_button {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    width: 30%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    /* margin-left: 17%; */
-    font-size: 28px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    background-color: #ffffff; /* White background color */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 25px; /* Rounded corners */
+    width: 30%; /* Set the width to 30% */
+    height: 100%; /* Full height */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    font-size: 28px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
 }
 
+/* Styling for remove button */
 .remove_button {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    width: 60px;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    /* margin-left: 17%; */ 
-    position: relative;
-    bottom: 25px;
-    left: 90%;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    background-color: #ffffff; /* White background color */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 25px; /* Rounded corners */
+    width: 60px; /* Fixed width */
+    height: 100%; /* Full height */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    position: relative; /* Relative positioning */
+    bottom: 25px; /* Move down by 25px */
+    left: 90%; /* Move left by 90% */
+    font-size: 14px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
 }
 
+/* Styling for text within add button */
 .add_button span {
-    font-size: 20px;
-    position: relative;
-    bottom: 2px;
-    margin-left: 15px
+    font-size: 20px; /* Font size */
+    position: relative; /* Relative positioning */
+    bottom: 2px; /* Move down by 2px */
+    margin-left: 15px; /* Left margin of 15px */
 }
 
+/* Hover effects for add and remove buttons */
 .add_button:hover, .remove_button:hover {
-    background-color: #B58B00;
-    color: white;
-    border-color: #B58B00;
+    background-color: #B58B00; /* Change background color to orange */
+    color: white; /* Change text color to white */
+    border-color: #B58B00; /* Change border color to orange */
 }
 
+/* Styling for button container */
 .button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 20px; /* Add a gap between the button container and the projects container */
-    width: 100%;
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    gap: 20px; /* Space between buttons */
+    margin-bottom: 20px; /* Bottom margin of 20px */
+    width: 100%; /* Full width */
 }
 
-/*Home Menu Styling*/
+/* Styling for the home menu container */
 .home-menu {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50pt;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    margin-top: 50pt; /* Top margin of 50pt */
 }
 
+/* Styling for buttons within the home menu */
 .home-menu button {    
-    width: 140px;
-    height: 140px;
-    display: flex;
-    margin-top: 20px;
-    border: none;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-size: contain;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease; /*Smooth transition for scaling*/
+    width: 140px; /* Fixed width */
+    height: 140px; /* Fixed height */
+    display: flex; /* Use flexbox for layout */
+    margin-top: 20px; /* Top margin of 20px */
+    border: none; /* Remove border */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-color: transparent; /* Transparent background color */
+    background-size: contain; /* Contain background image within the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
 
+/* Specific styling for day schedule button */
 .day-schedule-button {
-    align-items: center;
-    margin-right: 10pt;
-    margin-left: auto;
-    background-size: 110%; 
-    background-image: url(../../img/planets/mars-text.png);
+    align-items: center; /* Center content horizontally */
+    margin-right: 10pt; /* Right margin of 10pt */
+    margin-left: auto; /* Align to the right */
+    background-size: 110%; /* Slightly larger background size */
+    background-image: url(../../img/planets/mars-text.png); /* Background image for the button */
 }
 
+/* Hover effect for day schedule button */
 .day-schedule-button:hover {
-    transform: scale(1.1); /*Scale button on hover*/
+    transform: scale(1.1); /* Slightly enlarge the button */
 }
 
+/* Specific styling for reflect button */
 .reflect-button {
-    align-items: center;
-    margin: 0 auto;
-    background-size: 110%;;
-    background-image: url(../../img/planets/earth-text.png);
+    align-items: center; /* Center content horizontally */
+    margin: 0 auto; /* Center the button horizontally */
+    background-size: 110%; /* Slightly larger background size */
+    background-image: url(../../img/planets/earth-text.png); /* Background image for the button */
 }
 
+/* Hover effect for reflect button */
 .reflect-button:hover {
-    transform: scale(1.1); /*Scale button on hover*/
+    transform: scale(1.1); /* Slightly enlarge the button */
 }
 
+/* Specific styling for month schedule button */
 .month-schedule-button {
-    margin-right: auto;
-    margin-left: 20pt;
-    align-items: center;
-    background-position: 50% 50%;
-    background-image: url(../../img/planets/neptune-text.png);
+    margin-right: auto; /* Align to the left */
+    margin-left: 20pt; /* Left margin of 20pt */
+    align-items: center; /* Center content horizontally */
+    background-position: 50% 50%; /* Center the background image */
+    background-image: url(../../img/planets/neptune-text.png); /* Background image for the button */
 }
 
+/* Hover effect for month schedule button */
 .month-schedule-button:hover {
-    transform: scale(1.1); /*Scale button on hover*/  
+    transform: scale(1.1); /* Slightly enlarge the button */
 }
 
-/*Home Button Styling*/
+/* Styling for the home button container */
 .home-button-container {
-    width: 300px;
-    height: 220px;
-    cursor: pointer;
-    margin-left: 50%;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    position: relative;
+    width: 300px; /* Fixed width */
+    height: 220px; /* Fixed height */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-left: 50%; /* Left margin of 50% */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    position: relative; /* Relative positioning */
 }
 
+/* Styling for the spaceship within home button container */
 .home-button-container .spaceship {
-    width: 200px;
-    height: 200px;
-    background-color: transparent;
-    transform: rotate(270deg);
-    transition: filter 0.3s ease;
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    background-color: transparent; /* Transparent background color */
+    transform: rotate(270deg); /* Rotate 270 degrees */
+    transition: filter 0.3s ease; /* Smooth transition for filter effect */
 }
 
-.home-button-container:hover .spaceship{
-    filter: hue-rotate(180deg);
-    width: 210px;
-    height: 210px;
+/* Hover effect for spaceship within home button container */
+.home-button-container:hover .spaceship {
+    filter: hue-rotate(180deg); /* Change hue */
+    width: 210px; /* Increase width */
+    height: 210px; /* Increase height */
 }
 
-html{
-    height: 100%;
-    max-height: 100%;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden; 
-}
-
-body {
-    height: 100%;
-    max-height: 100%;
-    width: 100%;
-    max-width: 100%;
-    z-index: 1;
-    background-image: url('../../img/backgrounds/jupiter-light.jpg');
-    background-size: cover; /* Adjust the image to cover the whole background */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+/* Styling for the html element */
+html {
+    height: 100%; /* Full height */
+    max-height: 100%; /* Maximum height */
+    width: 100%; /* Full width */
+    max-width: 100%; /* Maximum width */
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Styling for the body element */
+body {
+    height: 100%; /* Full height */
+    max-height: 100%; /* Maximum height */
+    width: 100%; /* Full width */
+    max-width: 100%; /* Maximum width */
+    z-index: 1; /* Set z-index */
+    background-image: url('../../img/backgrounds/jupiter-light.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    margin: 0; /* Remove default margin */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Styling for the main container */
 .main-container {
-    display: flex;
-    margin-right: 2%;
-    flex-direction: row-reverse;
-    width: 90%;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    position: relative;
+    display: flex; /* Use flexbox for layout */
+    margin-right: 2%; /* Right margin of 2% */
+    flex-direction: row-reverse; /* Stack children horizontally in reverse order */
+    width: 90%; /* Set the width to 90% */
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-start; /* Align content to the start vertically */
+    gap: 20px; /* Space between children */
+    position: relative; /* Relative positioning */
 }
 
-/* modal styling */
+/* Styling for the modal container */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    display: none; /* Hide the modal by default */
+    position: fixed; /* Fixed positioning */
+    z-index: 1; /* Set z-index */
+    left: 0; /* Align to the left */
+    top: 0; /* Align to the top */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scrolling */
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
 }
 
+/* Styling for the modal content */
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 15px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
+    background-color: #fefefe; /* Light background color */
+    margin: 15% auto; /* Center the content horizontally and vertically */
+    padding: 20px; /* Padding of 20px */
+    border: 1px solid #888; /* Border with light gray color */
+    width: 80%; /* 80% width */
+    max-width: 500px; /* Maximum width of 500px */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Subtle shadow effects */
 }
 
+/* Styling for the close button */
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+    color: #aaa; /* Light gray color */
+    float: right; /* Align to the right */
+    font-size: 28px; /* Large font size */
+    font-weight: bold; /* Bold text */
 }
 
+/* Hover and focus effects for the close button */
 .close:hover, .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+    color: black; /* Change color to black */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
+/* Styling for the submit button */
 .submit {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    display: inline-block; /* Inline-block display */
+    padding: 10px 20px; /* Padding of 10px top/bottom and 20px left/right */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    color: white; /* White text color */
+    background-color: #007bff; /* Blue background color */
+    border: none; /* Remove border */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
 }
 
+/* Hover effect for submit button */
 .submit:hover {
-    background-color: #0056b3;
-    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
-    transform: scale(1.05);
+    background-color: #0056b3; /* Darker blue background color */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow effect */
+    transform: scale(1.05); /* Slightly enlarge the button */
 }
 
+/* Active state for submit button */
 .submit:active {
-    background-color: #004494;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transform: scale(1);
+    background-color: #004494; /* Even darker blue background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    transform: scale(1); /* Return to original size */
 }
 
+/* Styling for form container */
 form {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
 }
 
+/* Styling for labels */
 label {
-    margin-bottom: 5px;
-    font-weight: bold;
+    margin-bottom: 5px; /* Bottom margin of 5px */
+    font-weight: bold; /* Bold text */
 }
 
+/* Styling for text inputs and textareas */
 input[type="text"], input[type="datetime-local"], textarea {
-    margin-bottom: 20px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
+    margin-bottom: 20px; /* Bottom margin of 20px */
+    padding: 10px; /* Padding of 10px */
+    font-size: 16px; /* Font size */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
+/* Specific styling for textareas */
 textarea {
-    height: 100px;
-    resize: vertical;
+    height: 100px; /* Fixed height */
+    resize: vertical; /* Allow vertical resizing */
 }
 
+/* Styling for modal title */
 .modal-title {
-    text-align: center;
+    text-align: center; /* Center the text */
 }

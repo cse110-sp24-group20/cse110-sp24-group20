@@ -1,271 +1,302 @@
-/*Calendar Table Styling*/
+/* Styling for table element */
 table {
-    width: 75%;
-    border-collapse: collapse;
-    height: 500px;
-    margin-right: 10%;
-    margin-left: auto;
-    background-color: transparent;
+    width: 75%; /* Set the width to 75% of the parent */
+    border-collapse: collapse; /* Collapse borders into a single border */
+    height: 500px; /* Set the height to 500px */
+    margin-right: 10%; /* Right margin of 10% */
+    margin-left: auto; /* Center the table horizontally */
+    background-color: transparent; /* Transparent background color */
 }
   
+/* Styling for table headers (th) */
 th {
-    border: 2px solid #156359c0;
-    text-align: center;
-    padding: 8px;
-    width: 14.27%;
-    height: 100%;
+    border: 2px solid #156359c0; /* Solid border with specific color */
+    text-align: center; /* Center text */
+    padding: 8px; /* Padding of 8px */
+    width: 14.27%; /* Set the width to roughly one-seventh */
+    height: 100%; /* Full height */
 }
 
+/* Styling for table data cells (td) */
 td {
-    border: 2px solid #156359c0;
-    vertical-align: text-top;
-    text-align: left;
-    padding: 8px;
-    height: 50px;
-    background-color: rgb(245, 245, 245);
+    border: 2px solid #156359c0; /* Solid border with specific color */
+    vertical-align: text-top; /* Align text to the top */
+    text-align: left; /* Align text to the left */
+    padding: 8px; /* Padding of 8px */
+    height: 50px; /* Fixed height */
+    background-color: rgb(245, 245, 245); /* Light gray background color */
 }
 
-tr th{
-    background-color: rgb(60, 183, 214);
+/* Styling for table header rows (tr th) */
+tr th {
+    background-color: rgb(60, 183, 214); /* Light blue background color */
 }
   
+/* Styling for table caption */
 caption {
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 1.5em;
+    margin-bottom: 10px; /* Bottom margin of 10px */
+    font-weight: bold; /* Bold text */
+    font-size: 1.5em; /* Large font size */
 }
+
+/* Styling for home menu buttons */
 .home-menu button {
-    display: flex;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; 
-    margin-top: 20px;
-    background-color: transparent; 
-    color: black;
-    font-size: 16px;
+    display: flex; /* Use flexbox for layout */
+    width: 100px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    border-radius: 50%; /* Fully rounded corners */
+    margin-top: 20px; /* Top margin of 20px */
+    background-color: transparent; /* Transparent background color */
+    color: black; /* Black text color */
+    font-size: 16px; /* Font size */
 }
 
-/*Home Menu Styling*/
+/* Styling for the home menu container */
 .home-menu {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50pt;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    margin-top: 50pt; /* Top margin of 50pt */
 }
 
+/* Styling for buttons within the home menu */
 .home-menu button {    
-    width: 140px;
-    height: 140px;
-    display: flex;
-    border: none;
-    background-color: transparent;
-    background-size: contain;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease; /*Smooth transition for scaling*/
+    width: 140px; /* Fixed width */
+    height: 140px; /* Fixed height */
+    display: flex; /* Use flexbox for layout */
+    border: none; /* Remove border */
+    background-color: transparent; /* Transparent background color */
+    background-size: contain; /* Contain background image within the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
 
+/* Specific styling for reflect button */
 .reflect-button {
-    align-items: center;
-    margin: 0 auto;
-    background-size: 110%;;
-    background-image: url(../../img/planets/earth-text.png);
+    align-items: center; /* Center content horizontally */
+    margin: 0 auto; /* Center the button horizontally */
+    background-size: 110%; /* Slightly larger background size */
+    background-image: url(../../img/planets/earth-text.png); /* Background image for the button */
 }
 
+/* Hover effect for reflect button */
 .reflect-button:hover {
-    transform: scale(1.1); /*Scale button on hover*/
+    transform: scale(1.1); /* Slightly enlarge the button */
 }
 
+/* Specific styling for day schedule button */
 .day-schedule-button {
-    align-items: center;
-    margin-right: 10pt;
-    margin-left: auto;
-    background-size: 110%; 
-    background-image: url(../../img/planets/mars-text.png);
+    align-items: center; /* Center content horizontally */
+    margin-right: 10pt; /* Right margin of 10pt */
+    margin-left: auto; /* Align to the right */
+    background-size: 110%; /* Slightly larger background size */
+    background-image: url(../../img/planets/mars-text.png); /* Background image for the button */
 }
 
+/* Hover effect for day schedule button */
 .day-schedule-button:hover {
-    transform: scale(1.1); /*Scale button on hover*/
+    transform: scale(1.1); /* Slightly enlarge the button */
 }
 
+/* Specific styling for project button */
 .project-button {
-    margin-right: auto;
-    margin-left: 20pt;
-    align-items: center;
-    background-position: 50% 50%;
-    background-image: url(../../img/planets/jupiter-text.png);
+    margin-right: auto; /* Align to the left */
+    margin-left: 20pt; /* Left margin of 20pt */
+    align-items: center; /* Center content horizontally */
+    background-position: 50% 50%; /* Center the background image */
+    background-image: url(../../img/planets/jupiter-text.png); /* Background image for the button */
 }
 
+/* Hover effect for project button */
 .project-button:hover {
-    transform: scale(1.1); /*Scale button on hover*/  
+    transform: scale(1.1); /* Slightly enlarge the button */
 }
 
-/*Home Button Styling*/
+/* Styling for the home button container */
 .home-button-container {
-    width: 300px;
-    height: 220px;
-    cursor: pointer;
-    margin-left: 50%;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    position: relative;
+    width: 300px; /* Fixed width */
+    height: 220px; /* Fixed height */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-left: 50%; /* Left margin of 50% */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    position: relative; /* Relative positioning */
 }
 
+/* Styling for the spaceship within home button container */
 .home-button-container .spaceship {
-    width: 200px;
-    height: 200px;
-    background-color: transparent;
-    transform: rotate(270deg);
-    transition: filter 0.3s ease;
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    background-color: transparent; /* Transparent background color */
+    transform: rotate(270deg); /* Rotate 270 degrees */
+    transition: filter 0.3s ease; /* Smooth transition for filter effect */
 }
 
-.home-button-container:hover .spaceship{
-    filter: hue-rotate(180deg);
-    width: 220px;
-    height: 220px;
+/* Hover effect for spaceship within home button container */
+.home-button-container:hover .spaceship {
+    filter: hue-rotate(180deg); /* Change hue */
+    width: 220px; /* Increase width */
+    height: 220px; /* Increase height */
 }
 
+/* Hover effect for home text within home button container */
 .home-button-container:hover .home-text {
-    color: white;
+    color: white; /* Change text color to white */
 }
 
+/* Styling for the button container */
 .button-container {
-    display: flex;
-    flex-direction: column-reverse;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column-reverse; /* Stack children vertically in reverse order */
 }
 
+/* Styling for the calendar */
 .calendar {
-    color: gray;
-    display: flex;
-    margin-right: 2%;
-    justify-content: flex-end;
-    margin-left: auto;
-    flex-direction: row-reverse;
+    color: gray; /* Gray text color */
+    display: flex; /* Use flexbox for layout */
+    margin-right: 2%; /* Right margin of 2% */
+    justify-content: flex-end; /* Align children to the end */
+    margin-left: auto; /* Align to the left */
+    flex-direction: row-reverse; /* Stack children horizontally in reverse order */
 }
 
+/* Styling for the top section */
 .top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: auto;
-    margin-left: 15%;
-    padding: 20px;
-    background-color: #4bc0d4;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    margin-right: auto; /* Align to the left */
+    margin-left: 15%; /* Left margin of 15% */
+    padding: 20px; /* Padding of 20px */
+    background-color: #4bc0d4; /* Light blue background color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
 
+/* Styling for spans within top section */
 .top span {
-    font-size: 16px;
+    font-size: 16px; /* Font size */
 }
 
+/* Styling for the calendar box */
 .calendar-box {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    width: 100%; /* Full width */
 }
 
+/* Styling for year and month dropdowns */
 #year, #month {
-    width: 100px;
-    height: 30px;
-    display: block;
-    width: 100%;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    margin-left: 5pt;
+    width: 100px; /* Fixed width */
+    height: 30px; /* Fixed height */
+    display: block; /* Block display */
+    width: 100%; /* Full width */
+    height: 34px; /* Fixed height */
+    padding: 6px 12px; /* Padding of 6px top/bottom and 12px left/right */
+    font-size: 14px; /* Font size */
+    line-height: 1.42857143; /* Line height */
+    color: #555; /* Text color */
+    background-color: #fff; /* White background color */
+    background-image: none; /* No background image */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075); /* Subtle inset shadow for WebKit browsers */
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075); /* Subtle inset shadow */
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s; /* Smooth transitions for WebKit browsers */
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; /* Smooth transitions for Opera browsers */
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; /* Smooth transitions */
+    margin-left: 5pt; /* Left margin of 5pt */
 }
 
+/* Hover effect for year and month dropdowns */
 #year:hover, #month:hover {
-    border-color: teal;
+    border-color: teal; /* Change border color to teal */
 }
 
+/* Styling for float element */
 .float {
-    display: block;
-    width: 50px;
-    float: left;
+    display: block; /* Block display */
+    width: 50px; /* Fixed width */
+    float: left; /* Float to the left */
 }
 
+/* Styling for event element */
 .event {
-    display: block;
-    padding: 5px;
-    margin: 5px 0;
-    border-radius: 5px;
-    font-size: 14px;
-    position: relative;
+    display: block; /* Block display */
+    padding: 5px; /* Padding of 5px */
+    margin: 5px 0; /* Vertical margin of 5px */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    position: relative; /* Relative positioning */
 }
 
+/* Styling for tooltip within event */
 .event .tooltip {
-    display: none;
-    position: absolute;
-    background-color: #4e4a4a;
-    font-size: medium;
-    color: #fff;
-    padding: 5px;
-    border-radius: 5px;
-    white-space: normal;
-    top: 50%;
-    left: -110%; /* Adjust to the left side of eventDiv */
-    transform: translateY(-50%);
-    z-index: 10; /* Make sure the tooltip is displayed on top */
+    display: none; /* Hide tooltip by default */
+    position: absolute; /* Absolute positioning */
+    background-color: #4e4a4a; /* Dark background color */
+    font-size: medium; /* Medium font size */
+    color: #fff; /* White text color */
+    padding: 5px; /* Padding of 5px */
+    border-radius: 5px; /* Rounded corners */
+    white-space: normal; /* Normal white-space handling */
+    top: 50%; /* Center vertically */
+    left: -110%; /* Position to the left of event element */
+    transform: translateY(-50%); /* Adjust vertical position */
+    z-index: 10; /* Ensure tooltip is on top */
 }
 
+/* Hover effect for tooltip within event */
 .event:hover .tooltip {
-    display: block;
+    display: block; /* Show tooltip */
 }
 
-html{
-    height: 100%;
-    max-height: 100%;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+/* Styling for the html element */
+html {
+    height: 100%; /* Full height */
+    max-height: 100%; /* Maximum height */
+    width: 100%; /* Full width */
+    max-width: 100%; /* Maximum width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Styling for the body element */
 body {
-    height: 100%;
-    max-height: 100%;
-    width: 100%;
-    max-width: 100%;
-    z-index: 1;
-    background-image: url('../../img/backgrounds/neptune (1).png');
-    background-size: cover; /* Adjust the image to cover the whole background */
+    height: 100%; /* Full height */
+    max-height: 100%; /* Maximum height */
+    width: 100%; /* Full width */
+    max-width: 100%; /* Maximum width */
+    z-index: 1; /* Set z-index */
+    background-image: url('../../img/backgrounds/neptune (1).png'); /* Background image */
+    background-size: cover; /* Cover the entire background */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
-    overflow-x: hidden;
-    background-attachment: fixed;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-attachment: fixed; /* Fixed background image */
 }
 
+/* Styling for instruction box */
 .instruction-box {
-    background-color: #0bc6d3;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 5px;
-    max-width: 400px;
-    text-align: center;
-    border: 1px solid #ccc;
-    margin-right: 15%;
-    margin-left: auto;
+    background-color: #0bc6d3; /* Light blue background color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    padding: 5px; /* Padding of 5px */
+    max-width: 400px; /* Maximum width of 400px */
+    text-align: center; /* Center the text */
+    border: 1px solid #ccc; /* Light gray border */
+    margin-right: 15%; /* Right margin of 15% */
+    margin-left: auto; /* Center the box horizontally */
 }
 
+/* Styling for h2 within instruction box */
 .instruction-box h2 {
-    margin-top: 0;
-    color: #0b025a;
-    font-size: 24px;
-    font-weight: bold;
+    margin-top: 0; /* No top margin */
+    color: #0b025a; /* Dark blue text color */
+    font-size: 24px; /* Large font size */
+    font-weight: bold; /* Bold text */
 }
 
+/* Styling for paragraphs within instruction box */
 .instruction-box p {
-    color: #241818;
-    font-size: 16px;
-    line-height: 1.5;
+    color: #241818; /* Dark gray text color */
+    font-size: 16px; /* Font size */
+    line-height: 1.5; /* Line height */
 }
