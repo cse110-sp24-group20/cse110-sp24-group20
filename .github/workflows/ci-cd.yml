@@ -6,14 +6,11 @@ jobs:
   tests:
     runs-on: ubuntu-latest
 
-    env:
-      CODACY_PROJECT_TOKEN: ${{c30d0e2813bc4bd9aeb2c55e4db4c161}}
-
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
 
       - name: Cache Node Modules
-        uses: actions/cache@v3
+        uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -24,13 +21,18 @@ jobs:
         run: npm install
 
       - name: Run Tests and Generate Coverage Report
-        run: npm test
+        run: npm test -- --coverage
 
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }} # Add your Codecov token in the GitHub secrets
-          files: ./coverage/lcov.info
-          flags: unittests
-          name: codecov-umbrella
-          fail_ci_if_error: true
+      - name: List Coverage Files
+        run: ls -l ./coverage
+
+      - name: Echo Codacy Token
+        run: echo $CODACY_PROJECT_TOKEN
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+
+      - name: Upload coverage to Codacy
+        env:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+        run: |
+          bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r ./coverage/lcov.info

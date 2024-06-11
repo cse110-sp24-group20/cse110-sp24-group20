@@ -29,8 +29,7 @@
     "preset": "jest-puppeteer",
     "verbose": true
   },
-  "scripts": {
-    "test": "nyc --reporter=lcov --reporter=text npm test"
+  "dependencies": {
+    "jscoverage": "^0.6.0"
   }
-  
 }
