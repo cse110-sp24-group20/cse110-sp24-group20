@@ -1,4 +1,16 @@
-/* project tracker */
+/*
+Project Tracker Page Styles
+
+Styleguide 3
+*/
+
+/*
+Project Tracker
+
+Styles for the project tracker container.
+
+Styleguide 3.1.1
+*/
 .project-tracker {
     width: 80%;
     max-width: 1200px;
@@ -13,6 +25,13 @@
     align-items: center;
 }
 
+/*
+Project Count
+
+Styles for the project count element.
+
+Styleguide 3.1.2
+*/
 .project-count {
     position: absolute;
     top: 20px;
@@ -26,6 +45,13 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/*
+Project Tracker Heading
+
+Styles for the heading within the project tracker.
+
+Styleguide 3.1.3
+*/
 .project-tracker h1 {
     text-align: center;
     color: #333;
@@ -33,6 +59,13 @@
     width: 100%;
 }
 
+/*
+Projects Container
+
+Styles for the projects container.
+
+Styleguide 3.2.1
+*/
 .projects-container {
     display: flex;
     flex-direction: column;
@@ -41,6 +74,13 @@
     margin-top: 20px;
 }
 
+/*
+Projects
+
+Styles for the projects list.
+
+Styleguide 3.2.2
+*/
 .projects {
     flex: 1;
     width: 100%;
@@ -55,6 +95,13 @@
     box-sizing: border-box;
 }
 
+/*
+Project
+
+Styles for individual project elements.
+
+Styleguide 3.2.3
+*/
 .project {
     display: flex;
     flex-direction: column;
@@ -68,12 +115,26 @@
     box-sizing: border-box;
 }
 
+/*
+Project Title
+
+Styles for the project title.
+
+Styleguide 3.2.4
+*/
 .project-title {
     font-size: 18px;
     font-weight: bold;
     color: #333;
 }
 
+/*
+Project Input Container
+
+Styles for the container holding project inputs.
+
+Styleguide 3.2.5
+*/
 .project-input-container {
     display: flex;
     align-items: center;
@@ -81,6 +142,13 @@
     width: 100%;
 }
 
+/*
+Range Input
+
+Styles for the range input.
+
+Styleguide 3.3.1
+*/
 input[type="range"] {
     -webkit-appearance: none;
     width: 100%; /* Make the input take up remaining space */
@@ -112,10 +180,24 @@ input[type="range"]::-moz-range-thumb {
     border: none;
 }
 
+/*
+Range Input with Progress Bar
+
+Styles for the range input with a progress bar background.
+
+Styleguide 3.3.2
+*/
 input[type="range"].progress-bar {
     background: linear-gradient(to right, red, yellow, green);
 }
 
+/*
+Add Button
+
+Styles for the add button.
+
+Styleguide 3.4.1
+*/
 .add_button {
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -124,12 +206,18 @@ input[type="range"].progress-bar {
     height: 100%;
     justify-content: center;
     align-items: center;
-    /* margin-left: 17%; */
     font-size: 28px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+/*
+Remove Button
+
+Styles for the remove button.
+
+Styleguide 3.4.2
+*/
 .remove_button {
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -138,7 +226,6 @@ input[type="range"].progress-bar {
     height: 100%;
     justify-content: center;
     align-items: center;
-    /* margin-left: 17%; */ 
     position: relative;
     bottom: 25px;
     left: 90%;
@@ -147,19 +234,42 @@ input[type="range"].progress-bar {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+/*
+Add Button Text
+
+Styles for the text within the add button.
+
+Styleguide 3.4.3
+*/
 .add_button span {
     font-size: 20px;
     position: relative;
     bottom: 2px;
-    margin-left: 15px
+    margin-left: 15px;
 }
 
+/*
+Button Hover Effects
+
+Hover effects for the add and remove buttons.
+
+:hover    - Changes background color and text color on hover.
+
+Styleguide 3.4.4
+*/
 .add_button:hover, .remove_button:hover {
     background-color: #B58B00;
     color: white;
     border-color: #B58B00;
 }
 
+/*
+Button Container
+
+Styles for the button container with flex layout and spacing.
+
+Styleguide 3.4.5
+*/
 .button-container {
     display: flex;
     justify-content: center;
@@ -169,13 +279,26 @@ input[type="range"].progress-bar {
     width: 100%;
 }
 
-/*Home Menu Styling*/
+/*
+Home Menu Styling
+
+Styles for the home menu container.
+
+Styleguide 3.5.1
+*/
 .home-menu {
     display: flex;
     flex-direction: column;
     margin-top: 50pt;
 }
 
+/*
+Home Menu Button
+
+Styles for buttons within the home menu.
+
+Styleguide 3.5.2
+*/
 .home-menu button {    
     width: 140px;
     height: 140px;
@@ -185,11 +308,19 @@ input[type="range"].progress-bar {
     background-repeat: no-repeat;
     background-color: transparent;
     background-size: contain;
-    border: none;
     cursor: pointer;
     transition: transform 0.3s ease; /*Smooth transition for scaling*/
 }
 
+/*
+Day Schedule Button
+
+Styles for the day schedule button with hover effects.
+
+:hover    - Scales the button on hover.
+
+Styleguide 3.5.3
+*/
 .day-schedule-button {
     align-items: center;
     margin-right: 10pt;
@@ -202,6 +333,15 @@ input[type="range"].progress-bar {
     transform: scale(1.1); /*Scale button on hover*/
 }
 
+/*
+Reflect Button
+
+Styles for the reflect button with hover effects.
+
+:hover    - Scales the button on hover.
+
+Styleguide 3.5.4
+*/
 .reflect-button {
     align-items: center;
     margin: 0 auto;
@@ -213,6 +353,15 @@ input[type="range"].progress-bar {
     transform: scale(1.1); /*Scale button on hover*/
 }
 
+/*
+Month Schedule Button
+
+Styles for the month schedule button with hover effects.
+
+:hover    - Scales the button on hover.
+
+Styleguide 3.5.5
+*/
 .month-schedule-button {
     margin-right: auto;
     margin-left: 20pt;
@@ -225,7 +374,13 @@ input[type="range"].progress-bar {
     transform: scale(1.1); /*Scale button on hover*/  
 }
 
-/*Home Button Styling*/
+/*
+Home Button Styling
+
+Styles for the home button container with hover effects.
+
+Styleguide 3.6.1
+*/
 .home-button-container {
     width: 300px;
     height: 220px;
@@ -235,6 +390,15 @@ input[type="range"].progress-bar {
     position: relative;
 }
 
+/*
+Home Button Container Spaceship
+
+Styles for the spaceship within the home button container with hover effects.
+
+:hover    - Changes filter and size on hover.
+
+Styleguide 3.6.2
+*/
 .home-button-container .spaceship {
     width: 200px;
     height: 200px;
@@ -249,6 +413,13 @@ input[type="range"].progress-bar {
     height: 210px;
 }
 
+/*
+HTML Styling
+
+Styles for the html element to prevent horizontal scrolling.
+
+Styleguide 3.7.1
+*/
 html{
     height: 100%;
     max-height: 100%;
@@ -257,6 +428,13 @@ html{
     overflow-x: hidden; 
 }
 
+/*
+Body Styling
+
+Styles for the body element, including background image and size settings.
+
+Styleguide 3.7.2
+*/
 body {
     height: 100%;
     max-height: 100%;
@@ -274,6 +452,13 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/*
+Main Container
+
+Styles for the main container with flex layout.
+
+Styleguide 3.8.1
+*/
 .main-container {
     display: flex;
     margin-right: 2%;
@@ -281,7 +466,13 @@ body {
     width: 100%;
 }
 
-/* modal styling */
+/*
+Modal Styling
+
+Styles for modal windows.
+
+Styleguide 3.9.1
+*/
 .modal {
     display: none;
     position: fixed;
@@ -294,6 +485,13 @@ body {
     background-color: rgba(0,0,0,0.4);
 }
 
+/*
+Modal Content
+
+Styles for the content within modals.
+
+Styleguide 3.9.2
+*/
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
@@ -305,6 +503,15 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
 }
 
+/*
+Close Button
+
+Styles for the close button in modals.
+
+:hover    - Changes color on hover.
+
+Styleguide 3.9.3
+*/
 .close {
     color: #aaa;
     float: right;
@@ -318,6 +525,16 @@ body {
     cursor: pointer;
 }
 
+/*
+Submit Button
+
+Styles for submit buttons with hover and active effects.
+
+:hover  - Changes background color and scales up on hover.
+:active - Changes background color and scales down on active.
+
+Styleguide 3.10.1
+*/
 .submit {
     display: inline-block;
     padding: 10px 20px;
@@ -344,16 +561,37 @@ body {
     transform: scale(1);
 }
 
+/*
+Form Styling
+
+Styles for forms, including label and input elements.
+
+Styleguide 3.11.1
+*/
 form {
     display: flex;
     flex-direction: column;
 }
 
+/*
+Label Styling
+
+Styles for labels within forms.
+
+Styleguide 3.11.2
+*/
 label {
     margin-bottom: 5px;
     font-weight: bold;
 }
 
+/*
+Text Input and Textarea Styling
+
+Styles for text inputs and textareas within forms.
+
+Styleguide 3.11.3
+*/
 input[type="text"], input[type="datetime-local"], textarea {
     margin-bottom: 20px;
     padding: 10px;
@@ -364,11 +602,25 @@ input[type="text"], input[type="datetime-local"], textarea {
     box-sizing: border-box;
 }
 
+/*
+Textarea Styling
+
+Additional styles for textareas within forms.
+
+Styleguide 3.11.4
+*/
 textarea {
     height: 100px;
     resize: vertical;
 }
 
+/*
+Modal Title
+
+Styles for the modal title.
+
+Styleguide 3.12.1
+*/
 .modal-title {
     text-align: center;
 }
