@@ -1,3 +1,7 @@
+/**
+    @module projectTracker
+*/
+
 document.addEventListener('DOMContentLoaded', () => {
     const addButton = document.querySelector('.add_button'); // Button to add new projects
     const projectsContainer = document.querySelector('.projects'); // Container for all project elements
