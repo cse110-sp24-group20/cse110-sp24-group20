@@ -78,7 +78,7 @@ To ensure our project remains stable and bug-free as it travels through the cosm
 - [Sentiment Widget Demo](https://www.youtube.com/watch?v=3w28m61RVow)
 - [TA Sprint Check In](https://www.youtube.com/watch?v=QSJdulnFW6s)
 - [Final Public Presentation Video](https://www.youtube.com/watch?v=ouiVghSc72Y)
-- [Final Private TA Presentation Video]()
+- [Final Private TA Presentation Video](https://www.youtube.com/watch?v=N6sQvTMhO1A)
 
 ## Team Agenda and Action Plans (UCSD Restricted)
 - [Week 2 - Group Kickoff and Team Branding](https://docs.google.com/document/d/1yzLrVUtwJmrQ68DPAA6afpxohxKKO2E4eC-_4uID680/edit)
