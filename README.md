@@ -61,7 +61,7 @@ To ensure our project remains stable and bug-free as it travels through the cosm
 
 ### Our Tools
 - [Codacy Coverage]()
-- [JDocs]()
+- [JDocs](https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/javascript/docs/index.html)
 
 ### Fun Features
 - **Senitment Widget**: One of the coolest features of our project is the integration of the sentiment widget we built at the beginning of the quarter. This animated widget allows users to select and edit their sentiment on the reflections page. It's not only a functional tool, but also a nod to how how team has grown and evolved over the course of the project.
