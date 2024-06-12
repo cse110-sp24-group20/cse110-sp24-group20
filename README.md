@@ -65,7 +65,7 @@ To ensure our project remains stable and bug-free as it travels through the cosm
 
 ### Fun Features
 - **Senitment Widget**: One of the coolest features of our project is the integration of the sentiment widget we built at the beginning of the quarter. This animated widget allows users to select and edit their sentiment on the reflections page. It's not only a functional tool, but also a nod to how how team has grown and evolved over the course of the project.
-- **Interactive Sceduling**: When you add events to the "Scedule Your Day" page, the events show up on the calendar in the "Schedule Your Month" page. Hovering over an event reveals the information you input (description, date, and time). The events are displayed in the corresponding color you chose and also indicate if you have completed the event based on whether you pressed the complete button in the "Schedule Your Day" page.
+- **Interactive Sceduling**: When you add events to the "Schedule Your Day" page, the events show up on the calendar in the "Schedule Your Month" page. Hovering over an event reveals the information you input (description, date, and time). The events are displayed in the corresponding color you chose and also indicate if you have completed the event based on whether you pressed the complete button in the "Schedule Your Day" page.
 
 ## Important Links
 -  [Team Page](https://cse110-sp24-group20.github.io/cse110-sp24-group20/admin/team.html)
