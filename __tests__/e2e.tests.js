@@ -156,15 +156,70 @@ describe('Basic user flow for Website', () => {
     */
     // Test to add new reflection and verify it appears in list
     it('Reflect On Your Day Page - Add a new reflection', async () => {
-      
+      await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/html/reflectDay.html');
+      await page.click('.add-button');
+      await page.waitForSelector('.sentiment-widget', { visible: true });
+
+      // Select the radio button with value 3
+      await page.evaluate(() => {
+          const radio = document.querySelector('input[name="rating"][value="3"]');
+          if (radio) {
+              radio.click();
+          }
+      });
+
+      // Verify the radio button is selected
+      const isSelected = await page.$eval('input[name="rating"][value="3"]', el => el.checked);
+      expect(isSelected).toBe(true);
+
+      // Close the sentiment widget by selecting the sentiment
+      await page.evaluate(() => {
+          const selectedSentiment = document.querySelector('#rating3');
+          if (selectedSentiment) {
+              selectedSentiment.click();
+          }
+      });
+
+      // Wait for the reflection to appear in the list
+      await page.waitForSelector('.previous-reflection');
+      const reflectionCount = await page.$eval('#reflect-count', el => el.textContent);
+      expect(reflectionCount).toBe('2');
     }, 30000); // Set timeout to 30 seconds for this test
     // Test to edit a reflection and verify it changes
     it('Reflect On Your Day Page - Edit a reflection', async () => {
+      await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/html/reflectDay.html');
+    
+      // Wait for the reflection to be present
+      await page.waitForSelector('.previous-reflection');
       
+      // Click the edit button
+      await page.click('.edit-item');
+      
+      // Wait for the reflection input to become editable and change its content
+      await page.evaluate(() => {
+          const textArea = document.querySelector('.previous-reflection textarea');
+          textArea.disabled = false;
+          textArea.value = 'Updated Reflection Text';
+          textArea.dispatchEvent(new Event('input'));
+      });
+
+      // Verify the reflection text has been updated
+      const reflectionText = await page.$eval('.previous-reflection textarea', el => el.value);
+      expect(reflectionText).toBe('Updated Reflection Text');
     }, 30000); // Set timeout to 30 seconds for this test
     // Test to delete a reflection and verify it is removed from the list
     it('Reflect On Your Day Page - Delete a reflection', async () => {
+      await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/html/reflectDay.html');
+    
+      // Wait for the reflection to be present
+      await page.waitForSelector('.previous-reflection');
       
+      // Click the delete button
+      await page.click('.delete-item');
+      
+      // Verify the reflection is removed from the list
+      const reflectionCount = await page.$eval('#reflect-count', el => el.textContent);
+      expect(reflectionCount).toBe('1');
     }, 30000); // Set timeout to 30 seconds for this test
 
     /**
@@ -183,10 +238,23 @@ describe('Basic user flow for Website', () => {
     */
    // Test to add a new project and verify it appears on the list
     it('Project Tracker Page - Add a new project', async () => {
-      
-    });
+      await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/html/projectTracker.html');
+      await page.click('.add_button');
+      await page.waitForSelector('.modal');
+
+      await page.type('#eventName', 'New Project');
+      await page.click('.submit');
+
+      await page.waitForSelector('.project-title');
+      const projectName = await page.$eval('.project-title', el => el.textContent);
+      expect(projectName).toBe('New Project');
+    }, 30000);
     // Test to delete a project annd verify it is removed from list
     it('Project Tracker Page - Delete a project', async () => {
-      
-    });
+      await page.goto('https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/html/projectTracker.html');
+      await page.click('.remove_button');
+      await page.waitForSelector('.project-title', { hidden: true });
+      const projects = await page.$$('.project');
+      expect(projects.length).toBe(0);
+    }, 30000);
   });
