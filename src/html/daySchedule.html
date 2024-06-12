@@ -21,11 +21,13 @@
       </div>
       <!--Store all todo-items in a todo-list ul element-->
       <ul class="todo-list">
-        <!-- submit form-->
+        <!-- Create two divs allowing for a modal display in order to create an Add Event window-->
         <div class="modal">
           <div class="modal-content">
+              <!--span with unicode X to serve as a button tp close the add event window-->
               <span class="close">&times;</span>
               <h2 class="modal-title">Add Event</h2>
+              <!--Prompt user to enter Event Name, Description, Tag Color, Date, and Time-->
               <form id="eventForm">
                   <label for="eventName">Event Name:</label>&nbsp;
                   <input type="text" id="eventName" name="eventName" placeholder="Set up your goal" required><br>

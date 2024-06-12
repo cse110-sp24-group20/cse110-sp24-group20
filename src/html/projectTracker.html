@@ -39,12 +39,14 @@
                 </div>
             </div>
         </div>
-
+        <!-- Create two divs allowing for a modal display in order to create an Add Project window-->
         <div class="modal">
             <div class="modal-content">
+                <!--span with unicode X to serve as a button to close the add event window-->
                 <span class="close">&times;</span>
                 <h2 class="modal-title">Add Project</h2>
                 <form id="eventForm">
+                    <!--Prompt user for project name, percent completion and slider will be added dynamically-->
                     <label for="eventName">Project Name:</label>&nbsp;
                     <input type="text" id="eventName" name="eventName" placeholder="Name of your Project" required></textarea><br>
 
