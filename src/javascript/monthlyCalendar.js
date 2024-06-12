@@ -1,5 +1,5 @@
 /**
-    @module projectTracker
+    @module monthlyCalendar
 */
 
 const months = {

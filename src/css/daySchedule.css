@@ -1,5 +1,26 @@
-.container{
-    width: 65%;
+/*
+Day Schdule Page Styles
+
+Styleguide 1
+*/
+
+/*
+day schdule Styles
+
+This file contains styles for various day schdule pages components used throughout the project.
+
+Styleguide 1.1
+*/
+
+/*
+Container
+
+The main container element with responsive width, padding, and a subtle shadow.
+
+Styleguide 1.1.1
+*/
+.container {
+    width: 80%;
     max-width: 1200px;
     padding: 20px;
     margin: 0 auto;
@@ -14,6 +35,13 @@
     align-items: center;
 }
 
+/*
+Home Menu
+
+Styles the menu container on the homepage.
+
+Styleguide 1.1.2
+*/
 .home-menu {
     display: flex;
     flex-direction: column;
@@ -21,6 +49,16 @@
     gap: 10px;
 }
 
+/*
+Home Menu Button
+
+General button styles within the home menu.
+
+:hover    - Transforms on hover.
+.primary  - Indicates button is the primary action.
+
+Styleguide 1.1.3
+*/
 .home-menu button {
     width: 140px;
     height: 140px;
@@ -34,10 +72,19 @@
     transition: transform 0.3s ease;
 }
 
+/*
+Reflect Button
+
+Styles for the reflect button with hover effects.
+
+:hover - Scales up on hover.
+
+Styleguide 1.1.4
+*/
 .reflect-button {
     align-items: center;
     margin: 0 auto;
-    background-size: 110%;;
+    background-size: 110%;
     background-image: url(../../img/planets/earth-text.png);
 }
 
@@ -45,6 +92,15 @@
     transform: scale(1.1);
 }
 
+/*
+Project Button
+
+Styles for the project button with hover effects.
+
+:hover - Scales up on hover.
+
+Styleguide 1.1.5
+*/
 .project-button {
     margin-right: auto;
     margin-left: 20pt;
@@ -57,6 +113,15 @@
     transform: scale(1.1); 
 }
 
+/*
+Month Schedule Button
+
+Styles for the month schedule button with hover effects.
+
+:hover - Scales up on hover.
+
+Styleguide 1.1.6
+*/
 .month-schedule-button {
     align-items: center;
     margin-right: 10pt;
@@ -69,6 +134,13 @@
     transform: scale(1.1);
 }
 
+/*
+Home Button Container
+
+Styles for the home button container with hover effects.
+
+Styleguide 1.1.7
+*/
 .home-button-container {
     width: 300px;
     height: 220px;
@@ -78,6 +150,15 @@
     position: relative;
 }
 
+/*
+Home Button Container Spaceship
+
+Styles for the spaceship within the home button container with hover effects.
+
+:hover - Changes filter and size on hover.
+
+Styleguide 1.1.8
+*/
 .home-button-container .spaceship {
     width: 200px;
     height: 200px;
@@ -92,12 +173,26 @@
     height: 220px;
 }
 
-.width{
+/*
+Width
+
+Sets the width and height for specific elements.
+
+Styleguide 1.1.9
+*/
+.width {
     width: 85%;
     height: 100px;
 }
 
-.checkbox{
+/*
+Checkbox
+
+Styles for checkboxes.
+
+Styleguide 1.2.1
+*/
+.checkbox {
     background-color: lightgreen;
     width: 30px;
     height: 30px;
@@ -112,8 +207,14 @@
     cursor: pointer;
 }
 
-.listbox{
-    /* background-color: ; */
+/*
+Listbox
+
+Styles for list boxes.
+
+Styleguide 1.2.2
+*/
+.listbox {
     width: 30px;
     height: 30px;
     display: flex;
@@ -127,12 +228,26 @@
     cursor: pointer;
 }
 
+/*
+Checked List Item
+
+Styles for checked list items.
+
+Styleguide 1.2.3
+*/
 ul li.checked {
     color: lightgray;
     text-decoration: line-through;
 }
 
-html{
+/*
+HTML
+
+Styles for the html element to prevent horizontal scrolling.
+
+Styleguide 1.3.1
+*/
+html {
     height: 100%;
     max-height: 100%;
     width: 100%;
@@ -140,6 +255,13 @@ html{
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/*
+Body
+
+Styles for the body element, including background image and size settings.
+
+Styleguide 1.3.2
+*/
 body {
     height: 100%;
     max-height: 100%;
@@ -153,6 +275,13 @@ body {
     overflow-x: hidden; 
 }
 
+/*
+Modal
+
+Styles for modal windows.
+
+Styleguide 1.4.1
+*/
 .modal {
     display: none;
     position: fixed;
@@ -165,6 +294,13 @@ body {
     background-color: rgba(0,0,0,0.4);
 }
 
+/*
+Modal Content
+
+Styles for the content within modals.
+
+Styleguide 1.4.2
+*/
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
@@ -176,6 +312,15 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2), 0 6px 20px rgba(0,0,0,0.19);
 }
 
+/*
+Close Button
+
+Styles for the close button in modals.
+
+:hover - Changes color on hover.
+
+Styleguide 1.4.3
+*/
 .close {
     color: #aaa;
     float: right;
@@ -189,6 +334,16 @@ body {
     cursor: pointer;
 }
 
+/*
+Submit Button
+
+Styles for submit buttons with hover and active effects.
+
+:hover  - Changes background color and scales up on hover.
+:active - Changes background color and scales down on active.
+
+Styleguide 1.5.1
+*/
 .submit {
     display: inline-block;
     padding: 10px 20px;
@@ -215,17 +370,37 @@ body {
     transform: scale(1);
 }
 
+/*
+Form
+
+Styles for forms, including label and input elements.
+
+Styleguide 1.6.1
+*/
 form {
     display: flex;
     flex-direction: column;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/*
+Label
+
+Styles for labels within forms.
+
+Styleguide 1.6.2
+*/
 label {
     margin-bottom: 5px;
     font-weight: bold;
 }
 
+/*
+Input Text
+
+Styles for text inputs and textareas within forms.
+
+Styleguide 1.6.3
+*/
 input[type="text"], input[type="datetime-local"], textarea {
     margin-bottom: 20px;
     padding: 10px;
@@ -236,15 +411,36 @@ input[type="text"], input[type="datetime-local"], textarea {
     box-sizing: border-box;
 }
 
+/*
+Textarea
+
+Additional styles for textareas within forms.
+
+Styleguide 1.6.4
+*/
 textarea {
     height: 100px;
     resize: vertical;
 }
 
+/*
+Modal Title
+
+Styles for the modal title.
+
+Styleguide 1.7.1
+*/
 .modal-title {
     text-align: center;
 }
 
+/*
+Main Container
+
+Styles for the main container with flex layout.
+
+Styleguide 1.8.1
+*/
 .main-container {
     display: flex;
     margin-right: 2%;
@@ -252,6 +448,13 @@ textarea {
     width: 100%;
 }
 
+/*
+Add Button
+
+Styles for add buttons with hover effects.
+
+Styleguide 1.9.1
+*/
 .add_button {
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -260,25 +463,48 @@ textarea {
     height: 100%;
     justify-content: center;
     align-items: center;
-    /* margin-left: 17%; */
     font-size: 20px;
     font-family: "Gill Sans", sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+/*
+Remove Button
+
+Styles for remove buttons with a specific background color and border radius.
+
+Styleguide 1.9.2
+*/
 .remove_button {
     margin-right: 0px;
     background-color: rgb(238, 142, 142);
     border-radius: 0.5rem;
 }
 
+/*
+Add Button Hover
+Remove Button Hover
+
+Hover effects for add and remove buttons.
+
+:hover - Changes background color, text color, and border color on hover.
+
+Styleguide 1.9.3
+*/
 .add_button:hover, .remove_button:hover {
     background-color: #B58B00;
     color: white;
     border-color: #B58B00;
 }
 
+/*
+Button Container
+
+Container for buttons, with flex layout and spacing.
+
+Styleguide 1.9.4
+*/
 .button-container {
     display: flex;
 
@@ -289,24 +515,40 @@ textarea {
     width: 90%;
 }
 
-.todo-list{
+/*
+Todo List
+
+Styles for the todo list container.
+
+Styleguide 1.9.5
+*/
+.todo-list {
     list-style-type: none; /* Remove bullet points */
     background-color: rgba(243, 220, 214, 0.5);
     border-radius: 0.5rem;
-    width: 90%;
-    padding: 0;
-    margin: 0 auto;
-    max-height: 500px;
-    overflow-y: auto;
+    width: 80%;
 }
 
-input{
+/*
+General Input
+
+Styles for general input fields.
+
+Styleguide 1.9.6
+*/
+input {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 0.3rem;
     padding: 0.3rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/*
+Title Container
+
+Container for titles, with flex layout.
+
+Styleguide 1.9.7
+*/
 .title-container {
     display: flex;
     flex-direction: row;
@@ -314,11 +556,27 @@ input{
     justify-content: space-between;
 }
 
+/*
+Title
+
+Styles for title elements.
+
+Styleguide 1.9.8
+*/
 .title {
     flex: 1;
     text-align: center;
 }
 
+/*
+Todo Item
+
+Styles for individual todo items.
+
+:hover - Adds an inset border and changes color on hover.
+
+Styleguide 1.9.9
+*/
 .todo-item {
     background-color: #f9f9f9; /* Light white color */
     border-radius: 10px; /* Rounded corners */
@@ -333,7 +591,13 @@ input{
     border-color: rgb(97, 195, 228);
 }
 
+/*
+Color Input
 
+Styles for color input fields.
+
+Styleguide 1.9.10
+*/
 input[type="color"] {
     border: 1px solid #ADD8E6;
     border-radius: 5px;
@@ -341,4 +605,3 @@ input[type="color"] {
     margin: 0;
     box-sizing: border-box;
 }
-

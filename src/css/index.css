@@ -1,119 +1,213 @@
-/*Styling for background container*/
+/*
+Index Page Styles
+
+Styleguide 5
+*/
+
+/*
+Background Container Styling
+
+Styles for the background container.
+
+Styleguide 5.1.1
+*/
 #backgroud {
-    position: relative; /*Position the container relative to its normal position*/
-}
-/*Styling for fallback image*/
-#fallback-image {
-    position: absolute; /*Position the image absolutely within the container*/
-    top: 0; /*Align the image to the top of the container*/
-    left: 0; /*Align the image to the left of the container*/
-    width: 100%; /*Set the image width to fill the container */
-    height: 100%; /*Set the image height to fill the container */
-    object-fit: cover; /*Scale the image to cover the entire container while maintaining aspect ratio*/
-    z-index: 1; /*Ensure the fallback image is above the video*/
-}
-/*Styling for background space video*/
-#spaceVideo {
-    position: fixed; /* Fixes the video in place*/
-    right: 0; /*Aligns to the right edge of the viewport*/
-    bottom: 0; /*Aligns to the bottom edge of the viewport*/
-    width: 100%; /*Full width of the viewport*/
-    height: 100%; /*Full height of the viewport*/
-    object-fit: cover; /*Ensures the video covers the entire viewport without stretching*/
-    z-index: 0; /*Places the video behind fallback image*/
-    display: none; /*Initially hide the video*/
-}
-/*Centering the home-menu items*/
-.home-menu {
-    display: flex; /*Enables flexbot layout*/
-    flex-direction: column; /*Stacks childten vertically*/
-    align-items: center; /* Centers children horizontally*/
-    justify-content: center; /*Centers children vertically*/
-    height: 100vh; /*Full viewport height*/
-    position: relative; /*Allows absolute positioning of children*/
-    z-index: 1; /*Ensures menu items appear above the background video*/
-}
-/*Styling for buttons in the home menu*/
-.home-menu button {
-    width: calc(12vh + 6vw); /*Width
-     scales with viewport height and width*/
-    height: calc(12vh + 6vw); /*Height scales with viewport hieght and width*/
-    background-size: contain; /*Ensures background image gits within the button*/
-    background-repeat: no-repeat; /*Prevents Background image from repeating*/
-    background-color: transparent; /*Makes button background transparent*/
-    border: none; /*Removes default button border*/
-    border-radius: 50%; /*Makes the button circular*/
-    cursor: pointer; /*Changes cursor to point on hover*/
-    position: absolute; /*Allows positioning using top and left*/
-    display: flex; /*Enables flexbox layout*/
-    justify-content: center; /*Centers content horizontally*/
-    align-items: center; /*Centers content vertically*/
-    transform: translate(-50%, -50%); /*Offsets button to center it*/
-    background-position: 50% 50%; /*Centers background image*/
-}
-/*Button hover effect*/
-.home-menu button:hover { 
-    width: calc(13vh + 7vw); /*Increases width on hover*/
-    height: calc(13vh + 7vw); /*Increasing height on hover*/
-    animation-play-state: paused; /* Floating Animation paused on hover */
-}
-/*Keyframes for spaceship spinning animation*/
-@keyframes spin {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg); /*Initial rotation state*/
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg); /*Final rotation state*/
-    }
-}
-/*Styling for the spaceship*/
-.spaceship {
-    width: calc(10vh + 5vw); /*Width scales with viewport height and width*/
-    height: calc(10vh + 5vw); /*Height scales with viewport height and width*/
-    background-color: transparent; /*Makes spaceship background transparent*/
-    display: flex; /*Enables flexbox layout*/
-    justify-content: center; /*Centers content horizontally*/
-    align-items: center; /*Centers content vertically*/
-    position: absolute; /*Allows positioning using top and left*/
-    top: 50%; /*Positions spaceship vertically in the middle*/
-    left: 50%; /*Positions spaceship horizontally in the middle*/
-    transform: translate(-50% -50%) rotate(300deg); /*Centers and rotates the spaceship*/
-    animation: spin 6s linear infinite; /*Applies spinning animation*/
-}
-/*Reflect on the Day positioning and styling */
-.reflect-button {
-    top: calc(42% - 30vh); /*Positions button above center*/
-    left: 42%; /*Positions button horizontally in the middle*/
-    background-image: url(../../img/planets/earth-text.png); /*Set background image*/
-    transform: translate(-50% -50%); /*Centers the button*/
-    animation: floating 4.5s ease-in-out infinite; /*Floating Animation*/
-}
-/*Schedule your Day positioning and styling*/
-.day-schedule-button {
-    top: 42%; /*Positions button vertically in the middle*/
-    left: calc(42% - 25vw); /*Positions button to the left of center*/
-    background-image: url(../../img/planets/mars-text.png); /*Sets background image*/
-    transform: translate(-50% -50%); /*Centers the button*/
-    animation: floating 4s ease-in-out infinite; /*Floating Animation*/
-}
-/*Scheule your Month positioning and styling*/
-.month-schedule-button {
-    top: 42%; /*Positiong button vertically in the middle*/
-    left: calc(42% + 25vw); /*Positions button to the right of the center*/
-    background-image: url(../../img/planets/neptune-text.png); /*Sets background image*/
-    transform: translate(-50% -50%); /*Centers the button*/
-    animation: float_midway 5.5s linear infinite; /*Floating Animation*/
-}
-/*Track Project positioning and styling*/
-.project-button {
-    top: calc(42% + 30vh); /*Positions button below center*/
-    left: 42%; /*Positions button horizontally in the middle*/
-    background-image: url(../../img/planets/jupiter-text.png); /*Set the background image*/
-    transform: translate(-50% -50%); /*Centers the button*/
-    animation: floating 5s infinite; /* Floating animation*/
+    position: relative; /* Position the container relative to its normal position */
 }
 
-/* Floating Animation Function Used for All Planet Icons*/
+/*
+Fallback Image Styling
+
+Styles for the fallback image.
+
+Styleguide 5.1.2
+*/
+#fallback-image {
+    position: absolute; /* Position the image absolutely within the container */
+    top: 0; /* Align the image to the top of the container */
+    left: 0; /* Align the image to the left of the container */
+    width: 100%; /* Set the image width to fill the container */
+    height: 100%; /* Set the image height to fill the container */
+    object-fit: cover; /* Scale the image to cover the entire container while maintaining aspect ratio */
+    z-index: 1; /* Ensure the fallback image is above the video */
+}
+
+/*
+Background Space Video Styling
+
+Styles for the background space video.
+
+Styleguide 5.1.3
+*/
+#spaceVideo {
+    position: fixed; /* Fixes the video in place */
+    right: 0; /* Aligns to the right edge of the viewport */
+    bottom: 0; /* Aligns to the bottom edge of the viewport */
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    object-fit: cover; /* Ensures the video covers the entire viewport without stretching */
+    z-index: 0; /* Places the video behind fallback image */
+    display: none; /* Initially hide the video */
+}
+
+/*
+Home Menu Styling
+
+Styles for centering the home-menu items.
+
+Styleguide 5.2.1
+*/
+.home-menu {
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers children horizontally */
+    justify-content: center; /* Centers children vertically */
+    height: 100vh; /* Full viewport height */
+    position: relative; /* Allows absolute positioning of children */
+    z-index: 1; /* Ensures menu items appear above the background video */
+}
+
+/*
+Home Menu Button Styling
+
+Styles for buttons in the home menu.
+
+Styleguide 5.2.2
+*/
+.home-menu button {
+    width: calc(12vh + 6vw); /* Width scales with viewport height and width */
+    height: calc(12vh + 6vw); /* Height scales with viewport height and width */
+    background-size: contain; /* Ensures background image fits within the button */
+    background-repeat: no-repeat; /* Prevents background image from repeating */
+    background-color: transparent; /* Makes button background transparent */
+    border: none; /* Removes default button border */
+    border-radius: 50%; /* Makes the button circular */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    position: absolute; /* Allows positioning using top and left */
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    transform: translate(-50%, -50%); /* Offsets button to center it */
+    background-position: 50% 50%; /* Centers background image */
+}
+
+/*
+Home Menu Button Hover Effect
+
+Hover effect for buttons in the home menu.
+
+Styleguide 5.2.3
+*/
+.home-menu button:hover {
+    width: calc(13vh + 7vw); /* Increases width on hover */
+    height: calc(13vh + 7vw); /* Increases height on hover */
+    animation-play-state: paused; /* Pauses floating animation on hover */
+}
+
+/*
+Spaceship Spinning Animation
+
+Keyframes for spaceship spinning animation.
+
+Styleguide 5.3.1
+*/
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg); /* Initial rotation state */
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg); /* Final rotation state */
+    }
+}
+
+/*
+Spaceship Styling
+
+Styles for the spaceship.
+
+Styleguide 5.3.2
+*/
+.spaceship {
+    width: calc(10vh + 5vw); /* Width scales with viewport height and width */
+    height: calc(10vh + 5vw); /* Height scales with viewport height and width */
+    background-color: transparent; /* Makes spaceship background transparent */
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    position: absolute; /* Allows positioning using top and left */
+    top: 50%; /* Positions spaceship vertically in the middle */
+    left: 50%; /* Positions spaceship horizontally in the middle */
+    transform: translate(-50%, -50%) rotate(300deg); /* Centers and rotates the spaceship */
+    animation: spin 6s linear infinite; /* Applies spinning animation */
+}
+
+/*
+Reflect Button Styling
+
+Styles for the "Reflect on the Day" button.
+
+Styleguide 5.4.1
+*/
+.reflect-button {
+    top: calc(42% - 30vh); /* Positions button above center */
+    left: 42%; /* Positions button horizontally in the middle */
+    background-image: url(../../img/planets/earth-text.png); /* Sets background image */
+    transform: translate(-50%, -50%); /* Centers the button */
+    animation: floating 4.5s ease-in-out infinite; /* Floating animation */
+}
+
+/*
+Day Schedule Button Styling
+
+Styles for the "Schedule your Day" button.
+
+Styleguide 5.4.2
+*/
+.day-schedule-button {
+    top: 42%; /* Positions button vertically in the middle */
+    left: calc(42% - 25vw); /* Positions button to the left of center */
+    background-image: url(../../img/planets/mars-text.png); /* Sets background image */
+    transform: translate(-50%, -50%); /* Centers the button */
+    animation: floating 4s ease-in-out infinite; /* Floating animation */
+}
+
+/*
+Month Schedule Button Styling
+
+Styles for the "Schedule your Month" button.
+
+Styleguide 5.4.3
+*/
+.month-schedule-button {
+    top: 42%; /* Positions button vertically in the middle */
+    left: calc(42% + 25vw); /* Positions button to the right of center */
+    background-image: url(../../img/planets/neptune-text.png); /* Sets background image */
+    transform: translate(-50%, -50%); /* Centers the button */
+    animation: float_midway 5.5s linear infinite; /* Floating animation */
+}
+
+/*
+Project Button Styling
+
+Styles for the "Track Project" button.
+
+Styleguide 5.4.4
+*/
+.project-button {
+    top: calc(42% + 30vh); /* Positions button below center */
+    left: 42%; /* Positions button horizontally in the middle */
+    background-image: url(../../img/planets/jupiter-text.png); /* Sets background image */
+    transform: translate(-50%, -50%); /* Centers the button */
+    animation: floating 5s infinite; /* Floating animation */
+}
+
+/*
+Floating Animation
+
+Keyframes for floating animation used for all planet icons.
+
+Styleguide 5.5.1
+*/
 @keyframes floating {
     0% {
         transform: translateY(0); /* Start with the original position */
@@ -129,7 +223,13 @@
     }
 }
 
-/* Floating Animation That Starts Mid-way for All Planet Icons*/
+/*
+Float Midway Animation
+
+Keyframes for floating animation that starts mid-way, used for planet icons.
+
+Styleguide 5.5.2
+*/
 @keyframes float_midway {
     0% {
         transform: translateY(-10px); /* Start with the original position */
