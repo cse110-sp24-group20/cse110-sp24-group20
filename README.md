@@ -61,7 +61,7 @@ To ensure our project remains stable and bug-free as it travels through the cosm
 
 ### Our Tools
 - [Codacy Coverage]()
-- [JDocs]()
+- [JDocs](https://cse110-sp24-group20.github.io/cse110-sp24-group20/src/javascript/docs/index.html)
 
 ### Fun Features
 - **Senitment Widget**: One of the coolest features of our project is the integration of the sentiment widget we built at the beginning of the quarter. This animated widget allows users to select and edit their sentiment on the reflections page. It's not only a functional tool, but also a nod to how how team has grown and evolved over the course of the project.
@@ -78,7 +78,7 @@ To ensure our project remains stable and bug-free as it travels through the cosm
 - [Sentiment Widget Demo](https://www.youtube.com/watch?v=3w28m61RVow)
 - [TA Sprint Check In](https://www.youtube.com/watch?v=QSJdulnFW6s)
 - [Final Public Presentation Video](https://www.youtube.com/watch?v=ouiVghSc72Y)
-- [Final Private TA Presentation Video]()
+- [Final Private TA Presentation Video](https://www.youtube.com/watch?v=N6sQvTMhO1A)
 
 ## Team Agenda and Action Plans (UCSD Restricted)
 - [Week 2 - Group Kickoff and Team Branding](https://docs.google.com/document/d/1yzLrVUtwJmrQ68DPAA6afpxohxKKO2E4eC-_4uID680/edit)
