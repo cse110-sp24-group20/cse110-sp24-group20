@@ -1,5 +1,5 @@
 # <img src='./admin/branding/Team404_Logo.png' width="30"/> 404
-Welcome to the repository for Team 404, a stellar project group for CSE110 at UCSD! We are on a mission to create an out-of-this-world software development project. Join us as we navigate the cosmos of coding and teamwork.
+Welcome to the repository for Team 404, a stellar project group for CSE110 at UCSD! We are on a mission to create an out-of-this-world software development project. Join us as we navigate the cosmos of coding and teamwork
 
 ## Introduction
 *Welcome aboard space cadets!*<br>
